@@ -1,29 +1,21 @@
 ---
-import "@/styles/globals.css";
+import Layout from "@/layouts/DefaultLayout.astro"
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+
+export const prerender = true;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Button>
-			Click me
-		</Button>
-
-		<Button
-			variant="secondary"
-		>
-			Click me
-		</Button>
-
-		<Button variant="outline">
-			Click me
-		</Button>
-	</body>
-</html>
+<Layout title="Welcome">
+	<Container>
+		<Stack className="h-96 justify-center items-center text-center">
+			<h1 class="text-7xl font-bold">
+				Create your space
+			</h1>
+			<p>
+				The easiest way to create website yet.
+			</p>
+		</Stack>
+	</Container>
+</Layout>

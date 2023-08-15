@@ -1,4 +1,6 @@
 ---
+import "@/styles/globals.css";
+import { Button } from "@/components/ui/button";
 ---
 
 <html lang="en">
@@ -10,6 +12,18 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Button>
+			Click me
+		</Button>
+
+		<Button
+			variant="secondary"
+		>
+			Click me
+		</Button>
+
+		<Button variant="outline">
+			Click me
+		</Button>
 	</body>
 </html>

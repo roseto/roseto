@@ -3,7 +3,6 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 import cloudflare from "@astrojs/cloudflare";
-import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
@@ -11,7 +10,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [react(), tailwind({
     applyBaseStyles: false
-  }), image(), sitemap(), mdx()],
+  }), sitemap(), mdx()],
   output: "server",
   adapter: cloudflare()
 });

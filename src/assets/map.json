@@ -1,0 +1,1252 @@
+[
+	{
+		"title": "Accra",
+		"latitude": 5.6037168,
+		"longitude": -0.43696440000000003
+	},
+	{
+		"title": "Adelaide",
+		"latitude": -34.9284989,
+		"longitude": 139.1007456
+	},
+	{
+		"title": "Ahmedabad",
+		"latitude": 23.022505,
+		"longitude": 72.5713621
+	},
+	{
+		"title": "Algiers",
+		"latitude": 36.753768,
+		"longitude": 3.0587561
+	},
+	{
+		"title": "Almaty",
+		"latitude": 43.2220146,
+		"longitude": 77.3512485
+	},
+	{
+		"title": "Americana",
+		"latitude": 41.5847001,
+		"longitude": -93.634377
+	},
+	{
+		"title": "Amman",
+		"latitude": 31.9539494,
+		"longitude": 35.660635
+	},
+	{
+		"title": "Amsterdam",
+		"latitude": 52.3675734,
+		"longitude": 5.1541389
+	},
+	{
+		"title": "Antananarivo",
+		"latitude": -18.8791902,
+		"longitude": 47.5079055
+	},
+	{
+		"title": "Arica",
+		"latitude": -18.4782534,
+		"longitude": -70.3125988
+	},
+	{
+		"title": "Ashburn",
+		"latitude": 39.0437567,
+		"longitude": -77.2374416
+	},
+	{
+		"title": "Astara",
+		"latitude": 38.4224562,
+		"longitude": 48.8687149
+	},
+	{
+		"title": "Asuncion",
+		"latitude": -25.2637399,
+		"longitude": -57.82592599999999
+	},
+	{
+		"title": "Athens",
+		"latitude": 37.9838096,
+		"longitude": 24.2275388
+	},
+	{
+		"title": "Atlanta",
+		"latitude": 33.748752,
+		"longitude": -84.13768449999999
+	},
+	{
+		"title": "Auckland",
+		"latitude": -36.85088270000001,
+		"longitude": 175.2644881
+	},
+	{
+		"title": "Baghdad",
+		"latitude": 33.315241,
+		"longitude": 44.1160671
+	},
+	{
+		"title": "Baku",
+		"latitude": 40.40926169999999,
+		"longitude": 50.3670924
+	},
+	{
+		"title": "Bandar Seri Begawan",
+		"latitude": 4.903052199999999,
+		"longitude": 114.939821
+	},
+	{
+		"title": "Bangkok",
+		"latitude": 13.7563309,
+		"longitude": 100.7517651
+	},
+	{
+		"title": "Barcelona",
+		"latitude": 41.3873974,
+		"longitude": 2.168568
+	},
+	{
+		"title": "Basra",
+		"latitude": 30.5257657,
+		"longitude": 47.77379699999999
+	},
+	{
+		"title": "Beirut",
+		"latitude": 33.8937913,
+		"longitude": 35.5017767
+	},
+	{
+		"title": "Belgrade",
+		"latitude": 44.8125449,
+		"longitude": 20.96123
+	},
+	{
+		"title": "Belo Horizonte",
+		"latitude": -19.919052,
+		"longitude": -43.9386685
+	},
+	{
+		"title": "Belém",
+		"latitude": -1.4563432,
+		"longitude": -48.501299
+	},
+	{
+		"title": "Bengaluru",
+		"latitude": 12.9715987,
+		"longitude": 78.0945627
+	},
+	{
+		"title": "Berlin",
+		"latitude": 52.52000659999999,
+		"longitude": 13.404954
+	},
+	{
+		"title": "Bhubaneshwar",
+		"latitude": 20.2960587,
+		"longitude": 85.8245398
+	},
+	{
+		"title": "Blumenau",
+		"latitude": -26.9165792,
+		"longitude": -49.0717331
+	},
+	{
+		"title": "Bogota",
+		"latitude": 4.710988599999999,
+		"longitude": -73.822092
+	},
+	{
+		"title": "Boston",
+		"latitude": 42.3600825,
+		"longitude": -70.5588801
+	},
+	{
+		"title": "Brasília",
+		"latitude": -15.7975154,
+		"longitude": -47.39188739999999
+	},
+	{
+		"title": "Brisbane",
+		"latitude": -27.4704528,
+		"longitude": 153.5260341
+	},
+	{
+		"title": "Brussels",
+		"latitude": 50.8476424,
+		"longitude": 4.1071696
+	},
+	{
+		"title": "Bucharest",
+		"latitude": 44.4267674,
+		"longitude": 26.6025384
+	},
+	{
+		"title": "Budapest",
+		"latitude": 47.497912,
+		"longitude": 19.540235
+	},
+	{
+		"title": "Buenos Aires",
+		"latitude": -34.6036844,
+		"longitude": -58.1315591
+	},
+	{
+		"title": "Buffalo",
+		"latitude": 42.88644679999999,
+		"longitude": -78.8783689
+	},
+	{
+		"title": "Cagayan",
+		"latitude": 18.2489629,
+		"longitude": 121.8787833
+	},
+	{
+		"title": "Calgary",
+		"latitude": 51.04473309999999,
+		"longitude": -114.3218831
+	},
+	{
+		"title": "Campinas",
+		"latitude": -22.9099384,
+		"longitude": -47.0626332
+	},
+	{
+		"title": "Canberra",
+		"latitude": -35.2801903,
+		"longitude": 149.1310038
+	},
+	{
+		"title": "Cape Town",
+		"latitude": -33.9248685,
+		"longitude": 18.6740553
+	},
+	{
+		"title": "Casablanca City",
+		"latitude": 33.5731104,
+		"longitude": -7.589843399999999
+	},
+	{
+		"title": "Caçador",
+		"latitude": -26.7830205,
+		"longitude": -50.9980943
+	},
+	{
+		"title": "Cebu",
+		"latitude": 10.3156992,
+		"longitude": 123.8854366
+	},
+	{
+		"title": "Chandigarh",
+		"latitude": 30.7333148,
+		"longitude": 76.7794179
+	},
+	{
+		"title": "Charlotte",
+		"latitude": 35.2270869,
+		"longitude": -80.8431267
+	},
+	{
+		"title": "Chennai",
+		"latitude": 13.0826802,
+		"longitude": 80.7707184
+	},
+	{
+		"title": "Chiang Mai",
+		"latitude": 18.7883439,
+		"longitude": 98.98530079999999
+	},
+	{
+		"title": "Chicago",
+		"latitude": 41.8781136,
+		"longitude": -87.3797982
+	},
+	{
+		"title": "Chittagong",
+		"latitude": 22.356851,
+		"longitude": 91.7831819
+	},
+	{
+		"title": "Chișinău",
+		"latitude": 47.0104529,
+		"longitude": 29.3638103
+	},
+	{
+		"title": "Christchurch",
+		"latitude": -43.5320214,
+		"longitude": 172.3805589
+	},
+	{
+		"title": "Colombo",
+		"latitude": 6.9270786,
+		"longitude": 79.861243
+	},
+	{
+		"title": "Columbus",
+		"latitude": 39.9611755,
+		"longitude": -83.24879419999999
+	},
+	{
+		"title": "Copenhagen",
+		"latitude": 55.6760968,
+		"longitude": 13.0683371
+	},
+	{
+		"title": "Cordoba",
+		"latitude": 37.8881751,
+		"longitude": -4.7793835
+	},
+	{
+		"title": "Cork City",
+		"latitude": 51.8985143,
+		"longitude": -8.4756035
+	},
+	{
+		"title": "Cuiabá",
+		"latitude": -15.5954142,
+		"longitude": -56.0925824
+	},
+	{
+		"title": "Curitiba",
+		"latitude": -25.4372382,
+		"longitude": -49.5199727
+	},
+	{
+		"title": "Dakar",
+		"latitude": 14.716677,
+		"longitude": -17.4676861
+	},
+	{
+		"title": "Dallas",
+		"latitude": 32.7766642,
+		"longitude": -96.54698789999999
+	},
+	{
+		"title": "Dammam",
+		"latitude": 26.4206828,
+		"longitude": 50.0887943
+	},
+	{
+		"title": "Dar Es Salaam",
+		"latitude": -6.792354,
+		"longitude": 39.2083284
+	},
+	{
+		"title": "Denver",
+		"latitude": 39.7392358,
+		"longitude": -104.740251
+	},
+	{
+		"title": "Detroit",
+		"latitude": 42.331427,
+		"longitude": -83.2957538
+	},
+	{
+		"title": "Dhaka",
+		"latitude": 23.810332,
+		"longitude": 90.9125181
+	},
+	{
+		"title": "Djibouti",
+		"latitude": 11.825138,
+		"longitude": 42.590275
+	},
+	{
+		"title": "Doha",
+		"latitude": 25.2854473,
+		"longitude": 51.28103979999999
+	},
+	{
+		"title": "Dubai",
+		"latitude": 25.2048493,
+		"longitude": 55.5207828
+	},
+	{
+		"title": "Dublin",
+		"latitude": 53.3498053,
+		"longitude": -5.7603097
+	},
+	{
+		"title": "Durban",
+		"latitude": -29.85868039999999,
+		"longitude": 31.0218404
+	},
+	{
+		"title": "Düsseldorf",
+		"latitude": 51.2277411,
+		"longitude": 6.7734556
+	},
+	{
+		"title": "Edinburgh",
+		"latitude": 55.953252,
+		"longitude": -3.188267
+	},
+	{
+		"title": "Ekaterinburg",
+		"latitude": 56.8430993,
+		"longitude": 60.64540859999999
+	},
+	{
+		"title": "Erbil",
+		"latitude": 36.190073,
+		"longitude": 43.7430303
+	},
+	{
+		"title": "Florianópolis",
+		"latitude": -27.5948036,
+		"longitude": -48.5569286
+	},
+	{
+		"title": "Fortaleza",
+		"latitude": -3.7327203,
+		"longitude": -38.2770134
+	},
+	{
+		"title": "Frankfurt",
+		"latitude": 50.1109221,
+		"longitude": 8.9321267
+	},
+	{
+		"title": "Fukuoka",
+		"latitude": 33.5901838,
+		"longitude": 130.4016888
+	},
+	{
+		"title": "Gaborone",
+		"latitude": -24.6282079,
+		"longitude": 25.9231471
+	},
+	{
+		"title": "Geneva",
+		"latitude": 46.2043907,
+		"longitude": 6.1431577
+	},
+	{
+		"title": "Georgetown",
+		"latitude": 38.9097057,
+		"longitude": -77.06535650000001
+	},
+	{
+		"title": "Goiânia",
+		"latitude": -16.6868912,
+		"longitude": -49.2647943
+	},
+	{
+		"title": "Gothenburg",
+		"latitude": 57.70887,
+		"longitude": 11.97456
+	},
+	{
+		"title": "Guam",
+		"latitude": 13.444304,
+		"longitude": 144.793731
+	},
+	{
+		"title": "Guatemala City",
+		"latitude": 14.6349149,
+		"longitude": -90.5068824
+	},
+	{
+		"title": "Guayaquil",
+		"latitude": -2.1894128,
+		"longitude": -80.1390662
+	},
+	{
+		"title": "Haifa",
+		"latitude": 32.7940463,
+		"longitude": 34.989571
+	},
+	{
+		"title": "Hamburg",
+		"latitude": 53.5488282,
+		"longitude": 9.987170299999999
+	},
+	{
+		"title": "Hanoi",
+		"latitude": 21.0277644,
+		"longitude": 105.5841598
+	},
+	{
+		"title": "Harare",
+		"latitude": -17.8216288,
+		"longitude": 31.0492259
+	},
+	{
+		"title": "Helsinki",
+		"latitude": 60.16985569999999,
+		"longitude": 25.438379
+	},
+	{
+		"title": "Ho Chi Minh City",
+		"latitude": 10.8230989,
+		"longitude": 107.1296638
+	},
+	{
+		"title": "Hobart",
+		"latitude": -42.8826055,
+		"longitude": 147.3257196
+	},
+	{
+		"title": "Hong Kong",
+		"latitude": 22.3193039,
+		"longitude": 114.4193611
+	},
+	{
+		"title": "Honolulu",
+		"latitude": 21.3098845,
+		"longitude": -157.3581401
+	},
+	{
+		"title": "Houston",
+		"latitude": 29.7604267,
+		"longitude": -94.8698028
+	},
+	{
+		"title": "Hyderabad",
+		"latitude": 17.385044,
+		"longitude": 78.236671
+	},
+	{
+		"title": "Indianapolis",
+		"latitude": 39.768403,
+		"longitude": -86.158068
+	},
+	{
+		"title": "Islamabad",
+		"latitude": 33.6844202,
+		"longitude": 73.04788479999999
+	},
+	{
+		"title": "Istanbul",
+		"latitude": 41.0082376,
+		"longitude": 29.4783589
+	},
+	{
+		"title": "Itajaí",
+		"latitude": -26.9082782,
+		"longitude": -48.67751089999999
+	},
+	{
+		"title": "Jacksonville",
+		"latitude": 30.3321838,
+		"longitude": -81.90565099999999
+	},
+	{
+		"title": "Jakarta",
+		"latitude": -6.2087634,
+		"longitude": 107.345599
+	},
+	{
+		"title": "Jashore",
+		"latitude": 23.1634014,
+		"longitude": 89.2181664
+	},
+	{
+		"title": "Jeddah",
+		"latitude": 21.485811,
+		"longitude": 39.19250479999999
+	},
+	{
+		"title": "Johannesburg",
+		"latitude": -26.2041028,
+		"longitude": 28.2973051
+	},
+	{
+		"title": "Johor Bahru",
+		"latitude": 1.492659,
+		"longitude": 103.7413591
+	},
+	{
+		"title": "Joinville",
+		"latitude": -26.3043758,
+		"longitude": -48.84637439999999
+	},
+	{
+		"title": "Juazeiro do Norte",
+		"latitude": -7.224205400000001,
+		"longitude": -39.3130162
+	},
+	{
+		"title": "Kanpur",
+		"latitude": 26.449923,
+		"longitude": 80.3318736
+	},
+	{
+		"title": "Kansas City",
+		"latitude": 39.0997265,
+		"longitude": -94.0785667
+	},
+	{
+		"title": "Karachi",
+		"latitude": 24.8607343,
+		"longitude": 67.5011364
+	},
+	{
+		"title": "Kathmandu",
+		"latitude": 27.7172453,
+		"longitude": 85.8239605
+	},
+	{
+		"title": "Khabarovsk",
+		"latitude": 48.4814433,
+		"longitude": 135.5720667
+	},
+	{
+		"title": "Kigali",
+		"latitude": -1.9440727,
+		"longitude": 30.0618851
+	},
+	{
+		"title": "Kolkata",
+		"latitude": 22.572646,
+		"longitude": 88.11389500000001
+	},
+	{
+		"title": "Krasnoyarsk",
+		"latitude": 56.01528339999999,
+		"longitude": 93.3932476
+	},
+	{
+		"title": "Kuala Lumpur",
+		"latitude": 3.1569486,
+		"longitude": 102.212303
+	},
+	{
+		"title": "Kuwait City",
+		"latitude": 29.375859,
+		"longitude": 47.7274052
+	},
+	{
+		"title": "Kyiv",
+		"latitude": 50.4501,
+		"longitude": 31.0234
+	},
+	{
+		"title": "Lagos",
+		"latitude": 6.5243793,
+		"longitude": 3.8792057
+	},
+	{
+		"title": "Lahore",
+		"latitude": 31.5203696,
+		"longitude": 74.35874729999999
+	},
+	{
+		"title": "Las Vegas",
+		"latitude": 36.171563,
+		"longitude": -115.1391009
+	},
+	{
+		"title": "Lima",
+		"latitude": -12.0463731,
+		"longitude": -76.792754
+	},
+	{
+		"title": "Lisbon",
+		"latitude": 38.7222524,
+		"longitude": -8.6393366
+	},
+	{
+		"title": "London",
+		"latitude": 51.5072178,
+		"longitude": 0.12241380000000002
+	},
+	{
+		"title": "Los Angeles",
+		"latitude": 34.0522342,
+		"longitude": -117.9936849
+	},
+	{
+		"title": "Luanda",
+		"latitude": -8.8146556,
+		"longitude": 13.7301756
+	},
+	{
+		"title": "Luxembourg City",
+		"latitude": 49.61162100000001,
+		"longitude": 6.1319346
+	},
+	{
+		"title": "Macau",
+		"latitude": 22.198745,
+		"longitude": 113.543873
+	},
+	{
+		"title": "Madrid",
+		"latitude": 40.4167754,
+		"longitude": -3.4537902
+	},
+	{
+		"title": "Male",
+		"latitude": 4.1754959,
+		"longitude": 73.5093474
+	},
+	{
+		"title": "Manama",
+		"latitude": 26.2235305,
+		"longitude": 50.3375935
+	},
+	{
+		"title": "Manaus",
+		"latitude": -3.1190275,
+		"longitude": -60.0217314
+	},
+	{
+		"title": "Manchester",
+		"latitude": 53.4807593,
+		"longitude": -2.4926305
+	},
+	{
+		"title": "Mandalay",
+		"latitude": 21.9588282,
+		"longitude": 96.0891032
+	},
+	{
+		"title": "Manila",
+		"latitude": 14.5995124,
+		"longitude": 121.2342195
+	},
+	{
+		"title": "Maputo",
+		"latitude": -25.969248,
+		"longitude": 32.5731746
+	},
+	{
+		"title": "Marseille",
+		"latitude": 43.296482,
+		"longitude": 5.61978
+	},
+	{
+		"title": "Mcallen",
+		"latitude": 26.2034071,
+		"longitude": -98.48001239999999
+	},
+	{
+		"title": "Medellín",
+		"latitude": 6.2476376,
+		"longitude": -75.56581530000001
+	},
+	{
+		"title": "Melbourne",
+		"latitude": -37.8136276,
+		"longitude": 145.2130576
+	},
+	{
+		"title": "Memphis",
+		"latitude": 35.1495343,
+		"longitude": -90.0489801
+	},
+	{
+		"title": "Mexico City",
+		"latitude": 19.4326077,
+		"longitude": -99.383208
+	},
+	{
+		"title": "Miami",
+		"latitude": 25.7616798,
+		"longitude": -79.9417902
+	},
+	{
+		"title": "Milan",
+		"latitude": 45.4642035,
+		"longitude": 9.439982
+	},
+	{
+		"title": "Minneapolis",
+		"latitude": 44.852753,
+		"longitude": -93.5150108
+	},
+	{
+		"title": "Minsk",
+		"latitude": 53.9006011,
+		"longitude": 27.558972
+	},
+	{
+		"title": "Mombasa",
+		"latitude": -4.0434771,
+		"longitude": 39.6682065
+	},
+	{
+		"title": "Monrovia",
+		"latitude": 34.1442616,
+		"longitude": -118.0019482
+	},
+	{
+		"title": "Montgomery",
+		"latitude": 32.3792233,
+		"longitude": -86.3077368
+	},
+	{
+		"title": "Montréal",
+		"latitude": 45.5018869,
+		"longitude": -73.06739189999999
+	},
+	{
+		"title": "Moscow",
+		"latitude": 55.755826,
+		"longitude": 38.1173
+	},
+	{
+		"title": "Mumbai",
+		"latitude": 19.0759837,
+		"longitude": 73.1276559
+	},
+	{
+		"title": "Munich",
+		"latitude": 48.1351253,
+		"longitude": 11.3319806
+	},
+	{
+		"title": "Muscat",
+		"latitude": 23.5880307,
+		"longitude": 58.1328717
+	},
+	{
+		"title": "Nagpur",
+		"latitude": 21.1458004,
+		"longitude": 79.0881546
+	},
+	{
+		"title": "Naha",
+		"latitude": 26.2125758,
+		"longitude": 127.6790208
+	},
+	{
+		"title": "Nairobi",
+		"latitude": -1.2920659,
+		"longitude": 37.3219462
+	},
+	{
+		"title": "Najaf",
+		"latitude": 32.0106646,
+		"longitude": 44.3265272
+	},
+	{
+		"title": "Nashville",
+		"latitude": 36.1626638,
+		"longitude": -86.7816016
+	},
+	{
+		"title": "Nasiriyah",
+		"latitude": 31.0510427,
+		"longitude": 46.2569178
+	},
+	{
+		"title": "Neuquen",
+		"latitude": -38.9516784,
+		"longitude": -68.0591888
+	},
+	{
+		"title": "New Delhi",
+		"latitude": 28.6139391,
+		"longitude": 77.7090212
+	},
+	{
+		"title": "Newark",
+		"latitude": 40.735657,
+		"longitude": -74.1723667
+	},
+	{
+		"title": "Nicosia",
+		"latitude": 35.1855659,
+		"longitude": 33.88227639999999
+	},
+	{
+		"title": "Norfolk",
+		"latitude": 36.8507689,
+		"longitude": -76.28587259999999
+	},
+	{
+		"title": "Noumea",
+		"latitude": -22.2734912,
+		"longitude": 166.4480887
+	},
+	{
+		"title": "Omaha",
+		"latitude": 41.2565369,
+		"longitude": -95.9345034
+	},
+	{
+		"title": "Osaka",
+		"latitude": 34.5687249,
+		"longitude": 135.2522535
+	},
+	{
+		"title": "Oslo",
+		"latitude": 59.9138688,
+		"longitude": 11.0022454
+	},
+	{
+		"title": "Ottawa",
+		"latitude": 45.4215296,
+		"longitude": -75.69719309999999
+	},
+	{
+		"title": "Palermo",
+		"latitude": 37.99069,
+		"longitude": 13.1114868
+	},
+	{
+		"title": "Panama City",
+		"latitude": 30.1588129,
+		"longitude": -85.6602058
+	},
+	{
+		"title": "Paramaribo",
+		"latitude": 5.8520355,
+		"longitude": -55.2038278
+	},
+	{
+		"title": "Paris",
+		"latitude": 48.856614,
+		"longitude": 2.6022219
+	},
+	{
+		"title": "Patna",
+		"latitude": 25.5940947,
+		"longitude": 85.1375645
+	},
+	{
+		"title": "Perth",
+		"latitude": -31.9523123,
+		"longitude": 116.361309
+	},
+	{
+		"title": "Philadelphia",
+		"latitude": 39.9525839,
+		"longitude": -75.1652215
+	},
+	{
+		"title": "Phnom Penh",
+		"latitude": 11.5563738,
+		"longitude": 104.9282099
+	},
+	{
+		"title": "Phoenix",
+		"latitude": 33.4483771,
+		"longitude": -111.5740373
+	},
+	{
+		"title": "Pittsburgh",
+		"latitude": 40.44062479999999,
+		"longitude": -79.9958864
+	},
+	{
+		"title": "Port Louis",
+		"latitude": -20.1608912,
+		"longitude": 57.5012222
+	},
+	{
+		"title": "Port Au Prince",
+		"latitude": 18.594395,
+		"longitude": -72.3074326
+	},
+	{
+		"title": "Portland",
+		"latitude": 45.515232,
+		"longitude": -122.9283853
+	},
+	{
+		"title": "Porto Alegre",
+		"latitude": -30.0368176,
+		"longitude": -50.7089887
+	},
+	{
+		"title": "Prague",
+		"latitude": 50.0755381,
+		"longitude": 14.9378005
+	},
+	{
+		"title": "Queretaro",
+		"latitude": 20.5887932,
+		"longitude": -99.8898881
+	},
+	{
+		"title": "Quito",
+		"latitude": -0.1806532,
+		"longitude": -77.9678382
+	},
+	{
+		"title": "Ramallah",
+		"latitude": 31.9037641,
+		"longitude": 34.9534184
+	},
+	{
+		"title": "Reunion",
+		"latitude": -21.115141,
+		"longitude": 55.536384
+	},
+	{
+		"title": "Reykjavík",
+		"latitude": 64.146582,
+		"longitude": -21.9426354
+	},
+	{
+		"title": "Ribeirão Preto",
+		"latitude": -21.1694018,
+		"longitude": -47.8110855
+	},
+	{
+		"title": "Richmond",
+		"latitude": 37.5407246,
+		"longitude": -77.4360481
+	},
+	{
+		"title": "Riga",
+		"latitude": 56.9676941,
+		"longitude": 24.6056221
+	},
+	{
+		"title": "Rio de Janeiro",
+		"latitude": -22.9068467,
+		"longitude": -42.9228965
+	},
+	{
+		"title": "Riyadh",
+		"latitude": 24.7135517,
+		"longitude": 47.1752957
+	},
+	{
+		"title": "Rome",
+		"latitude": 41.9027835,
+		"longitude": 12.2463655
+	},
+	{
+		"title": "Sacramento",
+		"latitude": 38.5815719,
+		"longitude": -121.4943996
+	},
+	{
+		"title": "Salt Lake City",
+		"latitude": 40.7607793,
+		"longitude": -111.8910474
+	},
+	{
+		"title": "Salvador",
+		"latitude": 13.794185,
+		"longitude": -88.89653
+	},
+	{
+		"title": "San Diego",
+		"latitude": 32.715738,
+		"longitude": -117.1610838
+	},
+	{
+		"title": "San Jose",
+		"latitude": 37.21374,
+		"longitude": -121.6352525
+	},
+	{
+		"title": "San José",
+		"latitude": 37.58874,
+		"longitude": -122.1352525
+	},
+	{
+		"title": "Saskatoon",
+		"latitude": 52.157902,
+		"longitude": -106.6701577
+	},
+	{
+		"title": "Seattle",
+		"latitude": 47.6062095,
+		"longitude": -122.0820708
+	},
+	{
+		"title": "Seoul",
+		"latitude": 37.566535,
+		"longitude": 127.2279692
+	},
+	{
+		"title": "Singapore",
+		"latitude": 1.602083,
+		"longitude": 103.569836
+	},
+	{
+		"title": "Sofia City",
+		"latitude": 42.7570109,
+		"longitude": 23.7004683
+	},
+	{
+		"title": "Sorocaba",
+		"latitude": -23.4709096,
+		"longitude": -47.4851438
+	},
+	{
+		"title": "St. George's",
+		"latitude": 41.4909882,
+		"longitude": -71.2731677
+	},
+	{
+		"title": "St. Louis",
+		"latitude": 38.6270025,
+		"longitude": -90.44940419999999
+	},
+	{
+		"title": "St. Petersburg",
+		"latitude": 27.7676008,
+		"longitude": -82.64029149999999
+	},
+	{
+		"title": "Stockholm",
+		"latitude": 59.32932349999999,
+		"longitude": 18.3185808
+	},
+	{
+		"title": "Surat Thani",
+		"latitude": 9.134194899999999,
+		"longitude": 99.3334198
+	},
+	{
+		"title": "Sydney",
+		"latitude": -33.8688197,
+		"longitude": 151.4592955
+	},
+	{
+		"title": "São José do Rio Preto",
+		"latitude": -20.8126993,
+		"longitude": -49.37653719999999
+	},
+	{
+		"title": "São Paulo",
+		"latitude": -23.5557714,
+		"longitude": -46.3895571
+	},
+	{
+		"title": "Taipei",
+		"latitude": 25.0329636,
+		"longitude": 122.0654268
+	},
+	{
+		"title": "Tallahassee",
+		"latitude": 30.4382559,
+		"longitude": -84.28073289999999
+	},
+	{
+		"title": "Tallinn",
+		"latitude": 59.43696079999999,
+		"longitude": 24.7535746
+	},
+	{
+		"title": "Tampa",
+		"latitude": 27.950575,
+		"longitude": -82.4571776
+	},
+	{
+		"title": "Tashkent",
+		"latitude": 41.2994958,
+		"longitude": 68.9900734
+	},
+	{
+		"title": "Tbilisi",
+		"latitude": 41.7151377,
+		"longitude": 45.327096
+	},
+	{
+		"title": "Tegucigalpa",
+		"latitude": 14.065049,
+		"longitude": -87.1715002
+	},
+	{
+		"title": "Tel Aviv",
+		"latitude": 32.0852999,
+		"longitude": 35.28176759999999
+	},
+	{
+		"title": "Thessaloniki",
+		"latitude": 40.6400629,
+		"longitude": 22.9444191
+	},
+	{
+		"title": "Thimphu",
+		"latitude": 27.471586,
+		"longitude": 89.6386108
+	},
+	{
+		"title": "Tokyo",
+		"latitude": 35.6761919,
+		"longitude": 139.9003106
+	},
+	{
+		"title": "Toronto",
+		"latitude": 43.653226,
+		"longitude": -79.1331843
+	},
+	{
+		"title": "Tunis",
+		"latitude": 33.886917,
+		"longitude": 10.037499
+	},
+	{
+		"title": "Uberlândia",
+		"latitude": -18.9127749,
+		"longitude": -48.2755227
+	},
+	{
+		"title": "Ulaanbaatar",
+		"latitude": 47.88639879999999,
+		"longitude": 106.6557439
+	},
+	{
+		"title": "Valparaíso",
+		"latitude": -33.047238,
+		"longitude": -71.61268849999999
+	},
+	{
+		"title": "Vancouver",
+		"latitude": 49.2827291,
+		"longitude": -122.6207375
+	},
+	{
+		"title": "Vienna",
+		"latitude": 48.2081743,
+		"longitude": 16.8738189
+	},
+	{
+		"title": "Vientiane",
+		"latitude": 17.9757058,
+		"longitude": 102.6331035
+	},
+	{
+		"title": "Vilnius",
+		"latitude": 54.6871555,
+		"longitude": 25.7796514
+	},
+	{
+		"title": "Warsaw",
+		"latitude": 52.2296756,
+		"longitude": 21.5122287
+	},
+	{
+		"title": "Willemstad",
+		"latitude": 12.1224221,
+		"longitude": -68.8824233
+	},
+	{
+		"title": "Winnipeg",
+		"latitude": 49.8954221,
+		"longitude": -97.1385145
+	},
+	{
+		"title": "Yangon",
+		"latitude": 16.840939,
+		"longitude": 96.173526
+	},
+	{
+		"title": "Yerevan",
+		"latitude": 40.1872023,
+		"longitude": 45.015209
+	},
+	{
+		"title": "Yogyakarta",
+		"latitude": -7.7955798,
+		"longitude": 110.3694896
+	},
+	{
+		"title": "Zagreb",
+		"latitude": 45.8150108,
+		"longitude": 16.481918999999998
+	},
+	{
+		"title": "Zürich",
+		"latitude": 47.3768866,
+		"longitude": 9.041694
+	}
+]

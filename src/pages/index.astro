@@ -1,21 +1,223 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro"
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
+import { DoubleArrowDownIcon, GlobeIcon, Pencil2Icon, RocketIcon, RulerSquareIcon } from "@radix-ui/react-icons"; 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import PopsMap from "@/components/PopsMap";
+import { Button } from "@/components/ui/button";
 
 export const prerender = true;
 ---
 
 <Layout title="Welcome">
+	<div id="vanta">
+		<Container>
+			<Stack className="relative h-[90vh] justify-center items-center text-center">
+				<h1 class="text-7xl font-bold">
+					Create your {" "}
+					<span
+						class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary"
+					>
+						space
+					</span>
+				</h1>
+				<p>
+					The easiest way to create a website yet.
+				</p>
+				<div
+					class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
+				>
+					<DoubleArrowDownIcon className="animate-bounce" />
+					<p
+						class="text-sm font-bold"
+					>Sounds good? Scroll down.</p>
+				</div>
+			</Stack>
+		</Container>
+	</div>
+
 	<Container>
-		<Stack className="h-96 justify-center items-center text-center">
-			<h1 class="text-7xl font-bold">
-				Create your space
-			</h1>
-			<p>
-				The easiest way to create website yet.
+		<Stack className="mt-8">
+			<h2
+				class="text-4xl font-bold text-center"
+			>
+				Why use <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Roseto</span>?
+			</h2>
+			<div class="grid grid-cols-2 gap-2 justify-center">
+				<Card>
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<RocketIcon
+							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+						/>
+						<CardTitle className="mt-2 text-2xl">
+							Fast
+						</CardTitle>
+						<CardDescription>
+							Your website will be ready in seconds.
+						</CardDescription>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<Pencil2Icon
+							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+						/>
+						<CardTitle className="mt-2 text-2xl">
+							Simple
+						</CardTitle>
+						<CardDescription>
+							No need to learn new things. Just write your content.
+						</CardDescription>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<GlobeIcon
+							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+						/>
+						<CardTitle className="mt-2 text-2xl">
+							Everwhere
+						</CardTitle>
+						<CardDescription>
+							Your website will be deployed all over the world.
+						</CardDescription>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<RulerSquareIcon
+							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+						/>
+						<CardTitle className="mt-2 text-2xl">
+							Responsive
+						</CardTitle>
+						<CardDescription>
+							Your website will look great on any device.
+						</CardDescription>
+					</CardContent>
+				</Card>
+			</div>
+
+			<h2
+				class="text-4xl font-bold text-center mt-8"
+			>
+				How does it <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">work</span>?
+			</h2>
+			<Card className="bg-muted">
+				<CardHeader>
+					<CardTitle>
+						1. Create your website
+					</CardTitle>
+					<CardDescription>
+						Just write your content in Markdown.
+					</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<pre class="bg-background p-2 rounded overflow-auto">
+# Welcome to Roseto
+Welcome to Roseto, the easiest way to create a website yet.
+
+## This is a subtitle
+**This is bold text**
+
+[This is a link](https://roseto.space)</pre>
+				</CardContent>
+			</Card>
+
+			<Card className="bg-muted">
+				<CardHeader>
+					<CardTitle>
+						2. Deploy it
+					</CardTitle>
+					<CardDescription>
+						Press the deploy button and your website will be deployed all over the world.
+						We handle everything for you.
+					</CardDescription>
+				</CardHeader>
+			</Card>
+
+			<Card className="bg-muted">
+				<CardHeader>
+					<CardTitle>
+						3. Enjoy it
+					</CardTitle>
+					<CardDescription>
+						Your website will be available at <a class="text-primary hover:underline" href="https://your-website.roseto.space">https://your-website.roseto.space</a>.
+						Done!
+					</CardDescription>
+				</CardHeader>
+			</Card>
+
+			<h2
+				class="text-4xl font-bold text-center mt-8"
+			>
+				Where do we <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">deploy</span>?
+			</h2>
+			<p
+				class="text-center"
+			>
+				Pretty much everywhere.
 			</p>
+
+			<div class="w-full h-[80vh]">
+				<PopsMap client:only/>
+			</div>
+
+			<Stack className="text-center items-center">
+				<h2
+					class="text-7xl font-bold text-center mt-8"
+				>
+					Coming <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">soon</span>
+				</h2>
+				<p>
+					We are working hard to make Roseto available for everyone.
+				</p>
+				<a
+					href="https://formate.angelmario.eu/f/sign-up-for-roseto"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Button>
+						Sign up
+					</Button>
+				</a>
+			</Stack>
 		</Stack>
 	</Container>
 </Layout>
+
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+<script is:inline>
+	let bgDark = 0x09090b;
+	let bgLight = 0xffffff;
+
+	let bgColor = window.matchMedia("(prefers-color-scheme: dark)").matches ? bgDark : bgLight;
+
+	const effect = VANTA.DOTS({
+		el: "#vanta",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		scale: 1.00,
+		scaleMobile: 1.00,
+		backgroundColor: bgColor,
+		showLines: false,
+		color: 0xD4668B,
+		chaos: 0.50,
+	});
+
+	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+		bgColor = e.matches ? bgDark : bgLight;
+
+		effect.setOptions({
+			backgroundColor: bgColor,
+		});
+	});
+</script>

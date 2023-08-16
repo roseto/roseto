@@ -1,0 +1,17 @@
+.pop-icon {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+}
+
+.pop-icon::after {
+	position: absolute;
+	content: '';
+	width: 8px;
+	height: 8px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background-color: hsl(var(--primary));
+}

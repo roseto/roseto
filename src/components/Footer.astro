@@ -1,5 +1,6 @@
 ---
 import { Separator } from "@/components/ui/separator";
+import StatusBadge from "@/components/StatusBadge";
 ---
 
 
@@ -9,7 +10,10 @@ import { Separator } from "@/components/ui/separator";
 	<p>
 		&copy; Roseto
 	</p>
-	<div class="flex flex-row items-center h-6 gap-4">
+	
+	<StatusBadge />
+
+	<div class="mt-2 flex flex-row items-center h-6 gap-4">
 		<a 
 			href="https://github.com/roseto"
 			target="_blank"

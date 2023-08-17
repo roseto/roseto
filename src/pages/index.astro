@@ -23,7 +23,7 @@ export const prerender = true;
 					</span>
 				</h1>
 				<p>
-					The easiest way to create a website yet.
+					The easiest way to create your space online yet.
 				</p>
 				<div
 					class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
@@ -54,7 +54,7 @@ export const prerender = true;
 							Fast
 						</CardTitle>
 						<CardDescription>
-							Your website will be ready in seconds.
+							Your space will be ready in seconds.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -68,7 +68,7 @@ export const prerender = true;
 							Simple
 						</CardTitle>
 						<CardDescription>
-							No need to learn new things. Just write your content.
+							No need to learn new things. Just post your content.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -110,46 +110,25 @@ export const prerender = true;
 			<Card className="bg-muted">
 				<CardHeader>
 					<CardTitle>
-						1. Create your website
+						3 steps
 					</CardTitle>
 					<CardDescription>
-						Just write your content in Markdown.
+						Just 3 steps to create your space online.
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
-					<pre class="bg-background p-2 rounded overflow-auto">
-# Welcome to Roseto
-Welcome to Roseto, the easiest way to create a website yet.
-
-## This is a subtitle
-**This is bold text**
-
-[This is a link](https://roseto.space)</pre>
+					<ol class="list-decimal list-inside">
+						<li>
+							Choose a name for your space.
+						</li>
+						<li>
+							Choose a theme and a template for your space.
+						</li>
+						<li>
+							Post your content.
+						</li>
+					</ol>
 				</CardContent>
-			</Card>
-
-			<Card className="bg-muted">
-				<CardHeader>
-					<CardTitle>
-						2. Deploy it
-					</CardTitle>
-					<CardDescription>
-						Press the deploy button and your website will be deployed all over the world.
-						We handle everything for you.
-					</CardDescription>
-				</CardHeader>
-			</Card>
-
-			<Card className="bg-muted">
-				<CardHeader>
-					<CardTitle>
-						3. Enjoy it
-					</CardTitle>
-					<CardDescription>
-						Your website will be available at <a class="text-primary hover:underline" href="https://your-website.roseto.space">https://your-website.roseto.space</a>.
-						Done!
-					</CardDescription>
-				</CardHeader>
 			</Card>
 
 			<h2
@@ -160,32 +139,34 @@ Welcome to Roseto, the easiest way to create a website yet.
 			<p
 				class="text-center"
 			>
-				Pretty much everywhere.
+				Your space will be available all over the world.
 			</p>
 
-			<div class="w-full h-[80vh]">
+			<div class="w-full h-[50vh] md:h-[75vh]">
 				<PopsMap client:only/>
 			</div>
 
-			<Stack className="text-center items-center">
-				<h2
-					class="text-7xl font-bold text-center mt-8"
-				>
-					Coming <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">soon</span>
-				</h2>
-				<p>
-					We are working hard to make Roseto available for everyone.
-				</p>
-				<a
-					href="https://formate.angelmario.eu/f/sign-up-for-roseto"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button>
-						Sign up
-					</Button>
-				</a>
-			</Stack>
+			<Card className="p-16">
+				<Stack className="text-center items-center">
+					<h2
+						class="text-7xl font-bold text-center"
+					>
+						Coming <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">soon</span>
+					</h2>
+					<p>
+						We are working hard to make Roseto available for everyone.
+					</p>
+					<a
+						href="https://formate.angelmario.eu/f/sign-up-for-roseto"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Button>
+							Sign up
+						</Button>
+					</a>
+				</Stack>
+			</Card>
 		</Stack>
 	</Container>
 </Layout>

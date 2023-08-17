@@ -27,7 +27,7 @@ export default function PopsMap() {
 
 	return (
 		<MapContainer
-			center={[51.505, -0.09]}
+			center={[20.505, -0.09]}
 			zoom={isMobile ? 1 : 2}
 			scrollWheelZoom={false}
 			className="w-full h-full rounded z-10"

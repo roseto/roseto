@@ -4,4 +4,6 @@ export interface Template {
 	description: string;
 
 	template: string;
+
+	supports: string[];
 }

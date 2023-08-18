@@ -1,0 +1,8 @@
+/* This file is used to test all theme variables */
+:root {
+	--border-radius: 50%;
+	--muted-color: #999; 
+	--align: center;
+	--font-family: sans-serif;
+	--background: url('https://images.unsplash.com/photo-1688728474617-577e621f8cbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}

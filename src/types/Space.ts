@@ -1,10 +1,13 @@
 export interface Space {
 	id: string;
-	subdomain: string;
-	templateId?: string;
-	themeId?: string;
-
+	username: string;
 	name: string;
+	avatarUrl: string;
+
+	backgroundImageUrl?: string;
+	textAlign?: "left" | "center" | "right";
+	textColor?: string;
+	textFont?: "sans-serif" | "serif" | "monospace" | "cursive" | "fantasy";
 
 	social?: {
 		instagram?: string;

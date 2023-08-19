@@ -1,9 +1,10 @@
 import type { APIRoute } from "astro";
-import { app } from "@/lib/firebase/server";
+import { getApp } from "@/lib/firebase/server";
 import { DecodedIdToken, getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 export const get: APIRoute = async ({ cookies, request, redirect }) => {
+	const app = getApp();
 	const auth = getAuth(app);
 	const firestore = getFirestore(app);
 

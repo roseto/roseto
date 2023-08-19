@@ -1,0 +1,11 @@
+---
+import Layout from "@/layouts/DefaultLayout.astro";
+import SignIn from "@/components/SignIn";
+import { Container } from "@/components/ui/container";
+---
+
+<Layout title="Sign in">
+	<Container>
+		<SignIn client:load/>
+	</Container>
+</Layout>

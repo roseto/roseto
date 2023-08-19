@@ -1,0 +1,38 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+	<defs>
+		<linearGradient id="gradient-4" bx:pinned="true">
+			<stop offset="0.504" style="stop-color: rgb(212, 102, 139);"></stop>
+			<stop offset="0.771" style="stop-color: rgb(225, 155, 153);"></stop>
+			<stop offset="1" style="stop-color: rgb(245, 230, 173);"></stop>
+		</linearGradient>
+		<linearGradient id="gradient-4-0" gradientUnits="userSpaceOnUse" x1="280.704" y1="156.344"
+			x2="280.704" y2="308.562" spreadMethod="pad"
+			gradientTransform="matrix(1.966155, 0, 0, 1.966155, -255.960068, -249.923191)"
+			xlink:href="#gradient-4"></linearGradient>
+		<linearGradient id="gradient-4-1" gradientUnits="userSpaceOnUse" x1="274.685" y1="218.955"
+			x2="274.685" y2="243.132" spreadMethod="pad"
+			gradientTransform="matrix(1.888746, 0, 0, 1.110164, -235.703033, -41.804291)"
+			xlink:href="#gradient-4"></linearGradient>
+		<linearGradient id="gradient-4-2" gradientUnits="userSpaceOnUse" x1="286.337" y1="183.234"
+			x2="286.337" y2="368.88" spreadMethod="pad"
+			gradientTransform="matrix(1.966155, 0, 0, 1.966155, -255.960068, -249.923191)"
+			xlink:href="#gradient-4"></linearGradient>
+		<linearGradient id="gradient-4-3" gradientUnits="userSpaceOnUse" x1="193.285" y1="145.753"
+			x2="193.285" y2="334.515" spreadMethod="pad"
+			gradientTransform="matrix(1.966155, 0, 0, 1.966155, -255.960068, -249.923191)"
+			xlink:href="#gradient-4"></linearGradient>
+	</defs>
+	<path
+		style="fill-rule: nonzero; paint-order: fill; fill: url(#gradient-4-0); stroke-linecap: round; stroke-miterlimit: 12.28; stroke-linejoin: round; stroke-dasharray: 2; stroke: rgb(40, 40, 40); stroke-width: 10px;"
+		d="M 318.1 188.19 C 322.244 187.153 313.636 158.13 297.222 149.51 C 268.534 136.341 217.134 113.836 182.243 106.733 C 172.433 203.832 260.009 353.571 261.284 356.757 C 526.941 193.28 395.17 -20.088 195.853 85.797 C 236.228 108.797 327.539 113.635 338.992 164.932 C 340.822 173.131 361.843 229.848 295.785 251.246 C 271.518 259.106 219.822 223.082 232.278 179.08 C 245.277 133.15 308.135 198.855 318.1 188.19 Z"></path>
+	<path id="svg_9"
+		d="M 308.806 210.923 C 292 208.365 271.521 189.23 260.424 190.943 C 249.528 193.687 257.927 223.231 279.201 228.111 C 298.082 227.009 303.415 217.821 308.806 210.923 Z"
+		style="fill-rule: nonzero; paint-order: fill; fill: url(#gradient-4-1); stroke-linecap: round; stroke-miterlimit: 12.28; stroke-linejoin: round; stroke-dasharray: 2; stroke: rgb(40, 40, 40); stroke-width: 10px;"></path>
+	<path id="svg_7"
+		d="M 438.274 110.342 C 457.729 314.498 262.692 433.986 123.162 437.76 C 199.989 486.678 345.489 497.967 432.666 409.539 C 453.35 393.532 549.293 263.698 438.274 110.342 Z"
+		style="fill-rule: nonzero; paint-order: fill; fill: url(#gradient-4-2); stroke-linecap: round; stroke-miterlimit: 12.28; stroke-linejoin: round; stroke-dasharray: 2; stroke: rgb(40, 40, 40); stroke-width: 10px;"></path>
+	<path id="svg_3"
+		d="M 208.147 37.225 C -72.341 108.748 28.082 406.445 93.926 407.765 C 126.849 408.423 208.858 392.509 225.893 377.844 C 242.929 363.176 60.29 86.212 211.491 36.649"
+		style="fill-rule: nonzero; paint-order: fill; fill: url(#gradient-4-3); stroke-linecap: round; stroke-miterlimit: 12.28; stroke-linejoin: round; stroke-dasharray: 2; stroke: rgb(40, 40, 40); stroke-width: 10px;"></path>
+</svg>

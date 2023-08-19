@@ -3,19 +3,13 @@ import "@/styles/globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer.astro";
-import { Container } from "@/components/ui/container";
 
 interface Props {
-	frontmatter?: {
-		title: string;
-	};
 	title: string;
 }
 
-const { frontmatter, title } = Astro.props;
+const { title } = Astro.props;
 
-const isMarkdown = frontmatter !== undefined;
-const pageTitle = frontmatter?.title ?? title;
 ---
 
 <html lang="en">
@@ -24,19 +18,13 @@ const pageTitle = frontmatter?.title ?? title;
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{title}</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Navbar path={Astro.url.pathname} client:load />
 		<div class="h-20" />
 		<main class="flex-1">
-			{isMarkdown ? (
-				<Container className="prose dark:prose-invert">
-					<slot/>
-				</Container>
-			) : (
-				<slot/>
-			)}
+			<slot/>
 		</main>
 		<Footer />
 	</body>

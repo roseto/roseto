@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import prefetch from "@astrojs/prefetch";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercelEdge from "@astrojs/vercel/edge";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +14,5 @@ export default defineConfig({
     applyBaseStyles: false
   }), sitemap(), mdx(), prefetch(), image()],
   output: "server",
-  adapter: vercel(),
+  adapter: vercelEdge(),
 });

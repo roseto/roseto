@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{ 
+			"source": "https://:subdomain.roseto.space", 
+			"destination": "/:subdomain"
+		}
+	]
+}

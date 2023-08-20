@@ -12,7 +12,7 @@ import vercelEdge from "@astrojs/vercel/edge";
 export default defineConfig({
   integrations: [react(), tailwind({
     applyBaseStyles: false
-  }), sitemap(), mdx(), prefetch(), image()],
+  }), sitemap(), mdx(), prefetch()],
   output: "server",
   adapter: vercelEdge(),
 });

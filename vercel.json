@@ -1,8 +1,14 @@
 {
 	"rewrites": [
-		{ 
-			"source": "https://:subdomain.roseto.space", 
-			"destination": "/:subdomain"
+		{
+			"source": "/:path*",
+			"has": [
+				{
+					"type": "host",
+					"value": "(?<sub>.+)\\.roseto\\.space"
+				}
+			],
+			"destination": "/:sub/:path*"
 		}
 	]
 }

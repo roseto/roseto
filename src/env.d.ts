@@ -1,4 +1,4 @@
-/// <reference types="astro/client-image" />
+/// <reference types="astro/client" />
 
 interface ImportMetaEnv {
   readonly FIREBASE_PRIVATE_KEY_ID: string;

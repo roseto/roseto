@@ -1,6 +1,7 @@
 ---
 import { Separator } from "@/components/ui/separator";
 import StatusBadge from "@/components/StatusBadge";
+import CarbonBadge from "@/components/CarbonBadge.astro";
 ---
 
 
@@ -12,6 +13,7 @@ import StatusBadge from "@/components/StatusBadge";
 	</p>
 	
 	<StatusBadge client:load />
+	<CarbonBadge />
 
 	<div class="mt-2 flex flex-row items-center h-6 gap-4">
 		<a 
@@ -36,6 +38,35 @@ import StatusBadge from "@/components/StatusBadge";
 			<img 
 				src="https://cdn.simpleicons.org/instagram/000000/ffffff" 
 				alt="Instagram"
+				class="w-6 h-6 fill-muted-foreground"
+			/>
+		</a>
+
+		
+		<Separator orientation="vertical" className="bg-muted-foreground" />
+
+		<a 
+			href="https://x.com/rosetodotspace"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<img 
+				src="https://cdn.simpleicons.org/x/000000/ffffff" 
+				alt="X"
+				class="w-6 h-6 fill-muted-foreground"
+			/>
+		</a>
+
+		<Separator orientation="vertical" className="bg-muted-foreground" />
+
+		<a 
+			href="https://opencollective.com/roseto"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<img 
+				src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
+				alt="Open Collective"
 				class="w-6 h-6 fill-muted-foreground"
 			/>
 		</a>

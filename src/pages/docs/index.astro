@@ -1,0 +1,32 @@
+---
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+import Layout from "@/layouts/DefaultLayout.astro";
+import { getCollection } from "astro:content";
+
+const docsEntries = await getCollection("docs");
+
+export const prerender = true;
+---
+
+<Layout title="Docs">
+	<Container>
+		<Stack>
+			<h1 class="text-5xl font-bold">Docs</h1>
+
+			{docsEntries.map((entry) => (
+				<a
+					href={"/docs/" + entry.slug}
+				>
+					<Card>
+						<CardHeader>
+							<CardTitle>{entry.data.title}</CardTitle>
+							<CardDescription>{entry.data.description}</CardDescription>
+						</CardHeader>
+					</Card>
+				</a>
+			))}
+		</Stack>
+	</Container>
+</Layout>

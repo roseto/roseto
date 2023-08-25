@@ -1,0 +1,24 @@
+---
+import { GlobeIcon } from "@radix-ui/react-icons";
+import { Badge } from "./ui/badge";
+
+// We track this number manually
+const percentage = 79;
+---
+
+
+<a
+	href="https://websitecarbon.com/website/roseto.space"
+	target="_blank"
+	rel="noopener noreferrer"
+>
+	<Badge
+		variant="outline"
+		className="border-muted-foreground"
+	>
+		<GlobeIcon className="mr-2" />
+		<p>
+			Cleaner than <strong>{percentage}% of all websites</strong> 
+		</p>
+	</Badge>
+</a>

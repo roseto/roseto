@@ -34,7 +34,7 @@ export default function StatusBadge() {
 		>
 			<Badge
 				variant={data === "UP" ? "outline" : data === "HASISSUES" ? "destructive" : "secondary"}
-				className={data === "UP" ? "border-background" : ""}
+				className={data === "UP" ? "border-muted-foreground" : ""}
 			>
 				<div
 					className={`w-2 h-2 rounded-full mr-2 ${data === "UP" ? "bg-green-500" : data === "HASISSUES" ? "bg-red-500" : "bg-yellow-500"}`}

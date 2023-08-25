@@ -10,13 +10,6 @@ export default function Navbar({ path }: Props) {
 			<a href="/" className="mr-auto">
 				<img src="/logo.svg" alt="logo" className="w-8 h-8" />
 			</a>
-			<Button
-				variant="ghost"
-				disabled
-				className={`${path === "/dashboard" ? "text-primary" : ""}`}
-			>
-				Your Space
-			</Button>
 		</nav>
 	)
 }

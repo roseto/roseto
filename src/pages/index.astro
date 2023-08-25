@@ -2,9 +2,8 @@
 import Layout from "@/layouts/DefaultLayout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, GlobeIcon, Pencil2Icon, RocketIcon, RulerSquareIcon } from "@radix-ui/react-icons"; 
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon, Pencil2Icon, RocketIcon, RulerSquareIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import PopsMap from "@/components/PopsMap";
 import { Button } from "@/components/ui/button";
 
 export const prerender = true;
@@ -15,15 +14,14 @@ export const prerender = true;
 		<Container>
 			<Stack className="relative h-[80vh] justify-center items-center text-center">
 				<h1 class="text-7xl font-bold">
-					Create your {" "}
 					<span
 						class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary"
 					>
-						space
-					</span>
+						Growing
+					</span> is a necessity. Not an option.
 				</h1>
 				<p>
-					The easiest way to create your space online yet.
+					The self-improvement space you need.
 				</p>
 				<div
 					class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
@@ -47,28 +45,28 @@ export const prerender = true;
 			<div class="grid grid-cols-2 gap-2 justify-center">
 				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
-						<RocketIcon
+						<FrameIcon
 							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 						/>
 						<CardTitle className="mt-2 text-2xl">
-							Fast
+							Easy
 						</CardTitle>
 						<CardDescription>
-							Your space will be ready in seconds.
+							Our platform is easy to use.
 						</CardDescription>
 					</CardContent>
 				</Card>
 
 				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
-						<Pencil2Icon
+						<LockOpen2Icon
 							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 						/>
 						<CardTitle className="mt-2 text-2xl">
-							Simple
+							Open
 						</CardTitle>
 						<CardDescription>
-							No need to learn new things. Just post your content.
+							We are as open as possible.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -82,21 +80,21 @@ export const prerender = true;
 							Everwhere
 						</CardTitle>
 						<CardDescription>
-							Your space will be deployed all over the world.
+							Our platform is available everywhere.
 						</CardDescription>
 					</CardContent>
 				</Card>
 
 				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
-						<RulerSquareIcon
+						<MagicWandIcon
 							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 						/>
 						<CardTitle className="mt-2 text-2xl">
-							Responsive
+							Magical
 						</CardTitle>
 						<CardDescription>
-							Your space will look great on any device.
+							Our content is simply magical.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -105,19 +103,22 @@ export const prerender = true;
 			<h2
 				class="text-4xl font-bold text-center mt-8"
 			>
-				What do I get?
+				Why improve <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">yourself</span>?
 			</h2>
 			<ul class="text-center">
-				<li>A free website</li>
-				<li>A place to post your photos</li>
-				<li>A place to post your art</li>
-				<li>A place to share your music</li>
-				<li>A place to share your thoughts</li>
-				<li>A place to show your work</li>
-				<li>A place to share your projects</li>
-				<li>A place to pitch your ideas</li>
-				<li>A place to share your knowledge</li>
-				<li>Your own space online</li>
+				<li>Better health</li>
+				<li>Better relationships</li>
+				<li>Better finances</li>
+				<li>Control over your life</li>
+				<li>Better life</li>
+				<li>Live a happier life</li>
+				<li>Learn new skills</li>
+				<li>Solve your problems</li>
+				<li>Be more productive</li>
+				<li>Be more creative</li>
+				<li>Be more confident</li>
+				<li>Work on your goals</li>
+				<li>Be more successful</li>
 				<li>Do we need to say more?</li>
 			</ul>
 
@@ -129,41 +130,36 @@ export const prerender = true;
 			<Card className="bg-muted">
 				<CardHeader>
 					<CardTitle>
-						3 steps
+						Simple
 					</CardTitle>
 					<CardDescription>
-						Just 3 steps to create your space online.
+						Just start reading
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
-					<ol class="list-decimal list-inside">
-						<li>
-							Choose a name for your space.
-						</li>
-						<li>
-							Customize it to your liking.
-						</li>
-						<li>
-							Post your content.
-						</li>
-					</ol>
+					<p>
+						We offer guides and resources free of charge. You can read them and learn from them.
+						Yep, and it's free.
+					</p>
 				</CardContent>
 			</Card>
 
 			<h2
 				class="text-4xl font-bold text-center mt-8"
 			>
-				Where do we put your <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">space</span>?
+				From where can I <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">access</span> Roseto?
 			</h2>
 			<p
 				class="text-center"
 			>
-				Your space will be available all over the world.
+				Everywhere. This way you can access Roseto from anywhere pretty fast.
 			</p>
 
-			<div class="w-full h-[50vh] md:h-[75vh]">
-				<PopsMap client:only/>
-			</div>
+			<img 
+				src="/global-network.svg"
+				alt="Cloudflare Workers"
+				class="w-full"
+			/>
 
 			<Card className="p-16">
 				<Stack className="text-center items-center">

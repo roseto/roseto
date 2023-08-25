@@ -27,11 +27,11 @@ export const get: APIRoute = async ({ cookies, request, redirect }) => {
 
 	cookies.set("session", sessionCookie, { path: "/" });
 
-	const userRef = firestore.collection("users").doc(decodedToken.uid);
+	const userRef = firestore.collection("space").doc(decodedToken.uid);
 	const userDoc = await userRef.get();
 
 	if (!userDoc.exists) {
-		return redirect("/onboarding");
+		return redirect("/edit");
 	}
 
 	return redirect("/home")

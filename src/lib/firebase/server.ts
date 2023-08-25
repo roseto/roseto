@@ -49,20 +49,9 @@ export const getUser = async (app: App, cookies: AstroCookies) => {
 	}
 }
 
-export const getSpace = async (app: App, cookies: AstroCookies, username?: string) => {
+export const getCurrentUserSpace = async (app: App, cookies: AstroCookies) => {
 	const auth = getAuth(app);
 	const firestore = getFirestore(app);
-
-	if (username) {
-		const userRef = firestore.collection("spaces").where("username", "==", username);
-		const userDoc = await userRef.get();
-
-		if (!userDoc.empty) {
-			return userDoc.docs[0].data() as Space;
-		}
-
-		return null;
-	}
 
 	const signedIn = await getUser(app, cookies);
 
@@ -81,7 +70,20 @@ export const getSpace = async (app: App, cookies: AstroCookies, username?: strin
 	return spaceDoc.data() as Space;
 }
 
-export const createSpace = async (app: App, cookies: AstroCookies, space: Partial<Space>) => {
+export const getSpace = async (app: App, username: string) => {
+	const firestore = getFirestore(app);
+
+	const userRef = firestore.collection("spaces").where("username", "==", username);
+	const userDoc = await userRef.get();
+
+	if (!userDoc.empty) {
+		return userDoc.docs[0].data() as Space;
+	}
+
+	return null;
+}
+
+export const updateSpace = async (app: App, cookies: AstroCookies, space: Partial<Space>) => {
 	const auth = getAuth(app);
 	const firestore = getFirestore(app);
 
@@ -93,5 +95,8 @@ export const createSpace = async (app: App, cookies: AstroCookies, space: Partia
 	
 	const user = await auth.getUser(signedIn.uid);
 	const spaceRef = firestore.collection("spaces").doc(user.uid);
-	await spaceRef.set(space);
+	await spaceRef.set({
+		...space,
+		id: user.uid,
+	});
 }

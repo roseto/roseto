@@ -1,4 +1,5 @@
 /// <reference types="astro/client" />
+/// <reference types="@astrojs/image/client" />
 
 interface ImportMetaEnv {
   readonly FIREBASE_PRIVATE_KEY_ID: string;

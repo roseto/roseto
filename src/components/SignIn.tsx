@@ -16,20 +16,20 @@ export default function SignIn() {
 	const [phoneNumber, setPhoneNumber] = useState<E164Number>();
 	const [verificationCode, setVerificationCode] = useState<number>();
 	const [loading, setLoading] = useState(false);
+	const [verifier, setVerifier] = useState<RecaptchaVerifier | null>(null);
 
 	useEffect(() => {
 		if (!recaptcha) {
-
-			const verifier = new RecaptchaVerifier(auth, "recaptcha", {
+			setVerifier(new RecaptchaVerifier(auth, "recaptcha", {
 				size: 'invisible',
-			})
-
-			verifier.verify().then(() => setRecaptcha(verifier));
+			}))
 		}
 	}, []);
 
 
 	const sendVerificationCode = async () => {
+		await verifier?.verify().then(() => setRecaptcha(verifier));
+
 		const result = await signInWithPhoneNumber(auth, phoneNumber?.toString()!, recaptcha!)
 			.catch(error => {
 				console.error(error);

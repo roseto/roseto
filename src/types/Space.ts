@@ -3,6 +3,7 @@ export interface Space {
 	username: string;
 	name: string;
 	photoUrl: string;
+	description: string;
 
 	backgroundImageUrl?: string;
 	textAlign?: "left" | "center" | "right";

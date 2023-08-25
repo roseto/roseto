@@ -9,9 +9,15 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind({
-    applyBaseStyles: false
-  }), sitemap(), mdx(), prefetch()],
-  output: "server",
-  adapter: cloudflare()
+	integrations: [
+		react(), 
+		tailwind({
+			applyBaseStyles: false
+		}), 
+		sitemap(), 
+		mdx(), 
+		prefetch()
+	],
+	output: "server",
+	adapter: cloudflare()
 });

@@ -1,7 +1,5 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro";
-import Avatar from "@/components/Avatar";
-import { getEntry } from "astro:content";
 import { getCollection, CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 
@@ -26,32 +24,11 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const author = await getEntry(entry.data.author);
 ---
 
 <Layout title={entry.data.title}>
 	<Container>
 		<h1 class="text-5xl font-bold">{entry.data.title}</h1>
-		<a
-			class="flex items-center gap-2 my-4"
-			href={author.data.link}
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<Avatar
-				client:load
-				src={author.data.avatar}
-				alt={author.data.name.split(" ").map((name) => name[0]).join("")}
-			/>
-			<div>
-				<p>
-					{author.data.name}
-				</p>
-				<p class="text-sm text-muted-foreground">
-					{author.data.handle}
-				</p>
-			</div>
-		</a>
 		<div class="prose dark:prose-invert">
 			<Content />
 		</div>

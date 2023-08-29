@@ -1,7 +1,6 @@
 ---
 title: We are open
 description: How we are trying to be open in every way possible
-author: savin-angel-mario
 ---
 
 We are commited to being as open as possible. Roseto is not a 

@@ -2,20 +2,58 @@
 import Layout from "@/layouts/DefaultLayout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon, Pencil2Icon, RocketIcon, RulerSquareIcon } from "@radix-ui/react-icons"; 
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const prerender = true;
 ---
 
+<style scoped>
+	#bkg-blob::before {
+		content: "";
+		position: absolute;
+		aspect-ratio: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 60vw;
+		height: 60vw;
+		max-width: 300px;
+		max-height: 300px;
+		background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+		border-radius: 50%;
+		animation: blob 15s infinite linear;
+		filter: blur(32px);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		#bkg-blob::before {
+			opacity: 0.5;
+		}
+	}
+
+
+	@keyframes blob {
+		0% {
+			transform: translate(-45%, -55%) rotate(0deg) scale(1);
+		}
+		50% {
+			transform: translate(-50%, -50%) rotate(180deg) scale(1.2, 0.8);
+		}
+		100% {
+			transform: translate(-45%, -55%) rotate(360deg) scale(1);
+		}
+	}
+</style>
+
 <Layout title="Welcome">
-	<div id="vanta">
+	<div id="bkg-blob">
 		<Container>
 			<Stack className="relative h-[80vh] justify-center items-center text-center">
-				<h1 class="text-7xl font-bold">
+				<h1 class="text-5xl md:text-7xl font-bold">
 					<span
-						class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary"
+						class="bg-clip-text text-primary"
 					>
 						Growing
 					</span> is a necessity, not an option.
@@ -200,35 +238,3 @@ export const prerender = true;
 		</Stack>
 	</Container>
 </Layout>
-
-
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
-
-<script is:inline>
-	let bgDark = 0x09090b;
-	let bgLight = 0xffffff;
-
-	let bgColor = window.matchMedia("(prefers-color-scheme: dark)").matches ? bgDark : bgLight;
-
-	const effect = VANTA.DOTS({
-		el: "#vanta",
-		mouseControls: true,
-		touchControls: true,
-		gyroControls: false,
-		scale: 1.00,
-		scaleMobile: 1.00,
-		backgroundColor: bgColor,
-		showLines: false,
-		color: 0xD4668B,
-		chaos: 0.50,
-	});
-
-	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
-		bgColor = e.matches ? bgDark : bgLight;
-
-		effect.setOptions({
-			backgroundColor: bgColor,
-		});
-	});
-</script>

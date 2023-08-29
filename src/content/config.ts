@@ -4,7 +4,6 @@ const docsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
-		author: reference("authors"),
 		description: z.string(),
 	})
 });

@@ -1,7 +1,6 @@
 ---
 title: Our commitment to sustainability
 description: How we are trying to offer our platform using as much green energy as possible
-author: savin-angel-mario
 ---
 
 We are very commited to keeping our carbon footprint as small as possible.

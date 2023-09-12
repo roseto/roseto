@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/DefaultLayout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { Container } from "@/components/ui/container";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Stack } from "@/components/ui/stack";
+
+export async function getStaticPaths() {
+	const categories = await getCollection("categories");
+	
+	return categories.map((entry) => ({
+		params: {
+			category: entry.id,
+		},
+		props: {
+			entry
+		}
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<"categories">;
+}
+
+const { entry } = Astro.props;
+
+const guidesEntries = await getCollection("guides", ({ data }) => {
+	return data.category.id === entry.id;
+})
+---
+
+<Layout title={entry.data.name}>
+	<Container>
+		<Stack>
+			<h1 class="text-5xl font-bold">{entry.data.name}</h1>
+
+			{guidesEntries.map((e) => (
+				<a
+					href={"/" + e.slug}
+				>
+					<Card>
+						<CardHeader>
+							<CardTitle>{e.data.title}</CardTitle>
+							<CardDescription>{e.data.description}</CardDescription>
+						</CardHeader>
+					</Card>
+				</a>
+			))}
+		</Stack>
+	</Container>
+</Layout>

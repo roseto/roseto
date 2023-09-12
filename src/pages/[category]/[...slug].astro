@@ -4,11 +4,12 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 
 export async function getStaticPaths() {
-	const newsEntries = await getCollection("docs");
+	const guidesEntries = await getCollection("guides");
 	
-	return newsEntries.map((entry) => ({
+	return guidesEntries.map((entry) => ({
 		params: {
-			slug: entry.slug,
+			category: entry.data.category.id,
+			slug: entry.slug.replace(entry.data.category.id + "/", "")
 		},
 		props: {
 			entry
@@ -17,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-	entry: CollectionEntry<"docs">;
+	entry: CollectionEntry<"guides">;
 }
 
 const { entry } = Astro.props;

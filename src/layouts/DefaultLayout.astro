@@ -10,9 +10,15 @@ interface Props {
 		title: string;
 	};
 	title: string;
+	navbar?: {
+		buttons?: {
+			text: string;
+			href: string;
+		}[];
+	}
 }
 
-const { frontmatter, title } = Astro.props;
+const { frontmatter, title, navbar } = Astro.props;
 
 const isMarkdown = frontmatter !== undefined;
 const pageTitle = frontmatter?.title ?? title;
@@ -24,10 +30,10 @@ const pageTitle = frontmatter?.title ?? title;
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{pageTitle} &middot; Roseto</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} client:load />
+		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} />
 		<div class="h-20" />
 		<main class="flex-1">
 			{isMarkdown ? (

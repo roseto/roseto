@@ -5,8 +5,6 @@ import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-export const prerender = true;
 ---
 
 <style scoped>
@@ -47,7 +45,15 @@ export const prerender = true;
 	}
 </style>
 
-<Layout title="Welcome">
+<Layout 
+	title="Welcome"
+	navbar={{
+		buttons: [{
+			text: "Home",
+			href: "/home",
+		}]
+	}}
+>
 	<div id="bkg-blob">
 		<Container>
 			<Stack className="relative h-[80vh] justify-center items-center text-center">

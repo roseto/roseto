@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer.astro";
 import { Container } from "@/components/ui/container";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
 	frontmatter?: {
@@ -31,6 +32,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle} &middot; Roseto</title>
+		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} />

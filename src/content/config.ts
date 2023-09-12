@@ -1,6 +1,6 @@
 import { z, defineCollection, reference } from "astro:content";
 
-const docsCollection = defineCollection({
+const rosetoDocsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
@@ -27,18 +27,21 @@ const categoriesCollection = defineCollection({
 	})
 });
 
-const guidesCollection = defineCollection({
+const docsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
+		author: reference("authors"),
 		description: z.string(),
 		category: reference("categories"),
+		"additional-categories": z.array(reference("categories")).optional(),
 	})
 });
 
 export const collections = {
+	"roseto-docs": rosetoDocsCollection,
 	authors: authorsCollection,
 	categories: categoriesCollection,
 	docs: docsCollection,
-	guides: guidesCollection,
+	guides: docsCollection,
 }

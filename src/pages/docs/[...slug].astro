@@ -4,7 +4,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 
 export async function getStaticPaths() {
-	const newsEntries = await getCollection("docs");
+	const newsEntries = await getCollection("roseto-docs");
 	
 	return newsEntries.map((entry) => ({
 		params: {

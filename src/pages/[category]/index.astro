@@ -24,8 +24,16 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const guidesEntries = await getCollection("guides", ({ data }) => {
-	return data.category.id === entry.id;
+const guidesEntries = await getCollection("docs", ({ data }) => {
+	if (data.category.id === entry.id) {
+		return true;
+	}
+
+	if (data["additional-categories"]?.some((c) => c.id === entry.id)) {
+		return true;
+	}
+
+	return false;
 })
 ---
 

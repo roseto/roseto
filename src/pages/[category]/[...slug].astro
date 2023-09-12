@@ -1,33 +1,39 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
+import AuthorCard from "@/components/AuthorCard.astro";
 
 export async function getStaticPaths() {
-	const guidesEntries = await getCollection("guides");
+	const docsEntries = await getCollection("docs");
 	
-	return guidesEntries.map((entry) => ({
-		params: {
-			category: entry.data.category.id,
-			slug: entry.slug.replace(entry.data.category.id + "/", "")
-		},
-		props: {
-			entry
-		}
-	}));
+	return docsEntries.map((entry) => {
+		return {
+			params: {
+				category: entry.data.category.id,
+				slug: entry.slug.split("/").slice(1).join("/")
+			},
+			props: {
+				entry,
+			}
+		};
+	});
 }
 
 interface Props {
-	entry: CollectionEntry<"guides">;
+	entry: CollectionEntry<"docs">;
+	author: CollectionEntry<"authors">;
 }
 
 const { entry } = Astro.props;
+const author = await getEntry(entry.data.author);
 const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
 	<Container>
 		<h1 class="text-5xl font-bold">{entry.data.title}</h1>
+		<AuthorCard author={author} />
 		<div class="prose dark:prose-invert">
 			<Content />
 		</div>

@@ -1,0 +1,30 @@
+---import Avatar from './Avatar';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	author: CollectionEntry<"authors">
+}
+
+const { author } = Astro.props;
+---
+
+<a
+	class="flex items-center gap-2 my-4"
+	href={author.data.link}
+	target="_blank"
+	rel="noopener noreferrer"
+>
+	<Avatar
+		client:load
+		src={author.data.avatar}
+		alt={author.data.name.split(" ").map((name) => name[0]).join("")}
+	/>
+	<div>
+		<p>
+			{author.data.name}
+		</p>
+		<p class="text-sm text-muted-foreground">
+			{author.data.handle}
+		</p>
+	</div>
+</a>

@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stack } from "@/components/ui/stack";
@@ -24,7 +24,7 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const guidesEntries = await getCollection("docs", ({ data }) => {
+const rawEntries = await getCollection("docs", ({ data }) => {
 	if (data.category.id === entry.id) {
 		return true;
 	}
@@ -34,22 +34,36 @@ const guidesEntries = await getCollection("docs", ({ data }) => {
 	}
 
 	return false;
-})
+});
+
+// Get authors from guidesEntries and await getEntry for each author
+
+const docsEntries = await Promise.all(rawEntries.map(async (e) => ({
+	...e,
+	data: {
+		...e.data,
+		author: await getEntry(e.data.author)
+	}
+})));
+
 ---
 
 <Layout title={entry.data.name}>
 	<Container>
 		<Stack>
-			<h1 class="text-5xl font-bold">{entry.data.name}</h1>
+			<h1 class="text-5xl font-bold" transition:name={entry.data.name}>{entry.data.name}</h1>
 
-			{guidesEntries.map((e) => (
+			{docsEntries.map((e) => (
 				<a
 					href={"/" + e.slug}
 				>
 					<Card>
 						<CardHeader>
-							<CardTitle>{e.data.title}</CardTitle>
-							<CardDescription>{e.data.description}</CardDescription>
+							<CardTitle transition:name={e.data.title}>{e.data.title}</CardTitle>
+							<CardDescription>
+								<span transition:name={e.data.author.data.name}>{e.data.author.data.name}</span><br/>
+								<span transition:name={e.data.description}>{e.data.description}</span>
+							</CardDescription>
 						</CardHeader>
 					</Card>
 				</a>

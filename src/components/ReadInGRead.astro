@@ -1,0 +1,19 @@
+---
+import { ReaderIcon } from "@radix-ui/react-icons";
+import { Button } from "./ui/button";
+
+const { url } = Astro;
+---
+
+<a 
+	href={"https://gread.deno.dev/" + url}
+	target="_blank"
+	rel="noopener noreferrer"
+>
+	<Button
+		variant="outline"
+	>
+		<ReaderIcon className="mr-2"/>
+		Read in GRead
+	</Button>
+</a>

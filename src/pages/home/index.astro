@@ -24,11 +24,13 @@ const categories = await getCollection("categories");
 						<Card
 							className={`h-full ${category.data.disabled ? "opacity-50" : ""}`}
 						>
-							<CardContent className="text-center mt-8">
-								<h2 class="text-7xl font-bold">
+							<CardContent className="mt-8">
+								<h2 
+									class="text-7xl font-bold"
+								>
 									{category.data.emoji}
 								</h2>
-								<h2 class="text-2xl font-bold mt-4">{category.data.name}</h2>
+								<h2 class="text-2xl font-bold mt-4" transition:name={category.data.name}>{category.data.name}</h2>
 								{category.data.disabled && (
 									<p class="text-sm mt-2">
 										Coming soon

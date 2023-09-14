@@ -3,6 +3,8 @@ import Layout from "@/layouts/DefaultLayout.astro";
 import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import AuthorCard from "@/components/AuthorCard.astro";
+import ReadInGRead from "@/components/ReadInGRead.astro";
+import { Stack } from "@/components/ui/stack";
 
 export async function getStaticPaths() {
 	const docsEntries = await getCollection("docs");
@@ -32,10 +34,19 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
 	<Container>
-		<h1 class="text-5xl font-bold">{entry.data.title}</h1>
-		<AuthorCard author={author} />
-		<div class="prose dark:prose-invert">
-			<Content />
-		</div>
+		<Stack>
+			<h1 class="text-5xl font-bold" transition:name={entry.data.title}>{entry.data.title}</h1>
+			<p
+				class="text-sm text-muted-foreground"
+				transition:name={entry.data.description}
+			>
+				{entry.data.description}
+			</p>
+			<AuthorCard author={author} />
+			<ReadInGRead/>
+			<div class="prose dark:prose-invert">
+				<Content />
+			</div>
+		</Stack>
 	</Container>
 </Layout>

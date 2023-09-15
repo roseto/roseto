@@ -2,11 +2,15 @@
 import { ReaderIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 
-const { url } = Astro;
+interface Props {
+	path: string;
+}
+
+const { path } = Astro.props;
 ---
 
 <a 
-	href={"https://gread.deno.dev/" + url}
+	href={"https://gread.deno.dev/" + "https://roseto.space" + path}
 	target="_blank"
 	rel="noopener noreferrer"
 >

@@ -27,11 +27,10 @@ interface Props {
 	author: CollectionEntry<"authors">;
 }
 
+const { category, slug } = Astro.params;
 const { entry } = Astro.props;
 const author = await getEntry(entry.data.author);
 const { Content } = await entry.render();
-
-export const prerender = false;
 ---
 
 <Layout title={entry.data.title}>
@@ -45,7 +44,7 @@ export const prerender = false;
 				{entry.data.description}
 			</p>
 			<AuthorCard author={author} />
-			<ReadInGRead />
+			<ReadInGRead path={"/" + category + "/" + slug} />
 			<div class="prose dark:prose-invert">
 				<Content />
 			</div>

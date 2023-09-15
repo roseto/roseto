@@ -30,6 +30,8 @@ interface Props {
 const { entry } = Astro.props;
 const author = await getEntry(entry.data.author);
 const { Content } = await entry.render();
+
+export const prerender = false;
 ---
 
 <Layout title={entry.data.title}>
@@ -43,7 +45,7 @@ const { Content } = await entry.render();
 				{entry.data.description}
 			</p>
 			<AuthorCard author={author} />
-			<ReadInGRead/>
+			<ReadInGRead />
 			<div class="prose dark:prose-invert">
 				<Content />
 			</div>

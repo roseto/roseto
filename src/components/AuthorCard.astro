@@ -20,7 +20,7 @@ const { author } = Astro.props;
 		alt={author.data.name.split(" ").map((name) => name[0]).join("")}
 	/>
 	<div>
-		<p transition:name={author.data.name}>
+		<p transition:name={author.id}>
 			{author.data.name}
 		</p>
 		<p class="text-sm text-muted-foreground">

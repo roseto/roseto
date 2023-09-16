@@ -24,7 +24,7 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const rawEntries = await getCollection("docs", ({ data }) => {
+const rawEntries = await getCollection("knowledge", ({ data }) => {
 	if (data.category.id === entry.id) {
 		return true;
 	}
@@ -36,9 +36,7 @@ const rawEntries = await getCollection("docs", ({ data }) => {
 	return false;
 });
 
-// Get authors from guidesEntries and await getEntry for each author
-
-const docsEntries = await Promise.all(rawEntries.map(async (e) => ({
+const knowledgeEntries = await Promise.all(rawEntries.map(async (e) => ({
 	...e,
 	data: {
 		...e.data,
@@ -51,18 +49,18 @@ const docsEntries = await Promise.all(rawEntries.map(async (e) => ({
 <Layout title={entry.data.name}>
 	<Container>
 		<Stack>
-			<h1 class="text-5xl font-bold" transition:name={entry.data.name}>{entry.data.name}</h1>
+			<h1 class="text-5xl font-bold" transition:name={entry.id + "title"}>{entry.data.name}</h1>
 
-			{docsEntries.map((e) => (
+			{knowledgeEntries.map((e) => (
 				<a
-					href={"/" + e.slug}
+					href={"/knowledge/" + e.slug}
 				>
 					<Card>
 						<CardHeader>
-							<CardTitle transition:name={e.data.title}>{e.data.title}</CardTitle>
+							<CardTitle transition:name={e.id + "title"}>{e.data.title}</CardTitle>
 							<CardDescription>
-								<span transition:name={e.data.author.data.name}>{e.data.author.data.name}</span><br/>
-								<span transition:name={e.data.description}>{e.data.description}</span>
+								<span transition:name={e.data.author.id}>{e.data.author.data.name}</span><br/>
+								<span transition:name={e.id + "description"}>{e.data.description}</span>
 							</CardDescription>
 						</CardHeader>
 					</Card>

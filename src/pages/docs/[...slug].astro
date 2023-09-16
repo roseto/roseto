@@ -4,7 +4,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 
 export async function getStaticPaths() {
-	const newsEntries = await getCollection("roseto-docs");
+	const newsEntries = await getCollection("docs");
 	
 	return newsEntries.map((entry) => ({
 		params: {
@@ -26,7 +26,7 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
 	<Container>
-		<h1 class="text-5xl font-bold">{entry.data.title}</h1>
+		<h1 class="text-5xl font-bold" transition:name={entry.id + "title"}>{entry.data.title}</h1>
 		<div class="prose dark:prose-invert">
 			<Content />
 		</div>

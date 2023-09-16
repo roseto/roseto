@@ -9,17 +9,22 @@ const categories = await getCollection("categories");
 ---
 
 <Layout 
-	title="Home"
+	title="Knowledge"
 >
 	<Container>
 		<Stack>
-			<h1 class="text-5xl font-bold">Home</h1>
+			<h1 class="text-5xl font-bold">Knowledge</h1>
+			<p>
+				Here you can find all the knowledge we have gathered over the years. I
+				am always learning new things and I will try to keep this page updated
+				with the latest information.
+			</p>
 			<div
 				class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8"
 			>
 				{categories.map((category) => (
 					<a
-						href={category.data.disabled ? undefined : "/" + category.id}
+						href={category.data.disabled ? undefined : "/knowledge/" + category.id}
 					>
 						<Card
 							className={`h-full ${category.data.disabled ? "opacity-50" : ""}`}
@@ -30,7 +35,7 @@ const categories = await getCollection("categories");
 								>
 									{category.data.emoji}
 								</h2>
-								<h2 class="text-2xl font-bold mt-4" transition:name={category.data.name}>{category.data.name}</h2>
+								<h2 class="text-2xl font-bold mt-4" transition:name={category.id + "title"}>{category.data.name}</h2>
 								{category.data.disabled && (
 									<p class="text-sm mt-2">
 										Coming soon

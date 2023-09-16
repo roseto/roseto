@@ -49,8 +49,8 @@ import { Button } from "@/components/ui/button";
 	title="Welcome"
 	navbar={{
 		buttons: [{
-			text: "Home",
-			href: "/home",
+			text: "Knowledge",
+			href: "/knowledge",
 		}]
 	}}
 >
@@ -84,7 +84,23 @@ import { Button } from "@/components/ui/button";
 			<h2
 				class="text-4xl font-bold text-center"
 			>
-				Why use <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Roseto</span>?
+				What happened to Profiteri (Ciorogarla Unita)?
+			</h2>
+			
+			<Card>
+				<CardContent className="mt-6">
+					<p>
+						We decided to invest more time and effort into Profiteri (Ciorogarla Unita) and make it more
+						than just a collective of people. We want to make it a community, a network of people that
+						share the same values and beliefs.
+					</p>
+				</CardContent>
+			</Card>
+
+			<h2
+				class="text-4xl font-bold text-center"
+			>
+				Why <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Roseto</span>?
 			</h2>
 			<div class="grid grid-cols-2 gap-2 justify-center">
 				<Card>
@@ -93,10 +109,10 @@ import { Button } from "@/components/ui/button";
 							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 						/>
 						<CardTitle className="mt-2 text-2xl">
-							Easy
+							Solid foundation
 						</CardTitle>
 						<CardDescription>
-							Our platform is easy to use.
+							We are built on privacy, security, freedom, sustainability, development, and community.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -110,7 +126,7 @@ import { Button } from "@/components/ui/button";
 							Open
 						</CardTitle>
 						<CardDescription>
-							We are as open as possible.
+							We are as open as possible. From our code, to the money we make, to our plans.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -124,7 +140,7 @@ import { Button } from "@/components/ui/button";
 							Everwhere
 						</CardTitle>
 						<CardDescription>
-							Our platform is available everywhere.
+							While we are based in Romania, we are doing our best to extend our reach to the entire world.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -138,7 +154,7 @@ import { Button } from "@/components/ui/button";
 							Magical
 						</CardTitle>
 						<CardDescription>
-							Our content is simply magical.
+							We are trying to make the world a better place. We are trying to make magic happen.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -147,46 +163,22 @@ import { Button } from "@/components/ui/button";
 			<h2
 				class="text-4xl font-bold text-center mt-8"
 			>
-				Why improve <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">yourself</span>?
+				We share our <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">knowledge</span>
 			</h2>
-			<ul class="text-center">
-				<li>Better health</li>
-				<li>Better relationships</li>
-				<li>Better finances</li>
-				<li>Control over your life</li>
-				<li>Better life</li>
-				<li>Live a happier life</li>
-				<li>Learn new skills</li>
-				<li>Solve your problems</li>
-				<li>Be more productive</li>
-				<li>Be more creative</li>
-				<li>Be more confident</li>
-				<li>Work on your goals</li>
-				<li>Be more successful</li>
-				<li>Do we need to say more?</li>
-			</ul>
-
-			<h2
-				class="text-4xl font-bold text-center mt-8"
+			<p
+				class="text-center"
 			>
-				Alright, how does it <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">work</span>?
-			</h2>
-			<Card className="bg-muted">
-				<CardHeader>
-					<CardTitle>
-						Simple
-					</CardTitle>
-					<CardDescription>
-						Just start reading
-					</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<p>
-						We offer guides and resources free of charge. You can read them and learn from them.
-						Yep, and it's free.
-					</p>
-				</CardContent>
-			</Card>
+				We are keen on sharing knowledge with the world. We are doing this through our collection 
+				of articles, tutorials, guides and resources. Think you can contribute? Join us!
+			</p>
+
+			<a 
+				href="/knowledge"
+			>
+				<Button className="w-full">
+					Knowledge Collection
+				</Button>
+			</a>
 
 			<h2
 				class="text-4xl font-bold text-center mt-8"
@@ -219,28 +211,6 @@ import { Button } from "@/components/ui/button";
 					</CardHeader>
 				</Card>
 			</a>
-
-			<Card className="p-16">
-				<Stack className="text-center items-center">
-					<h2
-						class="text-7xl font-bold text-center"
-					>
-						Coming <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">soon</span>
-					</h2>
-					<p>
-						We are working hard to make Roseto available for everyone.
-					</p>
-					<a
-						href="https://formate.angelmario.eu/f/sign-up-for-roseto"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Button>
-							Sign up
-						</Button>
-					</a>
-				</Stack>
-			</Card>
 		</Stack>
 	</Container>
 </Layout>

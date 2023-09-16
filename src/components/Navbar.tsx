@@ -8,9 +8,9 @@ interface Props {
 	}[]
 }
 
-export default function Navbar({ path, buttons }: Props) {
+export default function Navbar({ buttons }: Props) {
 	return (
-		<nav className="fixed w-full p-4 border-b flex flex-row z-50 bg-background items-center shadow">
+		<nav className="top-0 left-0 fixed w-full p-4 border-b flex flex-row z-50 bg-background items-center shadow">
 			<a href="/" className="mr-auto">
 				<img src="/logo.svg" alt="logo" className="w-8 h-8" />
 			</a>

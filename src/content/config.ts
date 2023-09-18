@@ -38,10 +38,19 @@ const knowledgeCollection = defineCollection({
 	})
 });
 
+const projectsCollection = defineCollection({
+	type: "data",
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		link: z.string().url(),
+	})
+});
+
 export const collections = {
 	docs: docsCollection,
 	authors: authorsCollection,
 	categories: categoriesCollection,
 	knowledge: knowledgeCollection,
-	guides: docsCollection,
+	projects: projectsCollection,
 }

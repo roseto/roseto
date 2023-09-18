@@ -5,6 +5,9 @@ import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
 ---
 
 <style scoped>
@@ -96,7 +99,40 @@ import { Button } from "@/components/ui/button";
 					</p>
 				</CardContent>
 			</Card>
-
+		</Stack>
+	</Container>
+	<Container
+		className="bg-gradient-to-b from-primary to-secondary rounded-xl mt-8"
+	>
+		<h2
+			class="text-4xl font-bold text-center text-primary-foreground py-8"
+		>
+			Projects
+		</h2>
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center pb-4"
+		>
+			{projects.map((project) => (
+				<a
+					href={project.data.link}
+					target="_blank"
+				>
+					<Card>
+						<CardHeader>
+							<CardTitle>
+								{project.data.title}
+							</CardTitle>
+							<CardDescription>
+								{project.data.description}
+							</CardDescription>
+						</CardHeader>
+					</Card>
+				</a>
+			))}
+		</div>
+	</Container>
+	<Container>
+		<Stack className="mt-8">
 			<h2
 				class="text-4xl font-bold text-center"
 			>

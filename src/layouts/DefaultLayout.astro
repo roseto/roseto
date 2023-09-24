@@ -31,6 +31,8 @@ const pageTitle = frontmatter?.title ?? title;
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(0 0% 100%)" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 7%)" />
 		<title>{pageTitle} &middot; Roseto</title>
 		<ViewTransitions />
 	</head>

@@ -28,6 +28,19 @@ const projects = await getCollection("projects");
 		filter: blur(32px);
 	}
 
+	#bkg-blob::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+		background: rgba(255, 255, 255, 0.1) var(--grain);
+		mix-blend-mode: overlay;
+		background-blend-mode: overlay;
+	}
+
 	@media (prefers-color-scheme: dark) {
 		#bkg-blob::before {
 			opacity: 0.5;

@@ -8,15 +8,16 @@ const docsCollection = defineCollection({
 	})
 });
 
-const authorsCollection = defineCollection({
+const contributorsCollection = defineCollection({
 	type: "data",
 	schema: z.object({
 		name: z.string(),
 		avatar: z.string().url(),
 		handle: z.string(),
 		link: z.string().url(),
+		core: z.boolean().optional()
 	})
-});
+})
 
 const categoriesCollection = defineCollection({
 	type: "data",
@@ -31,7 +32,7 @@ const knowledgeCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
-		author: reference("authors"),
+		authors: z.array(reference("contributors")),
 		description: z.string(),
 		category: reference("categories"),
 		"additional-categories": z.array(reference("categories")).optional(),
@@ -49,7 +50,6 @@ const projectsCollection = defineCollection({
 
 export const collections = {
 	docs: docsCollection,
-	authors: authorsCollection,
 	categories: categoriesCollection,
 	knowledge: knowledgeCollection,
 	projects: projectsCollection,

@@ -1,7 +1,8 @@
 ---
 title: Your second brain
 description: How we can use Obsidian as our second brain
-author: savin-angel-mario
+authors: 
+    - savin-angel-mario
 category: tech
 ---
 

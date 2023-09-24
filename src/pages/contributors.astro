@@ -1,0 +1,52 @@
+---
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+import Layout from "@/layouts/DefaultLayout.astro";
+import { getCollection } from "astro:content";
+
+
+const coreTeam = await getCollection("contributors", ({ data }) => data.core);
+---
+
+<Layout title="Contributors">
+	<Container>
+		<Stack>
+			<h1
+				class="text-5xl font-bold"
+			>
+				Who contributed to Roseto?
+			</h1>
+			<p>
+				At Roseto, we consider every contribution as a gift. We are grateful to all the people who 
+				have contributed to the project, whether they have contributed to the code, the documentation, 
+				the design, the community, or anything else.
+			</p>
+			
+			<h2
+				class="text-3xl font-bold"
+			>
+				Core Team
+			</h2>
+			<div
+				class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+			>
+				{coreTeam.map((contributor) => (
+					<a
+						class="flex flex-col items-center justify-center"
+						href={contributor.data.link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img 
+							src={contributor.data.avatar} 
+							alt={contributor.data.name} 
+							class="w-16 h-16 rounded-full"
+						/>
+						<h3>{contributor.data.name}</h3>
+						<p class="text-sm text-muted-foreground">{contributor.data.handle}</p>
+					</a>
+				))}
+			</div>
+		</Stack>
+	</Container>
+</Layout>

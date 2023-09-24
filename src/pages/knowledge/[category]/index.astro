@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro";
-import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry, getEntries } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stack } from "@/components/ui/stack";
@@ -40,7 +40,7 @@ const knowledgeEntries = await Promise.all(rawEntries.map(async (e) => ({
 	...e,
 	data: {
 		...e.data,
-		author: await getEntry(e.data.author)
+		authors: await getEntries(e.data.authors)
 	}
 })));
 
@@ -59,7 +59,9 @@ const knowledgeEntries = await Promise.all(rawEntries.map(async (e) => ({
 						<CardHeader>
 							<CardTitle transition:name={e.id + "title"}>{e.data.title}</CardTitle>
 							<CardDescription>
-								<span transition:name={e.data.author.id}>{e.data.author.data.name}</span><br/>
+								{e.data.authors.map((author) => (
+									<span transition:name={author.id}>{author.data.name}</span>
+								)).reduce((prev, curr) => [prev, ", ", curr])}<br />
 								<span transition:name={e.id + "description"}>{e.data.description}</span>
 							</CardDescription>
 						</CardHeader>

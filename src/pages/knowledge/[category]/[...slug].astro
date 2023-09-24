@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/DefaultLayout.astro";
-import { getCollection, type CollectionEntry, getEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry, getEntries } from "astro:content";
 import { Container } from "@/components/ui/container";
 import AuthorCard from "@/components/AuthorCard.astro";
 import ReadInGRead from "@/components/ReadInGRead.astro";
@@ -24,12 +24,12 @@ export async function getStaticPaths() {
 
 interface Props {
 	entry: CollectionEntry<"knowledge">;
-	author: CollectionEntry<"authors">;
+	author: CollectionEntry<"contributors">;
 }
 
 const { category, slug } = Astro.params;
 const { entry } = Astro.props;
-const author = await getEntry(entry.data.author);
+const authors = await getEntries(entry.data.authors);
 const { Content } = await entry.render();
 ---
 
@@ -43,7 +43,15 @@ const { Content } = await entry.render();
 			>
 				{entry.data.description}
 			</p>
-			<AuthorCard author={author} />
+			<div>
+				{authors.length ? (
+					<div class="flex space-x-4">
+						{authors.map((author) => (
+							<AuthorCard author={author} />
+						))}
+					</div>
+				) : null}
+			</div>
 			<ReadInGRead path={"/" + category + "/" + slug} />
 			<div class="prose dark:prose-invert">
 				<Content />

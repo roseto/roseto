@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import { Card, CardContent, CardHeader, CardDescription, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+
+
+const contributors = await getCollection("contributors")
+---
+
+<hr class="my-8"/>
+
+<Card>
+	<CardHeader>
+		<CardTitle>
+			Our Contributors
+		</CardTitle>
+		<CardDescription>
+			These are the people who have contributed to the Roseto.
+		</CardDescription>
+	</CardHeader>
+
+	<CardContent>
+		<div class="flex flex-wrap flex-row gap-4 items-center justify-center">
+			{contributors.map((contributor) => (
+				<a
+					href={contributor.data.link}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						class="rounded-full w-12 h-12 object-cover"
+						src={contributor.data.avatar}
+					/>
+				</a>
+			))}
+		</div>
+		<a
+			href="/contributors"
+		>
+			<Button
+				variant="outline"
+				className="w-full mt-4"
+			>
+				See all contributors
+			</Button>
+		</a>
+	</CardContent>
+</Card>
+
+<hr class="my-8"/>

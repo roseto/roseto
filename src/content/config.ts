@@ -13,7 +13,6 @@ const contributorsCollection = defineCollection({
 	schema: z.object({
 		name: z.string(),
 		avatar: z.string().url(),
-		handle: z.string(),
 		link: z.string().url(),
 		core: z.boolean().optional()
 	})
@@ -51,6 +50,7 @@ const projectsCollection = defineCollection({
 export const collections = {
 	docs: docsCollection,
 	categories: categoriesCollection,
+	contributors: contributorsCollection,
 	knowledge: knowledgeCollection,
 	projects: projectsCollection,
 }

@@ -6,6 +6,7 @@ import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getCollection } from "astro:content";
+import Contributors from "@/components/Contributors.astro";
 
 const projects = await getCollection("projects");
 ---
@@ -221,6 +222,8 @@ const projects = await getCollection("projects");
 					Knowledge Collection
 				</Button>
 			</a>
+
+			<Contributors />
 
 			<h2
 				class="text-4xl font-bold text-center mt-8"

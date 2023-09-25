@@ -14,7 +14,7 @@ const contributorsCollection = defineCollection({
 		name: z.string(),
 		avatar: z.string().url(),
 		link: z.string().url(),
-		core: z.boolean().optional()
+		core: z.boolean().optional(),
 	})
 })
 

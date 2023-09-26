@@ -27,17 +27,6 @@ const categoriesCollection = defineCollection({
 	})
 });
 
-const knowledgeCollection = defineCollection({
-	type: "content",
-	schema: z.object({
-		title: z.string(),
-		authors: z.array(reference("contributors")),
-		description: z.string(),
-		category: reference("categories"),
-		"additional-categories": z.array(reference("categories")).optional(),
-	})
-});
-
 const projectsCollection = defineCollection({
 	type: "data",
 	schema: z.object({
@@ -51,6 +40,5 @@ export const collections = {
 	docs: docsCollection,
 	categories: categoriesCollection,
 	contributors: contributorsCollection,
-	knowledge: knowledgeCollection,
 	projects: projectsCollection,
 }

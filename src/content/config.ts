@@ -1,4 +1,4 @@
-import { z, defineCollection, reference } from "astro:content";
+import { z, defineCollection } from "astro:content";
 
 const docsCollection = defineCollection({
 	type: "content",
@@ -12,7 +12,7 @@ const contributorsCollection = defineCollection({
 	type: "data",
 	schema: z.object({
 		name: z.string(),
-		avatar: z.string().url(),
+		avatar: z.string(),
 		link: z.string().url(),
 		core: z.boolean().optional(),
 	})

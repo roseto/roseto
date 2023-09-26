@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { getCollection } from "astro:content";
 import Contributors from "@/components/Contributors.astro";
+import Tiers from "@/components/Tiers.astro";
 
 const projects = await getCollection("projects");
 ---
@@ -31,6 +32,7 @@ const projects = await getCollection("projects");
 
 	#bkg-blob::after {
 		content: "";
+		pointer-events: none;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -212,7 +214,15 @@ const projects = await getCollection("projects");
 				</Card>
 			</div>
 
+		</Stack>
+	</Container>
+
+	<Tiers />
+
+	<Container>
+		<Stack>
 			<Contributors />
+
 
 			<!--
 			<h2

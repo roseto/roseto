@@ -36,9 +36,23 @@ const projectsCollection = defineCollection({
 	})
 });
 
+const tiersCollection = defineCollection({
+	type: "data",
+	schema: z.object({
+		name: z.string(),
+		description: z.string(),
+		type: z.enum(["service", "product", "donation", "sponsor"]),
+		more: z.string().optional(),
+		interval: z.enum(["once", "monthly"]),
+		link: z.string().url(),
+		amount: z.number().gt(0),
+	})
+})
+
 export const collections = {
 	docs: docsCollection,
 	categories: categoriesCollection,
 	contributors: contributorsCollection,
 	projects: projectsCollection,
+	tiers: tiersCollection
 }

@@ -17,7 +17,7 @@ const tiers = await getCollection("tiers")
 </Container>
 
 <div
-	class="mt-4 px-4 flex flex-row gap-2 flex-nowrap overflow-x-scroll"
+	class="mt-4 p-4 mx-auto max-w-screen-lg flex flex-row gap-2 flex-nowrap overflow-x-scroll"
 >
 	{tiers.map((tier) => (
 		<TierCard tier={tier}/>

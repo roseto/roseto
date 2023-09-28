@@ -30,6 +30,7 @@ const contributors = await getCollection("contributors")
 					<img
 						class="rounded-full w-12 h-12 object-cover"
 						src={contributor.data.avatar}
+						alt={contributor.data.name}
 						loading="lazy"
 					/>
 				</a>

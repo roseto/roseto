@@ -57,7 +57,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} />
+		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} transition:persist />
 		<div class="h-20" />
 		<main class="flex-1">
 			{isMarkdown ? (
@@ -68,6 +68,6 @@ const pageTitle = frontmatter?.title ?? title;
 				<slot/>
 			)}
 		</main>
-		<Footer />
+		<Footer transition:persist />
 	</body>
 </html>

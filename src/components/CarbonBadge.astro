@@ -5,7 +5,8 @@ import { Badge } from "./ui/badge";
 // We track this number manually
 
 let percentage: number;
-const res = await fetch("https://api.websitecarbon.com/site?url=https://roseto.space");
+const res = await fetch("https://api.websitecarbon.com/site?url=https://roseto.space")
+	.catch(() => ({ ok: false }))
 
 
 
@@ -14,7 +15,7 @@ if (res.ok) {
 
 	percentage = data.cleanerThan * 100;
 } else {
-	throw new Error("Could not fetch carbon footprint")
+	percentage = 98
 }
 ---
 

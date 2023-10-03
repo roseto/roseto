@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { ExclamationTriangleIcon, InfoCircledIcon } from "@radix-ui/react-icons";
 
 interface Props {
-	type: "info" | "error"
+	type?: "info" | "error"
 }
 
 function Hint({ className, type, ...props }: JSX.IntrinsicElements["div"] & Props) {

@@ -2,11 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
+import { Hint } from "@/components/ui/hint";
 import { Input } from "@/components/ui/input";
 import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/DefaultLayout.astro";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { getEntry, type CollectionEntry } from "astro:content";
+
+export const prerender = false;
 
 const id = new URL(Astro.request.url).searchParams.get("id");
 let error = false;
@@ -67,13 +70,21 @@ if (id) {
 							name="id"
 							type="text"
 							required
-							className="text-8xl !p-16 !text-center"
+							autoComplete="off"
+							autoCapitalize="on"
+							autoCorrect="off"
+							autoFocus
+							className="text-8xl !p-16 !text-center uppercase"
+							pattern="[A-Za-z1-9]{3}"
 							maxLength={3}
 							minLength={3}
 						/>
+						<Hint className="mt-1">
+							The ID is made up of 3 characters containing letters A to Z and numbers 1 to 9.
+						</Hint>
 
 						<Button
-							className="mt-2 w-full"
+							className="mt-4 w-full"
 							type="submit"
 						>
 							Check

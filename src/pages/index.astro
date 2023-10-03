@@ -4,7 +4,6 @@ import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { getCollection } from "astro:content";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
@@ -68,6 +67,10 @@ const projects = await getCollection("projects");
 	title="Welcome"
 	navbar={{
 		buttons: [
+			{
+				text: "Check diploma",
+				href: "/check"
+			},
 			{
 				text: "Docs",
 				href: "/docs"

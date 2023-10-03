@@ -18,6 +18,15 @@ const contributorsCollection = defineCollection({
 	})
 })
 
+const diplomasCollection = defineCollection({
+	type: "data",
+	schema: z.object({
+		id: z.string().length(3),
+		status: z.enum(["ok", "cancelled"]),
+		name: z.string()
+	})
+});
+
 const categoriesCollection = defineCollection({
 	type: "data",
 	schema: z.object({
@@ -53,6 +62,7 @@ export const collections = {
 	docs: docsCollection,
 	categories: categoriesCollection,
 	contributors: contributorsCollection,
+	diplomas: diplomasCollection,
 	projects: projectsCollection,
 	tiers: tiersCollection
 }

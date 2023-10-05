@@ -1,5 +1,5 @@
 ---
-import Layout from "@/layouts/DefaultLayout.astro"
+import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
@@ -27,20 +27,6 @@ const projects = await getCollection("projects");
 		border-radius: 50%;
 		animation: blob 15s infinite linear;
 		filter: blur(32px);
-	}
-
-	#bkg-blob::after {
-		content: "";
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.25;
-		background: rgba(255, 255, 255, 0.1) var(--grain);
-		mix-blend-mode: overlay;
-		background-blend-mode: overlay;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -157,7 +143,7 @@ const projects = await getCollection("projects");
 			<h2
 				class="text-4xl font-bold text-center"
 			>
-				Why <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Roseto</span>?
+				Why <span class="bg-clip-text text-transparent bg-primary">Roseto</span>?
 			</h2>
 			<div class="grid grid-cols-2 gap-2 justify-center">
 				<Card>
@@ -246,20 +232,23 @@ const projects = await getCollection("projects");
 			/>
 			-->
 
-			<a 
-				href="/docs"
-			>
-				<Card>
-					<CardHeader>
-						<CardTitle>
-							Docs
-						</CardTitle>
-						<CardDescription>
-							Find out more about Roseto
-						</CardDescription>
-					</CardHeader>
-				</Card>
-			</a>
+			<Card>
+				<CardHeader>
+					<CardTitle>
+						About
+					</CardTitle>
+					<CardDescription>
+						Roseto is a dynamic and forward-thinking group committed
+						to empowering the youth while fostering the digital transformation 
+						of local communities and businesses. With a passion for innovation
+						and community development, we strive to bridge the gap between
+						technology and local needs, ensuring that the younger generation
+						has the tools and opportunities they need to thrive in today's
+						digital age. Join us in our mission to create a brighter, more
+						connected future for all.
+					</CardDescription>
+				</CardHeader>
+			</Card>
 		</Stack>
 	</Container>
 </Layout>

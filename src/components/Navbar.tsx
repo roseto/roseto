@@ -1,3 +1,4 @@
+import { useScrollTrigger } from "@/hooks/useScrollTrigger";
 import { Button } from "./ui/button";
 
 interface Props {
@@ -9,8 +10,14 @@ interface Props {
 }
 
 export default function Navbar({ buttons }: Props) {
+	const scrollTrigger = useScrollTrigger(56);
+
 	return (
-		<nav className="top-0 left-0 fixed w-full p-4 h-16 border-b flex flex-row z-50 bg-background items-center shadow">
+		<nav 
+			className={
+				"top-0 left-0 fixed w-full p-4 h-16 flex flex-row z-50 border-b bg-background items-center transition " + 
+				(scrollTrigger ? "border-muted shadow" : "border-transparent")}
+		>
 			<a href="/" className="mr-auto">
 				<img src="/logo.svg" alt="logo" className="w-8 h-8" />
 			</a>

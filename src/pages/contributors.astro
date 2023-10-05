@@ -2,7 +2,7 @@
 import { Container } from "@/components/ui/container";
 import { Hint } from "@/components/ui/hint";
 import { Stack } from "@/components/ui/stack";
-import Layout from "@/layouts/DefaultLayout.astro";
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 
@@ -27,7 +27,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			<h2
 				class="mt-8 text-3xl font-bold"
 			>
-				Core Team
+				Roseto Group
 			</h2>
 
 			<Hint>

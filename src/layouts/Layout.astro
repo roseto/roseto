@@ -32,7 +32,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(0 0% 100%)" />
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 7%)" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 12%)" />
 		{Astro.url.pathname === "/" ?
 			<title>Roseto — Growing is a necessity, not an option.</title>
 			:
@@ -57,7 +57,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} transition:persist />
+		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load transition:persist />
 		<div class="h-20" />
 		<main class="flex-1">
 			{isMarkdown ? (

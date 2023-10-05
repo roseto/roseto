@@ -1,5 +1,6 @@
 ---
 import { Container } from "@/components/ui/container";
+import { Hint } from "@/components/ui/hint";
 import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/DefaultLayout.astro";
 import { getCollection } from "astro:content";
@@ -28,6 +29,11 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			>
 				Core Team
 			</h2>
+
+			<Hint>
+				"Roseto Group" and "Roseto Contributors"
+			</Hint>
+
 			<div
 				class="flex flex-row flex-wrap gap-4"
 			>
@@ -55,6 +61,11 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			>
 				Contributors
 			</h2>
+
+			<Hint>
+				"Roseto Contributors"
+			</Hint>
+
 			<div
 				class="flex flex-row flex-wrap gap-4"
 			>

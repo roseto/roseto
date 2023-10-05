@@ -1,0 +1,43 @@
+---
+import { readFile } from "fs/promises";
+import { marked } from "marked";
+import Layout from "@/layouts/DefaultLayout.astro";
+import { Stack } from "@/components/ui/stack";
+import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { DownloadIcon } from "@radix-ui/react-icons";
+
+const license = await readFile("./LICENSE", "utf8");
+const content = marked.parse(license);
+---
+
+<Layout title="License">
+	<Container>
+		<Stack>
+			<h1
+				class="text-5xl font-bold"
+			>
+				License
+			</h1>
+
+			<p>
+				Roseto's code and resources is licensed under the MIT license. 
+				We are still working on transfering all code and resources created by
+				Roseto to this license.
+			</p>
+
+			<code class="bg-card rounded grainy p-4 prose dark:prose-invert" set:html={content}/>
+			<a
+				href={"data:text/plain;charset=utf-8," + encodeURIComponent(license)}
+				download="license.txt"
+			>
+				<Button
+					variant="secondary"	
+				>
+					<DownloadIcon className="mr-2 w-4 h-4"/>
+					Download license
+				</Button>
+			</a>
+		</Stack>
+	</Container>
+</Layout>

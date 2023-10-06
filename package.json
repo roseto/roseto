@@ -3,10 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "bun -b astro dev",
+    "start": "bun -b astro dev",
+    "build": "bun -b astro build",
+    "preview": "bun -b astro preview",
     "astro": "astro"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.12",
+    "bun-types": "^1.0.5-canary.20231006T140143",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "marked": "^9.1.0",

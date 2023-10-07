@@ -1,0 +1,64 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+import { CalendarIcon, DrawingPinIcon } from "@radix-ui/react-icons";
+
+export async function getStaticPaths() {
+	const projectEntries = await getCollection("projects");
+	
+	return projectEntries.map((entry) => ({
+		params: {
+			slug: entry.slug,
+		},
+		props: {
+			entry
+		}
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<"projects">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<style is:global>
+	img {
+		@apply rounded max-h-[300px] w-full object-cover
+	}
+</style>
+
+<Layout title={entry.data.title}>
+	<Container>
+		<Stack>
+			{entry.data.cover &&
+				<img
+					src={entry.data.cover}	
+					class="h-64 w-full object-cover rounded"
+					transition:name={"cover" + entry.id}
+				/>
+			}
+			<h1 class="text-5xl font-bold" transition:name={"title" + entry.id}>{entry.data.title}</h1>
+			{entry.data.location &&
+				<p class="text-muted-foreground text-sm">
+					<DrawingPinIcon className="inline w-4 h-4 mr-1" />
+					{entry.data.location}
+				</p>
+			}
+			{entry.data.date &&
+				<p class="text-muted-foreground text-sm">
+					<CalendarIcon className="inline w-4 h-4 mr-1" />
+					{new Date(entry.data.date).toLocaleDateString("EN", { year: "numeric", month: "long", day: "numeric" })}
+				</p>
+			}
+			<div class="prose dark:prose-invert">
+				<Content />
+			</div>
+		</Stack>
+	</Container>
+</Layout>
+

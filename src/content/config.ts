@@ -37,11 +37,14 @@ const categoriesCollection = defineCollection({
 });
 
 const projectsCollection = defineCollection({
-	type: "data",
+	type: "content",
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
-		link: z.string().url(),
+		link: z.string().url().optional(),
+		cover: z.string().optional(),
+		date: z.date().optional(),
+		location: z.string().optional()
 	})
 });
 

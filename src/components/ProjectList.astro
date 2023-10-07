@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+
+
+const projects = await getCollection("projects");
+
+// 2 2 1 1
+// 2 2 1 1
+// 1 1 2 2
+// 2 2 1 1
+const getSpanClassName = (idx: number) => {
+	let className = "";
+
+	if (idx >= 11) {
+		idx = 0;
+	}
+
+	if ([0, 7, 8].includes(idx)) {
+		className += "col-span-2 min-h-[256px]";
+	} else {
+		className += "col-span-1";
+	}
+
+	if (idx === 0) {
+		className += " row-span-2";
+	} else {
+		className += " row-span-1"
+	}
+
+	return className
+}
+---
+
+<div
+	class="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 justify-center pb-4"
+>
+	{projects.map((project, idx) => (
+		<a
+			href={project.body ? ("/projects/" + project.slug) : (project.data?.link || undefined)}
+			target={project.data?.link ? "_blank" : undefined}
+			class={getSpanClassName(idx)}
+		>
+			<Card className="w-full h-full">
+				{project.data?.cover &&
+					<img
+						src={project.data.cover}
+						transition:name={"cover" + project.id}
+						loading="lazy"
+						style={{
+							maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
+							"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
+						}}
+						class="absolute top-0 left-0 w-full h-full z-0 object-cover"
+					/>
+				}
+				<CardHeader className="relative z-10">
+					<CardTitle transition:name={"title" + project.id}>
+						{project.data.title}
+					</CardTitle>
+					<CardDescription transition:name={"description" + project.id}>
+						{project.data.description}
+					</CardDescription>
+				</CardHeader>
+			</Card>
+		</a>
+	))}
+</div>

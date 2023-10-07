@@ -4,11 +4,10 @@ import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { getCollection } from "astro:content";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
-
-const projects = await getCollection("projects");
+import ProjectList from "@/components/ProjectList.astro";
+import { Button } from "@/components/ui/button";
 ---
 
 <style scoped>
@@ -116,27 +115,12 @@ const projects = await getCollection("projects");
 		>
 			Projects
 		</h2>
-		<div
-			class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center pb-4"
-		>
-			{projects.map((project) => (
-				<a
-					href={project.data.link}
-					target="_blank"
-				>
-					<Card>
-						<CardHeader>
-							<CardTitle>
-								{project.data.title}
-							</CardTitle>
-							<CardDescription>
-								{project.data.description}
-							</CardDescription>
-						</CardHeader>
-					</Card>
-				</a>
-			))}
-		</div>
+		<ProjectList />
+		<a href="/projects">
+			<Button variant="outline" className="w-full mb-4 text-black border-black">
+				See all projects
+			</Button>
+		</a>
 	</Container>
 	<Container>
 		<Stack className="mt-8">

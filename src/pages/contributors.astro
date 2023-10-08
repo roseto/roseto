@@ -39,7 +39,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			>
 				{coreTeam.map((contributor) => (
 					<a
-						class="flex flex-col items-center w-24"
+						class="flex flex-col items-center w-32"
 						href={contributor.data.link}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -71,7 +71,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			>
 				{contributors.map((contributor) => (
 					<a
-						class="flex flex-col items-center w-24"
+						class="flex flex-col items-center w-32"
 						href={contributor.data.link}
 						target="_blank"
 						rel="noopener noreferrer"

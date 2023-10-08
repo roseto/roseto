@@ -8,6 +8,7 @@ import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
 import ProjectList from "@/components/ProjectList.astro";
 import { Button } from "@/components/ui/button";
+import Partnerships from "@/components/Partnerships.astro";
 ---
 
 <style scoped>
@@ -192,10 +193,10 @@ import { Button } from "@/components/ui/button";
 
 	<Tiers />
 
-	<Container>
+	<Container className="mt-4">
 		<Stack>
+			<Partnerships />
 			<Contributors />
-
 
 			<!--
 			<h2
@@ -210,7 +211,7 @@ import { Button } from "@/components/ui/button";
 			</p>
 
 			<img 
-				src="/global-network.svg"
+				src="/static/global-network.svg"
 				alt="Cloudflare Workers"
 				class="w-full"
 			/>

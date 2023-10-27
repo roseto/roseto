@@ -1,0 +1,46 @@
+---
+import { Card } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
+import { Hint } from "@/components/ui/hint";
+import { Stack } from "@/components/ui/stack";
+import Layout from "@/layouts/Layout.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+
+export const prerender = false;
+
+const id = new URL(Astro.request.url).searchParams.get("id");
+let doc: CollectionEntry<"signDocuments"> | undefined;
+
+
+if (id) {
+	doc = getEntry("signDocuments", id);
+}
+
+---
+
+<Layout title="Sign">
+	<Container>
+		<Stack>
+			<h1
+				class="text-5xl font-bold"
+			>
+				Sign
+			</h1>
+			<Card className="p-4">
+				<Hint>
+					What is Roseto Sign?
+				</Hint>
+				<p>
+					Roseto Sign is our own digital signing service that allows anyone to sign documents completely
+					digitally. Documents are open source under <a class="text-primary hover:underline">MIT License</a> but
+					signed documents are being sent privately by the signee via email.
+				</p>
+
+				<div class="">
+
+				</div>
+			</Card>
+		</Stack>
+	</Container>
+</Layout>

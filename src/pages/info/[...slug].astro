@@ -4,9 +4,9 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 
 export async function getStaticPaths() {
-	const newsEntries = await getCollection("docs");
+	const infoEntries = await getCollection("info");
 	
-	return newsEntries.map((entry) => ({
+	return infoEntries.map((entry) => ({
 		params: {
 			slug: entry.slug,
 		},
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-	entry: CollectionEntry<"docs">;
+	entry: CollectionEntry<"info">;
 }
 
 const { entry } = Astro.props;

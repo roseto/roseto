@@ -7,7 +7,7 @@ As you know from [our statement](/info/sustainability), we are dedicated to maki
 our carbon footprint as small as possible. We realised that a big part of our carbon footprint is the documents that we make
 and the ones that we need to get a signatures for.
 
-Thanks to [eDAIS](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation), we can 
+Thanks to [eIDAS](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation), we can 
 use digital signatures to sign documents. Just as legal, but less
 less impact on our digital footprint. We could've opted for [DocuSign](https://docusign.com),
 but we decided to use [DocuSeal](https://docuseal.eu) because of it's flexibility and open nature.

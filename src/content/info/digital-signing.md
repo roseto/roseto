@@ -22,7 +22,7 @@ for some people. But it's not really that complicated.
 
 Here are the steps that a document goes through to being signed:
 1. An email gets sent to a specific address that needs to be the signee. A link
-will be present that allows them to sign the document;
+will be present that allows them to sign the document. **Always make sure it comes from a Roseto email address (ex. mario@roseto.space)**;
 2. The Signee clicks the link and gets forwarded to [DocuSeal](https://docuseal.eu);
 3. The Signee completes the needed fields and then proceeds to sign the document by drawing;
 4. After every required field gets filled, the signee confirms the signing of the document and

@@ -18,9 +18,9 @@ npm run preview # Preview the built project
 
 ### Optional
 
+This is only required if you want to preview the diploma verification function. The test diploma ID is "1P0".
 ```bash
 npm run prepare-preview:diplomas # Add a test diploma for previewing.
-# This is only required if you want to preview the diploma verification function. The test diploma ID is "1P0".
 ```
 
 ## License

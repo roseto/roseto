@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "prepare-preview:diplomas": "wrangler kv:key put 1P0 \"{\"id\":\"1P0\",\"name\":\"Test Diploma\",\"status\":\"ok\"}\" --local --binding diplomas",
+    "preview": "wrangler pages dev ./dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -39,5 +40,8 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.17.1"
   }
 }

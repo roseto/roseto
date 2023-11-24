@@ -22,5 +22,10 @@ export default defineConfig({
 		prefetch()
 	],
 	output: "hybrid",
-	adapter: cloudflare()
+	adapter: cloudflare({
+		runtime: {
+			mode: "local",
+			persistTo: ".wrangler/state/v3"
+		}
+	})
 });

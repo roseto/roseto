@@ -6,24 +6,25 @@ import { Hint } from "@/components/ui/hint";
 import { Input } from "@/components/ui/input";
 import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/Layout.astro";
+import { getDiploma } from "@/lib/diplomas";
+import { Diploma } from "@/types/Diploma";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import { getEntry, type CollectionEntry } from "astro:content";
 
 export const prerender = false;
 
 const id = new URL(Astro.request.url).searchParams.get("id");
 let error = false;
-let diploma: CollectionEntry<"diplomas"> | undefined;
+let diploma: Diploma | null = null;
 
 
 if (id) {
-	diploma = await getEntry("diplomas", id.toUpperCase());
+	diploma = await getDiploma(id, Astro.locals)
 
 	if (!diploma) {
 		error = true;
 	}
 
-	if (diploma && diploma.data.status === "cancelled") {
+	if (diploma && diploma.status === "cancelled") {
 		error = true;
 	}
 }
@@ -50,7 +51,7 @@ if (id) {
 							IS {error ? "NOT" : ""} VALID
 						</p>
 						{diploma && 
-							<p>This diploma was issued for <span class="font-bold">{diploma.data.name}</span></p>
+							<p>This diploma was issued for <span class="font-bold">{diploma.name}</span></p>
 						}
 					</Card>
 					<a href="/verify">

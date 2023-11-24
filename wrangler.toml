@@ -1,0 +1,7 @@
+name = "roseto"
+main = "dist/worker/index.js"
+compatibility_date = "2023-11-24"
+
+kv_namespaces = [
+	{ binding = "diplomas", id = "d4f379f7610a45739d260eb72680c1d9" }
+]

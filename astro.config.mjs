@@ -21,11 +21,6 @@ export default defineConfig({
 		mdx(), 
 		prefetch()
 	],
-	vite: {
-		build: {
-		  minify: false,
-		},
-	  },	
 	output: "hybrid",
 	adapter: cloudflare({
 		runtime: {

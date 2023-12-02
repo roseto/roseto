@@ -55,8 +55,10 @@ const getSpanClassName = (idx: number) => {
 					/>
 				}
 				<CardHeader className="relative z-10">
-					<CardTitle transition:name={"title" + project.id}>
-						{project.data.title}
+					<CardTitle>
+						<p transition:name={"title" + project.id}>
+							{project.data.title}
+						</p>
 					</CardTitle>
 					<CardDescription transition:name={"description" + project.id}>
 						{project.data.description}

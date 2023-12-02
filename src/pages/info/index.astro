@@ -19,7 +19,11 @@ const docsEntries = await getCollection("info");
 				>
 					<Card>
 						<CardHeader>
-							<CardTitle transition:name={entry.id + "title"}>{entry.data.title}</CardTitle>
+							<CardTitle>
+								<p transition:name={"title" + entry.id}>
+									{entry.data.title}
+								</p>
+							</CardTitle>
 							<CardDescription>{entry.data.description}</CardDescription>
 						</CardHeader>
 					</Card>

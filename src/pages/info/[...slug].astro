@@ -26,7 +26,7 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
 	<Container>
-		<h1 class="text-5xl font-bold" transition:name={entry.id + "title"}>{entry.data.title}</h1>
+		<h1 transition:name={"title" + entry.id} class="text-5xl font-bold">{entry.data.title}</h1>
 		<div class="prose dark:prose-invert">
 			<Content />
 		</div>

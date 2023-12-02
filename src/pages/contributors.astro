@@ -35,7 +35,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			</Hint>
 
 			<div
-				class="flex flex-row flex-wrap gap-4"
+				class="flex flex-row flex-wrap gap-2"
 			>
 				{coreTeam.map((contributor) => (
 					<a
@@ -47,7 +47,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 						<img 
 							src={contributor.data.avatar} 
 							alt={contributor.data.name} 
-							class="w-16 h-16 rounded-full object-cover"
+							class="w-16 h-16 rounded-full object-cover mb-2"
 						/>
 						<h3 class="text-center text-sm text-muted-foreground">{contributor.data.name}</h3>
 					</a>
@@ -67,7 +67,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 			</Hint>
 
 			<div
-				class="flex flex-row flex-wrap gap-4"
+				class="flex flex-row flex-wrap gap-2"
 			>
 				{contributors.map((contributor) => (
 					<a
@@ -79,7 +79,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 						<img 
 							src={contributor.data.avatar} 
 							alt={contributor.data.name} 
-							class="w-16 h-16 rounded-full object-cover"
+							class="w-16 h-16 rounded-full object-cover mb-2"
 						/>
 						<h3 class="text-center text-sm text-muted-foreground">{contributor.data.name}</h3>
 					</a>

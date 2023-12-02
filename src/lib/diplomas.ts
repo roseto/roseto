@@ -5,7 +5,8 @@ export const getDiploma = async (id: string) => {
 	const diploma = await sanityClient.fetch<Diploma | null>(`*[_type == "diploma" && id == $id][0] {
 		id,
 		name,
-		blogPost
+		blogPost,
+		projectId
 	}`, { id: id.toUpperCase() });
 
 	return diploma;

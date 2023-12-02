@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { CalendarIcon, DrawingPinIcon } from "@radix-ui/react-icons";
+import { Link1Icon, CalendarIcon, DrawingPinIcon } from "@radix-ui/react-icons";
 
 export async function getStaticPaths() {
 	const projectEntries = await getCollection("projects");
@@ -28,7 +28,7 @@ const { Content } = await entry.render();
 
 <style is:global>
 	img {
-		@apply rounded max-h-[300px] w-full object-cover
+		@apply rounded max-h-[300px] w-full object-cover;
 	}
 </style>
 
@@ -43,6 +43,12 @@ const { Content } = await entry.render();
 				/>
 			}
 			<h1 class="text-5xl font-bold" transition:name={"title" + entry.id}>{entry.data.title}</h1>
+			{entry.data.projectId &&
+				<p class="text-muted-foreground text-sm">
+					<Link1Icon className="inline w-4 h-4 mr-1" />
+					{entry.data.projectId}
+				</p>
+			}
 			{entry.data.location &&
 				<p class="text-muted-foreground text-sm">
 					<DrawingPinIcon className="inline w-4 h-4 mr-1" />

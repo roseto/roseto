@@ -19,15 +19,6 @@ const contributorsCollection = defineCollection({
 	})
 })
 
-const categoriesCollection = defineCollection({
-	type: "data",
-	schema: z.object({
-		name: z.string(),
-		emoji: z.string(),
-		disabled: z.boolean().optional(),
-	})
-});
-
 const projectsCollection = defineCollection({
 	type: "content",
 	schema: z.object({
@@ -56,7 +47,6 @@ const tiersCollection = defineCollection({
 
 export const collections = {
 	info: infoCollection,
-	categories: categoriesCollection,
 	contributors: contributorsCollection,
 	projects: projectsCollection,
 	tiers: tiersCollection

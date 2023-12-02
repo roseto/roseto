@@ -25,7 +25,7 @@ const partners = await getCollection("contributors", ({data}) => data?.partner);
 					rel="noopener noreferrer"
 				>
 					<img
-						class="rounded-full w-12 h-12 object-cover"
+						class="rounded w-16 h-16 object-cover border-secondary border-2"
 						src={partner.data.avatar}
 						alt={partner.data.name}
 						loading="lazy"

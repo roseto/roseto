@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "prepare-preview:diplomas": "wrangler kv:key put 1P0 \"{\"id\":\"1P0\",\"name\":\"Test Diploma\",\"status\":\"ok\"}\" --local --binding diplomas",
     "preview": "wrangler pages dev ./dist",
     "astro": "astro"
   },

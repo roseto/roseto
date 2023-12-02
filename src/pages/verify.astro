@@ -48,7 +48,7 @@ if (id) {
 						</p>
 						{diploma && 
 							<p>This diploma was issued for <b>{diploma.name}</b> on the project with ID <b>{diploma.projectId}</b></p>
-							<a href={diploma.blogPost} target="_blank" class="font-bold hover:underline text-primary">You can see the activity here.</a>
+							<a href={"/projects/" + diploma.projectId} target="_blank" class="font-bold hover:underline text-primary">You can see the project here.</a>
 						}
 					</Card>
 					<a href="/verify">

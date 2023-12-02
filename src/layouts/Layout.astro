@@ -54,6 +54,8 @@ const pageTitle = frontmatter?.title ?? title;
 		<meta property="twitter:description" content="A small collective with the objective of informing the youth and digitalize local communities." />
 		<meta property="twitter:image" content="https://roseto.space/og-image.png" />
 
+		<slot name="head" />
+
 		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">

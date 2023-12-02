@@ -34,10 +34,10 @@ const projectsCollection = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		link: z.string().url().optional(),
-		projectId: z.string().optional(),
 		cover: z.string().optional(),
 		date: z.date().optional(),
-		location: z.string().optional()
+		location: z.string().optional(),
+		aliases: z.array(z.string()).optional(),
 	})
 });
 

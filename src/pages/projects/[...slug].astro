@@ -37,16 +37,16 @@ const { Content } = await entry.render();
 		<Stack>
 			{entry.data.cover &&
 				<img
-					src={entry.data.cover}	
+					src={entry.data.cover}
 					class="h-64 w-full object-cover rounded"
 					transition:name={"cover" + entry.id}
 				/>
 			}
 			<h1 class="text-5xl font-bold" transition:name={"title" + entry.id}>{entry.data.title}</h1>
-			{entry.data.projectId &&
+			{entry.slug &&
 				<p class="text-muted-foreground text-sm">
 					<Link1Icon className="inline w-4 h-4 mr-1" />
-					{entry.data.projectId}
+					{entry.slug}
 				</p>
 			}
 			{entry.data.location &&

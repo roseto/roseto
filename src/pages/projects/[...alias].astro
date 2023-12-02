@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import { Container } from '@/components/ui/container';
+
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+	const aliases = new Map();
+
+	for (const entry of projects) {
+		for (const alias of entry.data.aliases || []) {
+			aliases.set(alias.replace(/^\//, ''), entry);
+		}
+	}
+
+	return Array.from(
+		aliases.entries(),
+		([alias, entry]) => ({
+			params: { alias },
+			props: {
+				title: entry.data.title,
+				dest: `/projects/${entry.slug}`
+			}
+		})
+	);
+}
+
+
+const { dest, title } = Astro.props;
+const replacement = `${Astro.url.origin}${dest}`;
+---
+
+<Layout title={title}>
+	<Fragment slot="head">
+		<meta name="robots" content="noindex"/>
+		<meta http-equiv="refresh" content={`5; url=${replacement}`}/>
+	</Fragment>
+	<Container>
+		<p>This page has permanently moved. The new URL is:</p>
+	
+		<p><a href={replacement} class="text-primary hover:underline">{replacement}</a></p>
+	
+		<p>You should be automatically redirected in a few seconds...</p>
+	</Container>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import { readFile } from "fs/promises";
+import { marked } from "marked";
+import Layout from "@/layouts/Layout.astro";
+import { Stack } from "@/components/ui/stack";
+import { Container } from "@/components/ui/container";
+import { Card } from "@/components/ui/card";
+
+const code = await readFile("./CODE_OF_CONDUCT.md", "utf-8");
+const content = marked.parse(code);
+---
+
+<Layout title="Code of Conduct">
+	<Container>
+		<Stack>
+			<h1
+				class="text-5xl font-bold"
+			>
+				Code of Conduct
+			</h1>
+
+			<p>
+				This is Roseto's code of conduct. A code of conduct defines standards for how to engage in a community. 
+				It signals an inclusive environment that respects all contributions.
+			</p>
+
+			<Card className="p-4 prose dark:prose-invert max-w-none" set:html={content} />
+		</Stack>
+	</Container>
+</Layout>

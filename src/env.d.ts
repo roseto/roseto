@@ -7,3 +7,13 @@ interface ImportMetaEnv {}
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+/// <reference types="astro/client" />
+
+type KVNamespace = import("@cloudflare/workers-types").KVNamespace;
+type ENV = {};
+
+type Runtime = import("@astrojs/cloudflare").DirectoryRuntime<ENV>;
+declare namespace App {
+  interface Locals extends Runtime {}
+}

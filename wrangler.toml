@@ -1,0 +1,3 @@
+name = "roseto"
+main = "dist/worker/index.js"
+compatibility_date = "2023-11-24"

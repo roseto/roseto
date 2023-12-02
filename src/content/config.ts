@@ -1,6 +1,6 @@
 import { z, defineCollection } from "astro:content";
 
-const docsCollection = defineCollection({
+const infoCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
@@ -18,15 +18,6 @@ const contributorsCollection = defineCollection({
 		partner: z.boolean().optional()
 	})
 })
-
-const diplomasCollection = defineCollection({
-	type: "data",
-	schema: z.object({
-		id: z.string().length(3),
-		status: z.enum(["ok", "cancelled"]),
-		name: z.string()
-	})
-});
 
 const categoriesCollection = defineCollection({
 	type: "data",
@@ -63,10 +54,9 @@ const tiersCollection = defineCollection({
 })
 
 export const collections = {
-	docs: docsCollection,
+	info: infoCollection,
 	categories: categoriesCollection,
 	contributors: contributorsCollection,
-	diplomas: diplomasCollection,
 	projects: projectsCollection,
 	tiers: tiersCollection
 }

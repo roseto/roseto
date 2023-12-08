@@ -6,6 +6,7 @@ interface Props {
 	buttons?: {
 		text: string;
 		href: string;
+		target?: string;
 	}[]
 }
 
@@ -23,7 +24,7 @@ export default function Navbar({ buttons }: Props) {
 			</a>
 			<div className="flex flex-row gap-1">
 				{buttons && buttons.map((button, i) => (
-					<a href={button.href} key={i}>
+					<a href={button.href} target={button.target} key={i}>
 						<Button
 							variant="ghost"
 						>

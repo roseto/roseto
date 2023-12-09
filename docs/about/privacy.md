@@ -1,8 +1,11 @@
 ---
 description: Privacy is precious and everyone has a right to it
+cover: >-
+  https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxwcml2YWN5fGVufDB8fHx8MTcwMjEzOTAxOHww&ixlib=rb-4.0.3&q=85
+coverY: 101
 ---
 
-# Privacy
+# 🔐 Privacy
 
 Privacy is another one of our top priorities. While some of our projects might use [Umami](https://umami.is), an open source analytics tool, we collect minimal data, and only when necessary.
 

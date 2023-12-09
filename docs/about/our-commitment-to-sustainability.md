@@ -1,8 +1,11 @@
 ---
 description: How we are trying to offer our platform using as much green energy as possible
+cover: >-
+  https://images.unsplash.com/photo-1503785640985-f62e3aeee448?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw0fHx0cmVlc3xlbnwwfHx8fDE3MDIxMzkwNDB8MA&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
-# Our commitment to sustainability
+# 🌳 Our commitment to sustainability
 
 We are very commited to keeping our carbon footprint as small as possible.
 

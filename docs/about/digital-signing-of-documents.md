@@ -1,8 +1,11 @@
 ---
 description: How we reduced our carbon footprint even more
+cover: >-
+  https://images.unsplash.com/photo-1521791055366-0d553872125f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxzaWduaW5nfGVufDB8fHx8MTcwMjEzOTA1NXww&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
-# Digital signing of documents
+# 🖊 Digital signing of documents
 
 As you know from our statement, we are dedicated to making our carbon footprint as small as possible. We realised that a big part of our carbon footprint is the documents that we make and the ones that we need to get a signatures for.
 

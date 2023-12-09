@@ -1,8 +1,11 @@
 ---
 description: About the projects we do
+cover: >-
+  https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxwcm9qZWN0c3xlbnwwfHx8fDE3MDIxMzkwNzB8MA&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
-# Projects
+# 💡 Projects
 
 Roseto is a bunch of cool people who love to use technology to make a difference in our communities. We're passionate about empowering the youth and fostering digital transformation, and we believe that tech can be a powerful tool for creating a brighter future for everyone.
 

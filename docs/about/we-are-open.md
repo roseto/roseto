@@ -1,8 +1,11 @@
 ---
 description: How we are trying to be open in every way possible
+cover: >-
+  https://images.unsplash.com/photo-1472898965229-f9b06b9c9bbe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxvcGVufGVufDB8fHx8MTcwMjEzOTAwM3ww&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
-# We are open
+# 👐 We are open
 
 We are commited to being as open as possible. Roseto is not a business. Roseto is more than a platform, it's an idea, a community.
 

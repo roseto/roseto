@@ -3,9 +3,11 @@ description: >-
   Roseto is a dynamic and forward-thinking group committed to empowering the
   youth while fostering the digital transformation of local communities and
   businesses.
+cover: .gitbook/assets/welcome-cover.webp
+coverY: -8
 ---
 
-# Welcome
+# 👋 Welcome
 
 ## About Roseto
 

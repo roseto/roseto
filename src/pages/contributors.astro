@@ -79,9 +79,18 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 						<img 
 							src={contributor.data.avatar} 
 							alt={contributor.data.name} 
-							class="w-16 h-16 rounded-full object-cover mb-2"
+							class:list={[
+								"w-16 h-16 object-cover mb-2", 
+								contributor.data.supporter || contributor.data.partner ? "rounded" : "rounded-full",
+								contributor.data.supporter ? "border-2 border-primary" : "",
+								contributor.data.partner ? "border-2 border-secondary" : "",
+							]}
 						/>
-						<h3 class="text-center text-sm text-muted-foreground">{contributor.data.name}</h3>
+						<h3 class="text-center text-sm text-muted-foreground">
+							{contributor.data.name}
+							{contributor.data.supporter ? " (Supporter)" : ""}
+							{contributor.data.partner ? " (Partner)" : ""}	
+						</h3>
 					</a>
 				))}
 			</div>

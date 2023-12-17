@@ -16,6 +16,7 @@
 * [🔐 Privacy](about/privacy.md)
 * [🌳 Our commitment to sustainability](about/our-commitment-to-sustainability.md)
 * [🖊 Digital signing of documents](about/digital-signing-of-documents.md)
+* [🌐 Our domains](about/our-domains.md)
 * [🤝 Roseto Group Members](about/roseto-group-members.md)
 
 ## What we do

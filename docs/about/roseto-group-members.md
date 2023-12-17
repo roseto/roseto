@@ -6,3 +6,8 @@ description: The list of Roseto Group members
 
 <table data-view="cards" data-full-width="false"><thead><tr><th>Name</th><th>Role</th><th>Email</th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Michael Mary</td><td>Trainer, Social Media Manager</td><td><a href="mailto:mary@roseto.space">mary@roseto.space</a></td><td><a href="../.gitbook/assets/mary.png">mary.png</a></td></tr><tr><td>Chiru Liviu Alexandru</td><td>Helper, Designer</td><td><a href="mailto:liviu@roseto.space">liviu@roseto.space</a></td><td><a href="../.gitbook/assets/liviu.png">liviu.png</a></td></tr><tr><td>Savin Angel-Mario</td><td>Leader</td><td><a href="mailto:mario@roseto.space">mario@roseto.space</a></td><td><a href="../.gitbook/assets/mario.png">mario.png</a></td></tr><tr><td>Vișinoschi Adrian</td><td>Trainer</td><td><a href="mailto:adrian@roseto.space">adrian@roseto.space</a></td><td><a href="../.gitbook/assets/adrian.png">adrian.png</a></td></tr></tbody></table>
 
+## Who is "Roseto Group" and "Roseto Contributors"
+
+"Roseto Group" is us, the team that manages Roseto. We are also called "Roseto Contributors" since we also contribute to the project.
+
+"Roseto Contributors" is the people who contribute to the project but do not make part of the core team.

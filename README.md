@@ -16,13 +16,6 @@ npm run build # Build the project
 npm run preview # Preview the built project
 ```
 
-### Optional
-
-This is only required if you want to preview the diploma verification function. The test diploma ID is "1P0".
-```bash
-npm run prepare-preview:diplomas # Add a test diploma for previewing.
-```
-
 ## License
 The Roseto project is licensed under the terms of the license specified in the [LICENSE](/LICENSE.md) file. Please make sure to comply with the terms of the license when using, modifying, or distributing the project.
 

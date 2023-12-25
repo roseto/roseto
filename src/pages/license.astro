@@ -22,25 +22,30 @@ const content = marked.parse(license);
 			</h1>
 
 			<p>
-				Roseto's code and resources is licensed under the MIT license. 
-				We are still working on transfering all code and resources created by
-				Roseto to this license. If you'd like you can download this license locally.
+				Roseto © 2023 is licensed under CC BY-NC-SA 4.0.
+				
+				<a
+					href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+					class="hover:underline text-primary"
+					target="_blank"
+				>
+				See a copy of the license here.
+				</a>
+			</p>
+			<p>
+				This license requires that reusers give credit to the creator. 
+				It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, 
+				for noncommercial purposes only. If others modify or adapt the material, 
+				they must license the modified material under identical terms.
+			</p>
+
+			<p>
+				Attributions should be given to "Roseto Group".
 			</p>
 
 			<Card className="p-4">
 				<code class="prose dark:prose-invert" set:html={content}/>
 			</Card>
-			<a
-				href={"data:text/plain;charset=utf-8," + encodeURIComponent(license)}
-				download="license.txt"
-			>
-				<Button
-					variant="secondary"	
-				>
-					<DownloadIcon className="mr-2 w-4 h-4"/>
-					Download license
-				</Button>
-			</a>
 		</Stack>
 	</Container>
 </Layout>

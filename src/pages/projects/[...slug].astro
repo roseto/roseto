@@ -23,7 +23,13 @@ interface Props {
 }
 
 const { entry } = Astro.props;
+
+if (!entry.body) {
+	return Astro.redirect("/");
+}
+
 const { Content } = await entry.render();
+
 ---
 
 <style is:global>

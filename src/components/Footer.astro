@@ -1,6 +1,8 @@
 ---
 import { Separator } from "@/components/ui/separator";
 import CarbonBadge from "@/components/CarbonBadge.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 
@@ -8,7 +10,7 @@ import CarbonBadge from "@/components/CarbonBadge.astro";
 	class="flex flex-col gap-2 p-4 bg-muted rounded-t mt-8"
 >
 	<p>
-		<a class="hover:underline" href="/license">Roseto &copy; 2023 is licensed under CC BY-NC-SA 4.0 </a>
+		<a class="hover:underline" href="/license">Roseto &copy; {currentYear} is licensed under CC BY-NC-SA 4.0 </a>
 	</p>
 	
 	<CarbonBadge />

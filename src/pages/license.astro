@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 
 const license = await readFile("./LICENSE.md", "utf-8");
 const content = marked.parse(license);
+const currentYear = new Date().getFullYear();
 ---
 
 <Layout title="License">
@@ -22,7 +23,7 @@ const content = marked.parse(license);
 			</h1>
 
 			<p>
-				Roseto © 2023 is licensed under CC BY-NC-SA 4.0.
+				Roseto © {currentYear} is licensed under CC BY-NC-SA 4.0.
 				
 				<a
 					href="https://creativecommons.org/licenses/by-nc-sa/4.0/"

@@ -2,12 +2,13 @@
 import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon } from "@radix-ui/react-icons"; 
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon, RocketIcon } from "@radix-ui/react-icons"; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
 import ProjectList from "@/components/ProjectList.astro";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import Partnerships from "@/components/Partnerships.astro";
 import Supporters from "@/components/Supporters.astro";
 ---
@@ -133,7 +134,7 @@ import Supporters from "@/components/Supporters.astro";
 			<h2
 				class="text-4xl font-bold text-center mt-4"
 			>
-				Why <span class="bg-clip-text text-transparent bg-primary">Roseto</span>?
+				Why <span class="text-primary">Roseto</span>?
 			</h2>
 			<div class="grid grid-cols-2 gap-2 justify-center">
 				<Card>
@@ -180,14 +181,14 @@ import Supporters from "@/components/Supporters.astro";
 
 				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
-						<MagicWandIcon
+						<RocketIcon
 							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 						/>
 						<CardTitle className="mt-2 text-2xl">
-							Magical
+							Forward-thinking
 						</CardTitle>
 						<CardDescription>
-							We are trying to make the world a better place. We are trying to make magic happen.
+							We are always looking for new ways to improve our services and the way we do things.
 						</CardDescription>
 					</CardContent>
 				</Card>
@@ -198,7 +199,77 @@ import Supporters from "@/components/Supporters.astro";
 
 	<Tiers />
 
-	<Container className="mt-4">
+	<Container>
+		<Stack className="relative mt-4">
+			<div
+				class="sticky top-4 z-40 p-2 border border-muted rounded bg-background/90 backdrop-filter backdrop-blur-sm"
+			>
+				<h2
+					class="text-5xl font-bold text-center mb-2"
+				>
+					<span class="text-primary">Roseto</span>'s Mission
+				</h2>
+				<Progress 
+					client:load
+					id="mission-progress"
+				/>
+			</div>
+
+			<Card id="mission-card-1">
+				<CardContent className="flex flex-col text-center items-center mt-8">
+					<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64" />
+					<CardDescription>
+						Build and maintain open-source software, tools, and services that help people and businesses.
+					</CardDescription>
+				</CardContent>
+			</Card>
+
+			<Card id="mission-card-2">
+				<CardContent className="flex flex-col text-center items-center mt-8">
+					<img src="/static/community.svg" alt="Community" class="w-full h-64" />
+					<CardDescription>
+						Build a community of people that share the same values and beliefs.
+					</CardDescription>
+				</CardContent>
+			</Card>
+
+			<Card id="mission-card-3">
+				<CardContent className="flex flex-col text-center items-center mt-8">
+					<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64" />
+					<CardDescription>
+						Help young people develop their skills and find their passion,
+						volunteer and help the community while having fun.
+					</CardDescription>
+				</CardContent>
+			</Card>
+
+			<Card id="mission-card-4">
+				<CardContent className="flex flex-col text-center items-center mt-8">
+					<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64" />
+					<CardDescription>
+						Help businesses and organizations with their digital transformation and development.
+					</CardDescription>
+				</CardContent>
+			</Card>
+
+			<Card id="mission-card-5">
+				<CardContent className="flex flex-col text-center items-center mt-8">
+					<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64" />
+					<CardDescription>
+						Connect people together and help them grow and develop their skills.
+					</CardDescription>
+				</CardContent>
+			</Card>
+
+			<h2
+				class="text-4xl font-bold text-center mt-8"
+			>
+				And we are not stopping here.
+			</h2>
+		</Stack>
+	</Container>
+
+	<Container>
 		<Stack>
 			<Contributors />
 
@@ -241,3 +312,40 @@ import Supporters from "@/components/Supporters.astro";
 		</Stack>
 	</Container>
 </Layout>
+
+<script>
+	const missionProgress = document.querySelector("#mission-progress > div") as HTMLElement;
+	const missions = document.querySelectorAll("[id^=mission-card-]");
+
+	// See how many steps we have
+	const steps = missions.length;
+	
+	// When we scroll past a mission, update the progress bar
+	// We use transform: translateX() to move the progress bar
+	// initially it's at -100% (empty), and we move it to 0% (full)
+	// Get the top of every mission
+	// it should progress from -100% to 0% as we scroll down
+
+	const missionTops = Array.from(missions).map((mission) => {
+		return mission.getBoundingClientRect().top;
+	});
+
+	document.addEventListener("scroll", () => {
+		// Get the current scroll position
+		const scrollPosition = window.scrollY;
+
+		// Get the current mission
+		const currentMission = missionTops.findIndex((top) => {
+			return top > scrollPosition;
+		});
+
+		// Get the current progress
+		const currentProgress = (currentMission / steps) * 100;
+
+		// Using Math, make 100 - currentProgress and make sure we don't go above 95%
+		const calculatedProgress = 100 - currentProgress > 100 ? 10 : 100 - currentProgress;
+
+		// Update the progress bar
+		missionProgress.style.transform = `translateX(-${calculatedProgress}%)`;
+	});
+</script>

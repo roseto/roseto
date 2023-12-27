@@ -313,23 +313,17 @@ import Supporters from "@/components/Supporters.astro";
 </Layout>
 
 <script>
-	const missionProgress = document.querySelector("#mission-progress > div") as HTMLElement;
 	const missions = document.querySelectorAll("[id^=mission-card-]");
 
 	// See how many steps we have
 	const steps = missions.length;
-	
-	// When we scroll past a mission, update the progress bar
-	// We use transform: translateX() to move the progress bar
-	// initially it's at -100% (empty), and we move it to 0% (full)
-	// Get the top of every mission
-	// it should progress from -100% to 0% as we scroll down
 
 	const missionTops = Array.from(missions).map((mission) => {
 		return mission.getBoundingClientRect().top;
 	});
 
 	document.addEventListener("scroll", () => {
+		const missionProgress = document.querySelector("#mission-progress > div") as HTMLElement;
 		// Get the current scroll position
 		const scrollPosition = window.scrollY;
 

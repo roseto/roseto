@@ -312,7 +312,7 @@ import Supporters from "@/components/Supporters.astro";
 	</Container>
 </Layout>
 
-<script>
+<script is:inline>
 	const missions = document.querySelectorAll("[id^=mission-card-]");
 
 	// See how many steps we have
@@ -323,7 +323,7 @@ import Supporters from "@/components/Supporters.astro";
 	});
 
 	document.addEventListener("scroll", () => {
-		const missionProgress = document.querySelector("#mission-progress > div") as HTMLElement;
+		const missionProgress = document.querySelector("#mission-progress > div");
 		// Get the current scroll position
 		const scrollPosition = window.scrollY;
 

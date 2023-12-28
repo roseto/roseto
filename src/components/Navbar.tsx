@@ -16,7 +16,7 @@ export default function Navbar({ buttons }: Props) {
 			className="top-0 left-0 -mb-16 w-full p-4 h-16 flex flex-row z-50 items-center"
 		>
 			<a href="/" className="mr-auto">
-				<img src="/logo.svg" alt="logo" className="w-8 h-8" />
+				<img src="/logo.svg" alt="Logo" className="w-8 h-8" />
 			</a>
 			<div className="flex flex-row gap-1">
 				{buttons && buttons.map((button, i) => (

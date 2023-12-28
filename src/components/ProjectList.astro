@@ -46,6 +46,7 @@ const getSpanClassName = (idx: number) => {
 					<img
 						src={project.data.cover}
 						transition:name={"cover" + project.id}
+						alt={project.data.title}
 						loading="lazy"
 						style={{
 							maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,

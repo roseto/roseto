@@ -216,7 +216,7 @@ import Supporters from "@/components/Supporters.astro";
 
 			<Card id="mission-card-1" className="mt-2">
 				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64" />
+					<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
 					<CardDescription>
 						Build and maintain open-source software, tools, and services that help people and businesses.
 					</CardDescription>
@@ -225,7 +225,7 @@ import Supporters from "@/components/Supporters.astro";
 
 			<Card id="mission-card-2">
 				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/community.svg" alt="Community" class="w-full h-64" />
+					<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
 					<CardDescription>
 						Build a community of people that share the same values and beliefs.
 					</CardDescription>
@@ -234,7 +234,7 @@ import Supporters from "@/components/Supporters.astro";
 
 			<Card id="mission-card-3">
 				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64" />
+					<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
 					<CardDescription>
 						Help young people develop their skills and find their passion,
 						volunteer and help the community while having fun.
@@ -244,28 +244,27 @@ import Supporters from "@/components/Supporters.astro";
 
 			<Card id="mission-card-4">
 				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64" />
+					<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
 					<CardDescription>
 						Help businesses and organizations with their digital transformation and development.
 					</CardDescription>
 				</CardContent>
 			</Card>
 
-			<Card id="mission-card-5">
+			<Card id="mission-card-5" className="mb-24">
 				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64" />
+					<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
 					<CardDescription>
 						Connect people together and help them grow and develop their skills.
 					</CardDescription>
 				</CardContent>
 			</Card>
-
-			<h2
-				class="text-4xl font-bold text-center mt-8 mb-24"
-			>
-				And we are not stopping here.
-			</h2>
 		</Stack>
+		<h2
+			class="text-4xl font-bold text-center mt-4"
+		>
+			And we are not stopping here.
+		</h2>
 	</Container>
 
 	<Container>
@@ -336,7 +335,7 @@ import Supporters from "@/components/Supporters.astro";
 		const currentProgress = (currentMission / steps) * 100;
 
 		// Using Math, make 100 - currentProgress and make sure we don't go above 95%
-		const calculatedProgress = 100 - currentProgress > 100 ? 10 : 100 - currentProgress;
+		const calculatedProgress = 100 - currentProgress > 100 ? 5 : 100 - currentProgress;
 
 		// Update the progress bar
 		missionProgress.style.transform = `translateX(-${calculatedProgress}%)`;

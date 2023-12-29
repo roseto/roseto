@@ -2,35 +2,35 @@
 import { getCollection } from "astro:content";
 import { Card, CardContent, CardHeader, CardDescription, CardTitle } from "./ui/card";
 
-const supporters = await getCollection("contributors", ({data}) => data?.supporter);
+const specials = await getCollection("contributors", ({data}) => data?.special);
 ---
 
 <Card>
 	<CardHeader>
 		<CardTitle>
-			Our Supporters
+			Special mentions
 		</CardTitle>
 		<CardDescription>
-			The people who help us keep the lights on.
+			These people have gone above and beyond to support the project.
 		</CardDescription>
 	</CardHeader>
 
 	<CardContent>
 		<div class="flex flex-wrap flex-row gap-4 items-center justify-center">
-			{supporters.map((supporter) => (
+			{specials.map((special) => (
 				<a
 					class="flex flex-col items-center w-32"
-					href={supporter.data.link}
+					href={special.data.link}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					<img
 						class="rounded w-24 h-24 object-cover"
-						src={supporter.data.avatar}
-						alt={supporter.data.name}
+						src={special.data.avatar}
+						alt={special.data.name}
 						loading="lazy"
 					/>
-					<h3 class="text-center text-md text-muted-foreground">{supporter.data.name}</h3>
+					<h3 class="text-center text-md text-muted-foreground">{special.data.name}</h3>
 				</a>
 			))}
 		</div>

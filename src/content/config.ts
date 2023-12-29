@@ -8,7 +8,7 @@ const contributorsCollection = defineCollection({
 		link: z.string().url(),
 		core: z.boolean().optional(),
 		partner: z.boolean().optional(),
-		supporter: z.boolean().optional(),
+		special: z.boolean().optional(),
 	})
 })
 

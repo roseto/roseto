@@ -73,14 +73,11 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 							alt={contributor.data.name} 
 							class:list={[
 								"w-16 h-16 object-cover mb-2", 
-								contributor.data.supporter || contributor.data.partner ? "rounded" : "rounded-full",
-								contributor.data.supporter ? "border-2 border-primary" : "",
-								contributor.data.partner ? "border-2 border-secondary" : "",
+								contributor.data.partner ? "rounded border-2 border-secondary" : "rounded-full",
 							]}
 						/>
 						<h3 class="text-center text-sm text-muted-foreground">
 							{contributor.data.name}
-							{contributor.data.supporter ? " (Supporter)" : ""}
 							{contributor.data.partner ? " (Partner)" : ""}	
 						</h3>
 					</a>

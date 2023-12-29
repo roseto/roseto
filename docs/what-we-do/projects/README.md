@@ -30,16 +30,10 @@ Our projects have helped a lot of people in Romania:
 * **Strengthened Communities:** We've brought people together through engaging events and initiatives, fostering a sense of belonging.
 * **Solved Local Problems:** We've made life easier for people by providing useful tools like bus schedule information and community platforms.
 
-## Project ID
+## Project Specifications
 
-Every project is given a specific ID. This ID comes in this format: `ROSETO-YYYYMMDD`. Where "YYYYMMDD" means the year, month and date that this project has been started to be worked on.
+As we said before, transparency is a top priority for us, so that's why every project specification is created publicly. This way you can even comment on them and contribute to our projects.
 
-{% hint style="info" %}
-Please note that not all previous projects adhere to this ID system as it was implemented later. We are currently in the process of incorporating this identifier structure across all projects to ensure consistency and accuracy in project management. This effort will help us streamline project oversight
-{% endhint %}
-
-## Budget
-
-Each project receives a designated budget, within which expenses may be incurred. The budget allocation is determined based on the project's scope, objectives, and estimated resource requirements. This allocation ensures that projects have the necessary funding to achieve their goals and deliver tangible results.
-
-The budget is drawn from our [Open Collective resources](https://opencollective.com/roseto), a platform that facilitates secure and transparent financial management. OpenCollective enables us to track project expenditures, maintain financial records, and ensure adherence to budget guidelines. This comprehensive approach to financial management enhances project accountability and promotes responsible resource utilization.
+{% content-ref url="https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/" %}
+[Project Specs](https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/)
+{% endcontent-ref %}

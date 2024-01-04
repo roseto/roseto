@@ -26,7 +26,24 @@ DESCRIPTION
 
 ## Budget
 
-<table><thead><tr><th>Items</th><th data-type="number">Price (in EUR)</th></tr></thead><tbody><tr><td></td><td>null</td></tr><tr><td><strong><code>TOTAL</code></strong></td><td>0</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Items</th>
+      <th data-type="number">Price (in EUR)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+      </td>
+      <td>null</td>
+      </tr><tr>
+      <td><strong><code>TOTAL</code></strong></td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Related links
 

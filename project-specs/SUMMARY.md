@@ -12,3 +12,4 @@
 ## Project Specs
 
 * [Project Specification Template](project-specs/project-specification-template.md)
+* [Roseto Sync](project-specs/project-specification-template-1.md)

@@ -17,10 +17,11 @@ interface Props {
 			href: string;
 			target?: string;
 		}[];
-	}
+	};
+	noFooter?: boolean;
 }
 
-const { frontmatter, title, navbar } = Astro.props;
+const { frontmatter, title, navbar, noFooter } = Astro.props;
 
 const isMarkdown = frontmatter !== undefined;
 const pageTitle = frontmatter?.title ?? title;
@@ -60,7 +61,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load />
+		<Navbar path={Astro.url.pathname} origin={Astro.url.origin} buttons={navbar?.buttons} client:load />
 		<div class="h-20" />
 		<main class="flex-1">
 			{isMarkdown ? (
@@ -71,6 +72,6 @@ const pageTitle = frontmatter?.title ?? title;
 				<slot/>
 			)}
 		</main>
-		<Footer transition:persist />
+		{noFooter ? null : <Footer transition:persist />}
 	</body>
 </html>

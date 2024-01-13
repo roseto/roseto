@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { Link1Icon, CalendarIcon, DrawingPinIcon, Pencil2Icon } from "@radix-ui/react-icons";
+import { Link1Icon, CalendarIcon, DrawingPinIcon, Pencil2Icon, RadiobuttonIcon } from "@radix-ui/react-icons";
 
 export async function getStaticPaths() {
 	const projectEntries = await getCollection("projects");
@@ -51,9 +51,15 @@ const { Content } = await entry.render();
 			<h1 class="text-5xl font-bold" transition:name={"title" + entry.id}>{entry.data.title}</h1>
 			{entry.slug &&
 				<p class="text-muted-foreground text-sm">
-					<Link1Icon className="inline w-4 h-4 mr-1" />
+					<RadiobuttonIcon className="inline w-4 h-4 mr-1" />
 					{entry.slug.toUpperCase()}
 				</p>
+			}
+			{entry.data.link &&
+				<a class="text-muted-foreground text-sm hover:underline" href={entry.data.link} target="_blank">
+					<Link1Icon className="inline w-4 h-4 mr-1" />
+					{entry.data.link}
+				</a>
 			}
 			{entry.data.location &&
 				<p class="text-muted-foreground text-sm">
@@ -77,7 +83,7 @@ const { Content } = await entry.render();
 				</>
 			}
 
-			<hr/>
+			<hr class="my-4"/>
 
 			<div class="prose dark:prose-invert">
 				<Content />

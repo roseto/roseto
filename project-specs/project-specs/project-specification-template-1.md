@@ -2,22 +2,22 @@
 description: ROSETO-20240113
 ---
 
-# Roseto Sync
+# Learning about volunteering (Subject to change)
 
 ## Description
 
-Roseto Sync is a project that aims to organize periodic meetings called "syncs" for the purpose of connecting organizations with people, volunteering, catching up on new Roseto projects, plans and achievements.
+This project is aimed at educating students about the benefits of volunteering.
 
 ## Details
 
 * Project ID: **ROSETO-20240113**
-* Location: **VARIED**
-* Time/Date: **VARIED**
-* Subject: **Roseto and it's community**
-* Participants: **VARIED (Mostly past participants to other projects)**
-* Coordinators: **VARIED**
-* Duration: **\~2 hours**
-* Allocated budget: **VARIED**
+* Location: **Liceul Tehnologic "Pamfil Seicaru"**
+* Time/Date: **14:00 / 07.02.2024**
+* Subject: **Volunteering**
+* Participants: **10-15**
+* Coordinators: **Savin Angel-Mario**
+* Duration: **1-2 hours**
+* Allocated budget: **10€**
 
 ## Involved Partnerships
 
@@ -26,20 +26,20 @@ Roseto Sync is a project that aims to organize periodic meetings called "syncs" 
 
 ## Budget
 
-{% hint style="info" %}
-Will be callculated before every sync
-{% endhint %}
-
 <table><thead><tr><th>Items</th><th data-type="number">Price (in EUR)</th></tr></thead><tbody><tr><td></td><td>null</td></tr><tr><td><strong><code>TOTAL</code></strong></td><td>0</td></tr></tbody></table>
 
 ## Related links
 
 *
 
+## Related files
+
+
+
 ## Progress
 
-* [x] Budget Allocated (Non-applicable - Will be allocated before every sync)
-* [x] Project/Event Open Collective Creation (Non-apllicable - Will be created before every sync)
-* [x] Announced manifest to partners (Non-applicable - Will be announced before every sync)
-* [x] Items bought (Non-applicable - Will be announced before every sync)
+* [ ] Budget Allocated
+* [ ] Project/Event Open Collective Creation
+* [ ] Announced manifest to partners (if applicable)
+* [ ] Items bought
 * [ ] Executed

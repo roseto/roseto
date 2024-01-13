@@ -12,4 +12,5 @@
 ## Project Specs
 
 * [Project Specification Template](project-specs/project-specification-template.md)
-* [Roseto Sync](project-specs/project-specification-template-1.md)
+* [Learning about volunteering (Subject to change)](project-specs/project-specification-template-1.md)
+* [Roseto Sync (Subject to change)](project-specs/project-specification-template-2.md)

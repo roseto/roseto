@@ -4,7 +4,7 @@
 
 * [🏠 Homepage](https://roseto.space)
 * [💰 Open Collective](https://opencollective.com/roseto)
-* [📄 License](https://roseto.space/license)
+* [🔑 License](https://roseto.space/license)
 * [📝 Project Specifications](https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/)
 
 ***

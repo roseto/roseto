@@ -21,7 +21,8 @@ DESCRIPTION
 
 ## Involved Partnerships
 
-* Involved Partners: \*
+* Involved Partners:
+  *
 
 ## Budget
 
@@ -36,4 +37,5 @@ DESCRIPTION
 * [ ] Budget Allocated
 * [ ] Project/Event Open Collective Creation
 * [ ] Announced manifest to partners (if applicable)
+* [ ] Items bought
 * [ ] Executed

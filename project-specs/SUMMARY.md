@@ -9,8 +9,8 @@
 
 * [👋 Welcome](README.md)
 
-## Project Specs
+## Project Specs <a href="#s" id="s"></a>
 
-* [Project Specification Template](project-specs/project-specification-template.md)
-* [Learning about volunteering (Subject to change)](project-specs/project-specification-template-1.md)
-* [Roseto Sync (Subject to change)](project-specs/project-specification-template-2.md)
+* [Project Specification Template](s/project-specification-template.md)
+* [Learning about volunteering (Subject to change)](s/roseto-20240110.md)
+* [Roseto Sync (Subject to change)](s/roseto-20240113.md)

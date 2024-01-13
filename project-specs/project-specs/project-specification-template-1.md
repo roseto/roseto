@@ -14,7 +14,7 @@ Roseto Sync is a project that aims to organize periodic meetings called "syncs" 
 * Location: **VARIED**
 * Time/Date: **VARIED**
 * Subject: **Roseto and it's community**
-* Participants: **VARIED**
+* Participants: **VARIED (Mostly past participants to other projects)**
 * Coordinators: **VARIED**
 * Duration: **\~2 hours**
 * Allocated budget: **VARIED**
@@ -26,6 +26,10 @@ Roseto Sync is a project that aims to organize periodic meetings called "syncs" 
 
 ## Budget
 
+{% hint style="info" %}
+Will be callculated before every sync
+{% endhint %}
+
 <table><thead><tr><th>Items</th><th data-type="number">Price (in EUR)</th></tr></thead><tbody><tr><td></td><td>null</td></tr><tr><td><strong><code>TOTAL</code></strong></td><td>0</td></tr></tbody></table>
 
 ## Related links
@@ -34,8 +38,8 @@ Roseto Sync is a project that aims to organize periodic meetings called "syncs" 
 
 ## Progress
 
-* [ ] Budget Allocated
-* [ ] Project/Event Open Collective Creation
-* [ ] Announced manifest to partners (if applicable)
-* [ ] Items bought
+* [x] Budget Allocated (Non-applicable - Will be allocated before every sync)
+* [x] Project/Event Open Collective Creation (Non-apllicable - Will be created before every sync)
+* [x] Announced manifest to partners (Non-applicable - Will be announced before every sync)
+* [x] Items bought (Non-applicable - Will be announced before every sync)
 * [ ] Executed

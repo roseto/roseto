@@ -38,7 +38,7 @@ const getSpanClassName = (idx: number) => {
 	{projects.map((project, idx) => (
 		<a
 			href={project.body ? ("/projects/" + project.slug) : (project.data?.link || undefined)}
-			target={project.data?.link ? "_blank" : undefined}
+			target={!project.body && project.data?.link ? "_blank" : undefined}
 			class={getSpanClassName(idx)}
 		>
 			<Card className="w-full h-full">
@@ -52,7 +52,7 @@ const getSpanClassName = (idx: number) => {
 							maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
 							"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
 						}}
-						class="absolute top-0 left-0 w-full h-full z-0 object-cover"
+						class="absolute top-0 left-0 w-full h-full z-0 object-cover opacity-50"
 					/>
 				}
 				<CardHeader className="relative z-10">
@@ -61,7 +61,7 @@ const getSpanClassName = (idx: number) => {
 							{project.data.title}
 						</p>
 					</CardTitle>
-					<CardDescription transition:name={"description" + project.id}>
+					<CardDescription transition:name={"description" + project.id} className={project.data?.cover ? "text-foregorund" : ""}>
 						{project.data.description}
 					</CardDescription>
 				</CardHeader>

@@ -62,6 +62,9 @@
     @apply bg-background text-foreground overflow-x-hidden;
   }
 
+  .prose {
+	@apply prose-hr:!border-border;
+  }
 }
 
 .grainy {

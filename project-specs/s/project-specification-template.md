@@ -26,7 +26,7 @@ DESCRIPTION
 
 ## Budget
 
-<table><thead><tr><th>Items</th><th data-type="number">Price (in EUR)</th></tr></thead><tbody><tr><td></td><td>null</td></tr><tr><td><strong><code>TOTAL</code></strong></td><td>0</td></tr></tbody></table>
+<table><thead><tr><th width="95" data-type="checkbox">Done</th><th width="494">Items</th><th data-type="number">Price (in EURO)</th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td>false</td><td></td><td>null</td><td></td><td></td></tr><tr><td>false</td><td><strong><code>TOTAL</code></strong></td><td>0</td><td></td><td></td></tr></tbody></table>
 
 ## Related links
 

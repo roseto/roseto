@@ -11,12 +11,12 @@ const specials = await getCollection("contributors", ({data}) => data?.special);
 			Special mentions
 		</CardTitle>
 		<CardDescription>
-			These people have gone above and beyond to support the project.
+			The people who help us along the way
 		</CardDescription>
 	</CardHeader>
 
 	<CardContent>
-		<div class="flex flex-wrap flex-row gap-4 items-center justify-center">
+		<div class="flex flex-wrap flex-row gap-4 items-center">
 			{specials.map((special) => (
 				<a
 					class="flex flex-col items-center w-32"

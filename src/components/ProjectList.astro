@@ -17,7 +17,7 @@ const getSpanClassName = (idx: number) => {
 	}
 
 	if ([0, 7, 8].includes(idx)) {
-		className += "col-span-2 min-h-[256px]";
+		className += "col-span-1 md:col-span-2 min-h-[256px]";
 	} else {
 		className += "col-span-1";
 	}
@@ -33,7 +33,7 @@ const getSpanClassName = (idx: number) => {
 ---
 
 <div
-	class="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 justify-center pb-4"
+	class="grid grid-flow-row grid-cols-1 md:grid-cols-4 gap-2 justify-center pb-4"
 >
 	{projects.map((project, idx) => (
 		<a

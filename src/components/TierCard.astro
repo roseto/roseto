@@ -1,4 +1,5 @@
----import type { CollectionEntry } from 'astro:content';
+---
+import type { CollectionEntry } from 'astro:content';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Hint } from './ui/hint';
 import { Button } from './ui/button';
@@ -15,7 +16,10 @@ const { tier } = Astro.props;
 >	
 	<div
 		class="absolute opacity-50 top-0 left-0 w-64 h-64 z-0 pointer-events-none bg-gradient-to-br from-primary via-transparent"
-	/>
+	>
+		<img src="/static/shapes/star.svg" alt="" class="w-2/5 opacity-50">
+	</div>
+
 	<CardHeader className="z-10">
 		<p
 			class="text-xs text-muted-foreground"

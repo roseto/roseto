@@ -12,7 +12,7 @@ Our web domains are very important, since they are the main ways that we interac
 * [`roseto.space`](https://roseto.space)
 * [`ciorogarla.eu.org`](https://ciorogarla.eu.org)
 * [`roseto.link`](https://roseto.link)
-* `profiteri.eu.org` (Depricated, now redirects to `roseto.space`)
-* `ciorogarlaunita.eu.org` (Depricated, now redirects to `ciorogarla.eu.org`)
+* `profiteri.eu.org` (Deprecated, now redirects to `roseto.space`)
+* `ciorogarlaunita.eu.org` (Deprecated, now redirects to `ciorogarla.eu.org`)
 
 [^1]: 

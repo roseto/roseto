@@ -10,14 +10,14 @@ const tiers = await getCollection("tiers")
 
 <Container>
 	<h2
-		class="mt-8 text-4xl font-bold text-center"
+		class="mt-8 text-6xl font-bold"
 	>
-		Here are some of the ways you can contribute financially	
+		Contribute financially	
 	</h2>
 </Container>
 
 <div
-	class="mt-4 p-4 mx-auto max-w-screen-lg flex flex-row gap-2 flex-nowrap overflow-x-scroll"
+	class="mt-4 p-4 mx-auto max-w-screen-2xl flex flex-row gap-2 flex-nowrap overflow-x-scroll"
 >
 	{tiers.map((tier) => (
 		<TierCard tier={tier}/>

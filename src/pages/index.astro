@@ -14,41 +14,7 @@ import Specials from "@/components/Specials.astro";
 ---
 
 <style scoped>
-	#bkg-blob::before {
-		content: "";
-		position: absolute;
-		aspect-ratio: 1;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 60vw;
-		height: 60vw;
-		max-width: 300px;
-		max-height: 300px;
-		background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-		border-radius: 50%;
-		animation: blob 15s infinite linear;
-		filter: blur(32px);
-	}
 
-	@media (prefers-color-scheme: dark) {
-		#bkg-blob::before {
-			opacity: 0.5;
-		}
-	}
-
-
-	@keyframes blob {
-		0% {
-			transform: translate(-45%, -55%) rotate(0deg) scale(1);
-		}
-		50% {
-			transform: translate(-50%, -50%) rotate(180deg) scale(1.2, 0.8);
-		}
-		100% {
-			transform: translate(-45%, -55%) rotate(360deg) scale(1);
-		}
-	}
 </style>
 
 <Layout 
@@ -69,15 +35,21 @@ import Specials from "@/components/Specials.astro";
 >
 	<div id="bkg-blob">
 		<Container>
-			<Stack className="relative h-[80vh] justify-center items-center text-center">
-				<h1 class="text-5xl md:text-7xl font-bold">
+			<Stack className="relative h-[80vh] justify-center items-center">
+				<img 
+					src="/static/shapes/rectangles.svg" 
+					alt=""
+					class="absolute left-0 h-full dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
+				/>
+				<h1 class="text-6xl md:text-9xl font-bold">
 					<span
 						class="bg-clip-text text-primary"
 					>
 						Growing
 					</span> is a necessity, not an option.
 				</h1>
-				<p>
+
+				<p class="text-2xl font-bold w-full text-muted-foreground">
 					The self-improvement space you need.
 				</p>
 				<div
@@ -95,13 +67,13 @@ import Specials from "@/components/Specials.astro";
 	<Container>
 		<Stack className="mt-8">
 			<h2
-				class="text-4xl font-bold text-center"
+				class="text-4xl font-bold"
 			>
 				What happened to Profiteri (Ciorogarla Unita)?
 			</h2>
 			
 			<Card>
-				<CardContent className="mt-6">
+				<CardContent className="mt-4">
 					<p>
 						We decided to invest more time and effort into Profiteri (Ciorogarla Unita) and make it more
 						than just a collective of people. We want to make it a community, a network of people that
@@ -111,32 +83,38 @@ import Specials from "@/components/Specials.astro";
 			</Card>
 		</Stack>
 	</Container>
-	<Container
-		className="bg-gradient-to-b from-primary to-secondary rounded-xl mt-8"
+	<div
+		class="bg-gradient-to-b from-primary to-secondary mt-8"
 	>
-		<h2
-			class="text-4xl font-bold text-center text-primary-foreground py-8"
-		>
-			Projects
-		</h2>
-		<ProjectList />
-		<a href="/projects">
-			<Button variant="outline" className="w-full mb-4 text-black border-black">
-				See all projects
-			</Button>
-		</a>
-	</Container>
+		<Container>
+			<h2
+				class="text-6xl font-bold text-primary-foreground py-8"
+			>
+				Projects
+			</h2>
+			<ProjectList />
+			<a href="/projects">
+				<Button variant="outline" className="w-full mb-4 text-black border-black">
+					See all projects
+				</Button>
+			</a>
+		</Container>
+	</div>
 	<Container>
 		<Stack className="mt-8">
-			<Partnerships />
-			<Specials />
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-2"
+			>
+				<Partnerships />
+				<Specials />
+			</div>
 
 			<h2
-				class="text-4xl font-bold text-center mt-4"
+				class="text-6xl font-bold mt-4"
 			>
 				Why <span class="text-primary">Roseto</span>?
 			</h2>
-			<div class="grid grid-cols-2 gap-2 justify-center">
+			<div class="grid grid-cols-2 gap-2 justify-center relative">
 				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<FrameIcon
@@ -192,6 +170,11 @@ import Specials from "@/components/Specials.astro";
 						</CardDescription>
 					</CardContent>
 				</Card>
+				<img 
+					src="/static/shapes/column.svg" 
+					alt=""
+					class="absolute left-0 bottom-0 w-full max-w-md h-72 mix-blend-overlay pointer-events-none"
+				/>
 			</div>
 
 		</Stack>
@@ -217,7 +200,7 @@ import Specials from "@/components/Specials.astro";
 			<Card id="mission-card-1" className="mt-2">
 				<CardContent className="flex flex-col text-center items-center mt-8">
 					<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
-					<CardDescription>
+					<CardDescription className="text-xl">
 						Build and maintain open-source software, tools, and services that help people and businesses.
 					</CardDescription>
 				</CardContent>
@@ -226,7 +209,7 @@ import Specials from "@/components/Specials.astro";
 			<Card id="mission-card-2">
 				<CardContent className="flex flex-col text-center items-center mt-8">
 					<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
-					<CardDescription>
+					<CardDescription className="text-xl">
 						Build a community of people that share the same values and beliefs.
 					</CardDescription>
 				</CardContent>
@@ -235,7 +218,7 @@ import Specials from "@/components/Specials.astro";
 			<Card id="mission-card-3">
 				<CardContent className="flex flex-col text-center items-center mt-8">
 					<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
-					<CardDescription>
+					<CardDescription className="text-xl">
 						Help young people develop their skills and find their passion,
 						volunteer and help the community while having fun.
 					</CardDescription>
@@ -245,7 +228,7 @@ import Specials from "@/components/Specials.astro";
 			<Card id="mission-card-4">
 				<CardContent className="flex flex-col text-center items-center mt-8">
 					<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
-					<CardDescription>
+					<CardDescription className="text-xl">
 						Help businesses and organizations with their digital transformation and development.
 					</CardDescription>
 				</CardContent>
@@ -254,7 +237,7 @@ import Specials from "@/components/Specials.astro";
 			<Card id="mission-card-5" className="mb-24">
 				<CardContent className="flex flex-col text-center items-center mt-8">
 					<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
-					<CardDescription>
+					<CardDescription className="text-xl">
 						Connect people together and help them grow and develop their skills.
 					</CardDescription>
 				</CardContent>
@@ -265,6 +248,8 @@ import Specials from "@/components/Specials.astro";
 		>
 			And we are not stopping here.
 		</h2>
+
+		<hr class="my-2"/>
 	</Container>
 
 	<Container>

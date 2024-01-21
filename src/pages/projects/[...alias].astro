@@ -25,9 +25,10 @@ export async function getStaticPaths() {
 	);
 }
 
+const baseUrl = import.meta.env.PROD ? 'https://roseto.space' : Astro.url.origin;
 
 const { dest, title } = Astro.props;
-const replacement = `${Astro.url.origin}${dest}`;
+const replacement = `${baseUrl}${dest}`;
 ---
 
 <Layout title={title}>

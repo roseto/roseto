@@ -7,6 +7,7 @@ interface Props {
 		text: string;
 		href: string;
 		target?: string;
+		"data-astro-reload"?: boolean;
 	}[]
 }
 
@@ -30,7 +31,7 @@ export default function Navbar({ buttons, origin }: Props) {
 			</a>
 			<div className="flex flex-row gap-1">
 				{buttons && buttons.map((button, i) => (
-					<a href={button.href} target={button.target} key={i}>
+					<a href={button.href} target={button.target} data-astro-reload={button["data-astro-reload"]} key={i}>
 						<Button
 							variant="ghost"
 						>

@@ -23,7 +23,8 @@ import Specials from "@/components/Specials.astro";
 		buttons: [
 			{
 				text: "Verify diploma",
-				href: "/verify"
+				href: "/verify",
+				"data-astro-reload": true
 			},
 			{
 				text: "Docs",
@@ -73,7 +74,7 @@ import Specials from "@/components/Specials.astro";
 			</h2>
 			
 			<Card>
-				<CardContent className="mt-4">
+				<CardContent className="mt-6">
 					<p>
 						We decided to invest more time and effort into Profiteri (Ciorogarla Unita) and make it more
 						than just a collective of people. We want to make it a community, a network of people that
@@ -115,65 +116,58 @@ import Specials from "@/components/Specials.astro";
 				Why <span class="text-primary">Roseto</span>?
 			</h2>
 			<div class="grid grid-cols-2 gap-2 justify-center relative">
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<FrameIcon
-							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
-						/>
-						<CardTitle className="mt-2 text-2xl">
-							Solid foundation
-						</CardTitle>
-						<CardDescription>
-							We are built on privacy, security, freedom, sustainability, development, and community.
-						</CardDescription>
-					</CardContent>
-				</Card>
+				<div class="flex flex-col text-center items-center mt-8">
+					<FrameIcon
+						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+					/>
+					<CardTitle className="mt-2 text-2xl">
+						Solid foundation
+					</CardTitle>
+					<CardDescription>
+						We are built on privacy, security, freedom, sustainability, development, and community.
+					</CardDescription>
+				</div>
 
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<LockOpen2Icon
-							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
-						/>
-						<CardTitle className="mt-2 text-2xl">
-							Open
-						</CardTitle>
-						<CardDescription>
-							We are as open as possible. From our code, to the money we make, to our plans.
-						</CardDescription>
-					</CardContent>
-				</Card>
+				<div class="flex flex-col text-center items-center mt-8">
+					<LockOpen2Icon
+						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+					/>
+					<CardTitle className="mt-2 text-2xl">
+						Open
+					</CardTitle>
+					<CardDescription>
+						We are as open as possible. From our code, to the money we make, to our plans.
+					</CardDescription>
+				</div>
 
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<GlobeIcon
-							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
-						/>
-						<CardTitle className="mt-2 text-2xl">
-							Everwhere
-						</CardTitle>
-						<CardDescription>
-							While we are based in Romania, we are doing our best to extend our reach to the entire world.
-						</CardDescription>
-					</CardContent>
-				</Card>
+				<div class="flex flex-col text-center items-center mt-8">
+					<GlobeIcon
+						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+					/>
+					<CardTitle className="mt-2 text-2xl">
+						Everwhere
+					</CardTitle>
+					<CardDescription>
+						While we are based in Romania, we are doing our best to extend our reach to the entire world.
+					</CardDescription>
+				</div>
 
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<RocketIcon
-							className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
-						/>
-						<CardTitle className="mt-2 text-2xl">
-							Forward-thinking
-						</CardTitle>
-						<CardDescription>
-							We are always looking for new ways to improve our services and the way we do things.
-						</CardDescription>
-					</CardContent>
-				</Card>
+				<div class="flex flex-col text-center items-center mt-8">
+					<RocketIcon
+						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
+					/>
+					<CardTitle className="mt-2 text-2xl">
+						Forward-thinking
+					</CardTitle>
+					<CardDescription>
+						We are always looking for new ways to improve our services and the way we do things.
+					</CardDescription>
+				</div>
+
 				<img 
-					src="/static/shapes/column.svg" 
+					src="/static/shapes/blobs.svg" 
 					alt=""
-					class="absolute left-0 bottom-0 w-full max-w-md h-72 mix-blend-overlay pointer-events-none"
+					class="absolute left-0 bottom-0 w-64 md:w-full max-w-md h-64 dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
 				/>
 			</div>
 
@@ -254,7 +248,7 @@ import Specials from "@/components/Specials.astro";
 
 	<Container>
 		<Stack>
-			<Card className="mt-4">
+			<div class="mt-4">
 				<CardHeader>
 					<CardTitle>
 						This is how transparent we are
@@ -271,7 +265,7 @@ import Specials from "@/components/Specials.astro";
 						<li><a class="hover:underline" href="https://roseto.space/license">Our license</a></li>
 					</ul>
 				</CardContent>
-			</Card>
+			</div>
 
 			<Contributors />
 

@@ -17,7 +17,7 @@ const { tier } = Astro.props;
 	<div
 		class="absolute opacity-50 top-0 left-0 w-64 h-64 z-0 pointer-events-none bg-gradient-to-br from-primary via-transparent"
 	>
-		<img src="/static/shapes/star.svg" alt="" class="w-2/5 opacity-50">
+		<img src="/static/shapes/star.svg" alt="" class="w-2/5 dark:mix-blend-overlay mix-blend-multiply">
 	</div>
 
 	<CardHeader className="z-10">
@@ -29,7 +29,7 @@ const { tier } = Astro.props;
 		<CardTitle>
 			{tier.data.name}
 		</CardTitle>
-		<CardDescription>
+		<CardDescription className="text-foreground">
 			{tier.data.description}
 		</CardDescription>
 	</CardHeader>

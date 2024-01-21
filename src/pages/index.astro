@@ -11,11 +11,11 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import Partnerships from "@/components/Partnerships.astro";
 import Specials from "@/components/Specials.astro";
+import { getCollection } from "astro:content";
+
+const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
 
-<style scoped>
-
-</style>
 
 <Layout 
 	title="Welcome"
@@ -34,36 +34,36 @@ import Specials from "@/components/Specials.astro";
 		]
 	}}
 >
-	<div id="bkg-blob">
-		<Container>
-			<Stack className="relative h-[80vh] justify-center items-center">
-				<img 
-					src="/static/shapes/rectangles.svg" 
-					alt=""
-					class="absolute left-0 h-full dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
-				/>
-				<h1 class="text-6xl md:text-9xl font-black">
-					<span
-						class="bg-clip-text text-primary"
-					>
-						Growing
-					</span> is a necessity, not an option.
-				</h1>
-
-				<p class="text-2xl font-bold w-full text-muted-foreground">
-					The self-improvement space you need.
-				</p>
-				<div
-					class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
+	
+	<Container>
+		<Stack className="relative h-[80vh] justify-center items-center">
+			<img 
+				src="/static/shapes/rectangles.svg" 
+				alt=""
+				class="absolute left-0 h-full dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
+			/>
+			<h1 class="text-6xl md:text-9xl font-black">
+				<span
+					class="bg-clip-text text-primary"
 				>
-					<DoubleArrowDownIcon className="animate-bounce" />
-					<p
-						class="text-sm font-bold"
-					>Sounds good? Scroll down.</p>
-				</div>
-			</Stack>
-		</Container>
-	</div>
+					Growing
+				</span> is a necessity, not an option.
+			</h1>
+
+			<p class="text-2xl font-bold w-full text-muted-foreground">
+				The self-improvement space you need.
+			</p>
+			<div
+				class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
+			>
+				<DoubleArrowDownIcon className="animate-bounce" />
+				<p
+					class="text-sm font-bold"
+				>Sounds good? Scroll down.</p>
+			</div>
+		</Stack>
+	</Container>
+
 
 	<Container>
 		<Stack className="mt-32">
@@ -84,23 +84,40 @@ import Specials from "@/components/Specials.astro";
 			</Card>
 		</Stack>
 	</Container>
+
+	<img 
+		src="/static/shapes/wave-secondary.svg" 
+		alt=""
+		class="w-full h-32 -mb-px pointer-events-none"
+	/>
 	<div
-		class="bg-gradient-to-b from-primary to-secondary mt-8"
+		class="bg-secondary"
 	>
-		<Container>
+		<Container className="relative">
+			<img 
+				src="/static/shapes/clover.svg" 
+				alt=""
+				class="absolute bottom-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+			/>
 			<h2
-				class="text-6xl font-bold text-primary-foreground py-8"
+				class="text-6xl font-bold text-secondary-foreground py-8"
 			>
 				Projects
 			</h2>
 			<ProjectList />
 			<a href="/projects">
-				<Button variant="outline" className="w-full mb-4 text-black border-black">
-					See all projects
+				<Button variant="outline" className="w-full mb-4 text-secondary-foreground border-black">
+					See all {countProjects} projects
 				</Button>
 			</a>
 		</Container>
 	</div>
+	<img 
+		src="/static/shapes/wave-secondary.svg" 
+		alt=""
+		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
+	/>
+
 	<Container>
 		<Stack className="mt-8">
 			<div
@@ -167,7 +184,7 @@ import Specials from "@/components/Specials.astro";
 				<img 
 					src="/static/shapes/blobs.svg" 
 					alt=""
-					class="absolute left-0 bottom-0 w-64 md:w-full max-w-md h-64 dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
+					class="absolute left-0 bottom-0 w-64 md:w-full max-w-md h-64 dark:mix-blend-overlay mix-blend-multiply opacity-50 pointer-events-none"
 				/>
 			</div>
 
@@ -176,75 +193,86 @@ import Specials from "@/components/Specials.astro";
 
 	<Tiers />
 
-	<Container>
-		<Stack className="relative mt-4">
-			<div
-				class="sticky top-4 z-40 mx-2 p-2 border border-muted rounded bg-background/90 backdrop-filter backdrop-blur-sm"
-			>
-				<h2
-					class="text-3xl md:text-5xl font-bold text-center mb-1"
+	<img 
+		src="/static/shapes/wave.svg" 
+		alt=""
+		class="w-full h-32 mt-4 -mb-px pointer-events-none"
+	/>
+	<div class="bg-gradient-to-b from-primary to-secondary">
+		<Container>
+			<Stack className="relative">
+				<div
+					class="sticky top-4 z-40 mx-2 p-2 border border-muted rounded bg-background"
 				>
-					<span class="text-primary">Roseto</span>'s Mission
-				</h2>
-				<Progress 
-					id="mission-progress"
-				/>
-			</div>
-
-			<Card id="mission-card-1" className="mt-2">
-				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
-					<CardDescription className="text-xl">
-						Build and maintain open-source software, tools, and services that help people and businesses.
-					</CardDescription>
-				</CardContent>
-			</Card>
-
-			<Card id="mission-card-2">
-				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
-					<CardDescription className="text-xl">
-						Build a community of people that share the same values and beliefs.
-					</CardDescription>
-				</CardContent>
-			</Card>
-
-			<Card id="mission-card-3">
-				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
-					<CardDescription className="text-xl">
-						Help young people develop their skills and find their passion,
-						volunteer and help the community while having fun.
-					</CardDescription>
-				</CardContent>
-			</Card>
-
-			<Card id="mission-card-4">
-				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
-					<CardDescription className="text-xl">
-						Help businesses and organizations with their digital transformation and development.
-					</CardDescription>
-				</CardContent>
-			</Card>
-
-			<Card id="mission-card-5" className="mb-24">
-				<CardContent className="flex flex-col text-center items-center mt-8">
-					<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
-					<CardDescription className="text-xl">
-						Connect people together and help them grow and develop their skills.
-					</CardDescription>
-				</CardContent>
-			</Card>
-		</Stack>
-		<h2
-			class="text-4xl font-bold text-center mt-4"
-		>
-			And we are not stopping here.
-		</h2>
-
-		<hr class="my-2"/>
-	</Container>
+					<h2
+						class="text-3xl md:text-5xl font-bold text-center mb-1"
+					>
+						<span class="text-primary">Roseto</span>'s Mission
+					</h2>
+					<Progress 
+						id="mission-progress"
+					/>
+				</div>
+	
+				<Card id="mission-card-1" className="mt-2">
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
+						<CardDescription className="text-xl">
+							Build and maintain open-source software, tools, and services that help people and businesses.
+						</CardDescription>
+					</CardContent>
+				</Card>
+	
+				<Card id="mission-card-2">
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
+						<CardDescription className="text-xl">
+							Build a community of people that share the same values and beliefs.
+						</CardDescription>
+					</CardContent>
+				</Card>
+	
+				<Card id="mission-card-3">
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
+						<CardDescription className="text-xl">
+							Help young people develop their skills and find their passion,
+							volunteer and help the community while having fun.
+						</CardDescription>
+					</CardContent>
+				</Card>
+	
+				<Card id="mission-card-4">
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
+						<CardDescription className="text-xl">
+							Help businesses and organizations with their digital transformation and development.
+						</CardDescription>
+					</CardContent>
+				</Card>
+	
+				<Card id="mission-card-5" className="mb-24">
+					<CardContent className="flex flex-col text-center items-center mt-8">
+						<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
+						<CardDescription className="text-xl">
+							Connect people together and help them grow and develop their skills.
+						</CardDescription>
+					</CardContent>
+				</Card>
+			</Stack>
+			<h2
+				class="text-4xl font-bold text-center mt-4 text-secondary-foreground"
+			>
+				And we are not stopping here.
+			</h2>
+	
+		</Container>
+	</div>
+	<img 
+		src="/static/shapes/wave-secondary.svg" 
+		alt=""
+		class="w-full h-32 mb-4 rotate-180 -mt-px pointer-events-none"
+	/>
 
 	<Container>
 		<Stack>
@@ -321,6 +349,8 @@ import Specials from "@/components/Specials.astro";
 
 	document.addEventListener("scroll", () => {
 		const missionProgress = document.querySelector("#mission-progress > div");
+		if (!missionProgress) return;
+
 		// Get the current scroll position
 		const scrollPosition = window.scrollY;
 

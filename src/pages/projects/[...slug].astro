@@ -56,7 +56,7 @@ const { Content } = await entry.render();
 				</p>
 			}
 			{entry.data.link &&
-				<a class="text-muted-foreground text-sm hover:underline" href={entry.data.link} target="_blank">
+				<a class="text-primary text-sm hover:underline" href={entry.data.link} target="_blank">
 					<Link1Icon className="inline w-4 h-4 mr-1" />
 					{entry.data.link}
 				</a>
@@ -76,7 +76,7 @@ const { Content } = await entry.render();
 
 			{entry.data.spec &&
 				<>
-					<a class="text-muted-foreground text-sm hover:underline" href={entry.data.spec} target="_blank">
+					<a class="text-primary text-sm hover:underline" href={entry.data.spec} target="_blank">
 						<Pencil2Icon className="inline w-4 h-4 mr-1" />
 						Project specification
 					</a>

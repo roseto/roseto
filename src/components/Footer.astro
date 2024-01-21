@@ -1,110 +1,121 @@
 ---
 import { Separator } from "@/components/ui/separator";
 import CarbonBadge from "@/components/CarbonBadge.astro";
+import { Card, CardContent } from "./ui/card";
 
 const currentYear = new Date().getFullYear();
 ---
 
 
+<img
+	src="/static/shapes/wave-secondary.svg"
+	width="100%"
+	height="64px"
+	class="mt-8 h-32 w-full -mb-px pointer-events-none"
+/>
 <footer
-	class="flex flex-col gap-2 p-4 bg-muted rounded-t mt-8"
+	class="flex flex-col gap-2 p-4 bg-gradient-to-b from-secondary via-primary to-primary"
 >
-	<p>
-		<a class="hover:underline" href="/license">Roseto &copy; {currentYear} is licensed under CC BY-NC-SA 4.0 </a>
-	</p>
-	
-	<CarbonBadge />
-
-	<div class="flex flex-col">
-		<p class="mb-1 text-xl">Links</p>
-		<a href="/contributors" class="text-muted-foreground hover:underline">
-			Contributors
-		</a>
-		<a href="/verify" class="text-muted-foreground hover:underline" data-astro-reload>
-			Verify diploma
-		</a>
-		<a href="https://docs.roseto.space" target="_blank" class="text-muted-foreground hover:underline">
-			Docs
-		</a>
-		<a href="/license" class="text-muted-foreground hover:underline">
-			License
-		</a>
-		<a href="/code" class="text-muted-foreground hover:underline">
-			Code of Conduct
-		</a>
-		<a href="/contact" class="text-muted-foreground hover:underline">
-			Contact
-		</a>
-	</div>
-
-	<div class="mt-2 flex flex-row items-center h-6 gap-4">
-		<a 
-			href="https://facebook.com/rosetoteam"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<img 
-				src="https://cdn.simpleicons.org/facebook/000000/ffffff" 
-				alt="Facebook"
-				class="w-6 h-6 fill-muted-foreground"
-			/>
-		</a>
-
-		<Separator orientation="vertical" className="bg-muted-foreground" />
-
-		<a 
-			href="https://instagram.com/rosetoteam"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<img 
-				src="https://cdn.simpleicons.org/instagram/000000/ffffff" 
-				alt="Instagram"
-				class="w-6 h-6 fill-muted-foreground"
-			/>
-		</a>
-
-		<Separator orientation="vertical" className="bg-muted-foreground" />
-
-		<a 
-
-			href="https://github.com/roseto"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<img 
-				src="https://cdn.simpleicons.org/github/000000/ffffff" 
-				alt="GitHub"
-				class="w-6 h-6 fill-muted-foreground"
-			/>
-		</a>
-
-		<Separator orientation="vertical" className="bg-muted-foreground" />
-
-		<a 
-			href="https://opencollective.com/roseto"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<img 
-				src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
-				alt="Open Collective"
-				class="w-6 h-6 fill-muted-foreground"
-			/>
-		</a>
-
-		<Separator orientation="vertical" className="bg-muted-foreground" />
-
-		<a 
-			href="https://chat.whatsapp.com/B5dxooCfG9sCMMd7kea7m5"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<img 
-				src="https://cdn.simpleicons.org/whatsapp/000000/ffffff" 
-				alt="WhatsApp"
-				class="w-6 h-6 fill-muted-foreground"
-			/>
-		</a>
-	</div>
+	<Card>
+		<CardContent className="mt-6 space-y-2">
+			<p>
+				<a class="hover:underline" href="/license">Roseto &copy; {currentYear} is licensed under Creative Commons BY-NC-SA 4.0 </a>
+			</p>
+			
+			<CarbonBadge />
+		
+			<div class="flex flex-col">
+				<p class="mb-1 text-xl">Links</p>
+				<a href="/contributors" class="text-muted-foreground hover:underline">
+					Contributors
+				</a>
+				<a href="/verify" class="text-muted-foreground hover:underline" data-astro-reload>
+					Verify diploma
+				</a>
+				<a href="https://docs.roseto.space" target="_blank" class="text-muted-foreground hover:underline">
+					Docs
+				</a>
+				<a href="/license" class="text-muted-foreground hover:underline">
+					License
+				</a>
+				<a href="/code" class="text-muted-foreground hover:underline">
+					Code of Conduct
+				</a>
+				<a href="/contact" class="text-muted-foreground hover:underline">
+					Contact
+				</a>
+			</div>
+		
+			<div class="mt-2 flex flex-row items-center h-6 gap-4">
+				<a 
+					href="https://facebook.com/rosetoteam"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img 
+						src="https://cdn.simpleicons.org/facebook/000000/ffffff" 
+						alt="Facebook"
+						class="w-6 h-6 fill-muted-foreground"
+					/>
+				</a>
+		
+				<Separator orientation="vertical" className="bg-muted-foreground" />
+		
+				<a 
+					href="https://instagram.com/rosetoteam"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img 
+						src="https://cdn.simpleicons.org/instagram/000000/ffffff" 
+						alt="Instagram"
+						class="w-6 h-6 fill-muted-foreground"
+					/>
+				</a>
+		
+				<Separator orientation="vertical" className="bg-muted-foreground" />
+		
+				<a 
+		
+					href="https://github.com/roseto"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img 
+						src="https://cdn.simpleicons.org/github/000000/ffffff" 
+						alt="GitHub"
+						class="w-6 h-6 fill-muted-foreground"
+					/>
+				</a>
+		
+				<Separator orientation="vertical" className="bg-muted-foreground" />
+		
+				<a 
+					href="https://opencollective.com/roseto"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img 
+						src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
+						alt="Open Collective"
+						class="w-6 h-6 fill-muted-foreground"
+					/>
+				</a>
+		
+				<Separator orientation="vertical" className="bg-muted-foreground" />
+		
+				<a 
+					href="https://chat.whatsapp.com/B5dxooCfG9sCMMd7kea7m5"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img 
+						src="https://cdn.simpleicons.org/whatsapp/000000/ffffff" 
+						alt="WhatsApp"
+						class="w-6 h-6 fill-muted-foreground"
+					/>
+				</a>
+			</div>
+		</CardContent>
+	</Card>
 </footer>

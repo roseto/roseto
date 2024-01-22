@@ -12,5 +12,5 @@
 ## Project Specs <a href="#s" id="s"></a>
 
 * [Project Specification Template](s/project-specification-template.md)
-* [Learning about volunteering (Subject to change)](s/roseto-20240110.md)
+* [Learning about volunteering](s/roseto-20240110.md)
 * [Roseto Sync (Subject to change)](s/roseto-20240113.md)

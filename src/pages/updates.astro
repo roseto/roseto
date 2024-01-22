@@ -2,7 +2,6 @@
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/Layout.astro";
-import { RadiobuttonIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
 
 // This page is the hackiest thing I've ever written in Astro.
@@ -33,7 +32,7 @@ const updates = await getCollection("updates").then((collection) =>
 				Updates
 			</h1>
 			<p class="mb-8 text-muted-foreground z-10">
-				Here are some updates about Roseto in the form of a change log.
+				Here are some updates about Roseto in the form of a changelog.
 			</p>
 			<div
 				class="flex flex-row justify-center"

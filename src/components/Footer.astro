@@ -34,6 +34,7 @@ const currentYear = new Date().getFullYear();
 					<a href="/contributors" class="text-muted-foreground hover:underline">
 						Contributors
 					</a>
+					<!-- Due to how Cloudflare Workers handles requests, we have to force reload the page when we navigate to it since it is server rendered -->
 					<a href="/verify" class="text-muted-foreground hover:underline" data-astro-reload>
 						Verify diploma
 					</a>

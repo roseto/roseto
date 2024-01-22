@@ -72,6 +72,11 @@
 	overflow: hidden;
 }
 
+::selection {
+	background: hsl(var(--primary));
+	color: hsl(var(--primary-foreground));
+}
+
 .grainy::before {
 	content: "";
 	position: absolute;

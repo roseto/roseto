@@ -22,6 +22,10 @@ const countProjects = await getCollection("projects").then((projects) => project
 	navbar={{
 		buttons: [
 			{
+				text: "Updates",
+				href: "/updates",
+			},
+			{
 				text: "Verify diploma",
 				href: "/verify",
 				"data-astro-reload": true
@@ -202,7 +206,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 		<Container>
 			<Stack className="relative">
 				<div
-					class="sticky top-4 z-40 mx-2 p-2 border border-muted rounded bg-background"
+					class="sticky top-4 z-40 mx-auto p-2 border border-muted rounded bg-background w-full max-w-screen-sm"
 				>
 					<h2
 						class="text-3xl md:text-5xl font-bold text-center mb-1"

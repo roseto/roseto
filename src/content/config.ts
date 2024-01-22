@@ -26,6 +26,14 @@ const projectsCollection = defineCollection({
 	})
 });
 
+const updatesCollection = defineCollection({
+	type: "content",
+	schema: z.object({
+		title: z.string(),
+		date: z.date(),
+	})
+});
+
 const tiersCollection = defineCollection({
 	type: "data",
 	schema: z.object({
@@ -42,5 +50,6 @@ const tiersCollection = defineCollection({
 export const collections = {
 	contributors: contributorsCollection,
 	projects: projectsCollection,
-	tiers: tiersCollection
+	tiers: tiersCollection,
+	updates: updatesCollection,
 }

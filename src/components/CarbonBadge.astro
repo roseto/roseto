@@ -21,33 +21,35 @@ if (res.ok) {
 ---
 
 
-<a
-	href="https://websitecarbon.com/website/roseto.space"
-	target="_blank"
-	rel="noopener noreferrer"
->
-	<Badge
-		variant="outline"
-		className="border-muted-foreground"
+<div class="flex flex-row flex-wrap gap-2">
+	<a
+		href="https://websitecarbon.com/website/roseto.space"
+		target="_blank"
+		rel="noopener noreferrer"
 	>
-		<GlobeIcon className="mr-2" />
-		<p>
-			Cleaner than <strong>~{percentage}% of all websites</strong>
-		</p>
-	</Badge>
-</a>
-
-<a
-	href="https://websitecarbon.com/website/roseto.space"
-	target="_blank"
-	rel="noopener noreferrer"
->
-	<Badge
-		variant="outline"
-		className="border-muted-foreground"
+		<Badge
+			variant="outline"
+			className="border-muted-foreground h-full"
+		>
+			<GlobeIcon className="mr-2" />
+			<p>
+				Cleaner than <strong>~{percentage}% of all websites</strong>
+			</p>
+		</Badge>
+	</a>
+	
+	<a
+		href="https://websitecarbon.com/website/roseto.space"
+		target="_blank"
+		rel="noopener noreferrer"
 	>
-		<p>
-			<b class="mx-1">{rating}</b> Carbon Rating
-		</p>
-	</Badge>
-</a>
+		<Badge
+			variant="outline"
+			className="border-muted-foreground h-full"
+		>
+			<p>
+				<b class="mx-1">{rating}</b> Carbon Rating
+			</p>
+		</Badge>
+	</a>
+</div>

@@ -2,8 +2,8 @@
 import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon, RocketIcon } from "@radix-ui/react-icons"; 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, MagicWandIcon, RocketIcon, SymbolIcon } from "@radix-ui/react-icons";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
 import ProjectList from "@/components/ProjectList.astro";
@@ -197,6 +197,31 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<Tiers />
 
+	<Container className="mt-8">
+		<Card className="flex flex-row items-center bg-gradient-to-tr from-secondary/25 via-transparent">
+			<SymbolIcon
+				className="w-28 h-28 p-6 pr-0"
+			/>
+			<div>
+				<CardHeader>
+					<CardTitle>
+						Updates
+					</CardTitle>
+					<CardDescription>
+						We are always working on something new. Check out our updates to see what we are up to.
+					</CardDescription>
+				</CardHeader>
+				<CardFooter>
+					<a href="/updates">
+						<Button variant="secondary">
+							See updates
+						</Button>
+					</a>
+				</CardFooter>
+			</div>
+		</Card>
+	</Container>
+
 	<img 
 		src="/static/shapes/wave.svg" 
 		alt=""
@@ -320,12 +345,12 @@ const countProjects = await getCollection("projects").then((projects) => project
 			/>
 			-->
 
-			<Card className="bg-primary text-primary-foreground">
+			<Card>
 				<CardHeader>
 					<CardTitle>
 						About
 					</CardTitle>
-					<CardDescription className="text-primary-foreground">
+					<CardDescription>
 						Roseto is a dynamic and forward-thinking group committed
 						to empowering the youth while fostering the digital transformation 
 						of local communities and businesses. With a passion for innovation

@@ -6,7 +6,18 @@ import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="Projects">
+<Layout 
+	title="Projects"
+	navbar={{
+		buttons: [
+			{
+				text: "Project Specs",
+				href: "https://docs.roseto.space/project-specs",
+				target: "_blank"
+			}
+		]
+	}}
+>
 	<Container>
 		<Stack>
 			<h1 class="text-5xl font-bold">Projects</h1>

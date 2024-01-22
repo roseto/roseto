@@ -1,0 +1,98 @@
+---
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+import Layout from "@/layouts/Layout.astro";
+import { RadiobuttonIcon } from "@radix-ui/react-icons";
+import { getCollection } from "astro:content";
+
+// This page is the hackiest thing I've ever written in Astro.
+// But it works. I am not sure if it should work, or if it will continue to work.
+// But it works. And that's all that matters. Could break in the future,
+// be careful with future Astro updates.
+const updates = await getCollection("updates").then((collection) =>
+	collection.sort((a, b) => {
+		const aTime = a.data.date.getTime();
+		const bTime = b.data.date.getTime();
+
+		if (aTime && bTime) {
+			return bTime - aTime;
+		} else {
+			return 0;
+		}
+	})
+);
+---
+
+<Layout title="Updates">
+	<Container>
+		<Stack>
+			<img src="/static/shapes/star.svg" class="opacity-50 absolute w-24 h-24 right-6" alt="">
+			<h1
+				class="text-7xl font-bold z-10"
+			>
+				Updates
+			</h1>
+			<p class="mb-8 text-muted-foreground z-10">
+				Here are some updates about Roseto in the form of a change log.
+			</p>
+			<div
+				class="flex flex-row justify-center"
+			>
+				<div
+					class="w-px mr-4 -ml-4 md:ml-0 border-primary/25 border-dashed border-l-2"
+				/>
+				<div class="flex-grow flex flex-col gap-4 relative">
+					<div
+						class="w-3 h-0.5 bg-primary absolute top-1.5 -left-[calc(1rem+2px)]"
+					/>
+					<p class="mb-4 text-xs text-muted-foreground">
+						Today
+					</p>
+					{updates.map(async (update, idx) => (
+						<article>
+							<div class="relative flex flex-row items-center">
+								<div
+									class="w-3 h-0.5 bg-primary absolute top-1.5 -left-[calc(1rem+2px)]"
+								/>
+
+								<p
+									class="text-muted-foreground text-xs mb-2"
+								>
+									{new Date(update.data.date).toLocaleDateString("en-GB", {
+										year: "numeric",
+										month: "short",
+										day: "numeric",
+									})}
+								</p>
+							</div>
+							<a
+								href={`#${update.slug}`}
+								class="hover:underline"
+							>
+								<h2
+									class="text-4xl font-bold"
+									id={update.slug}
+								>
+									{update.data.title}
+								</h2>
+							</a>
+							
+							<div
+								class="prose max-w-screen-lg dark:prose-invert"
+							>
+								{await update.render().then(({ Content }) => (
+									<Content />
+								))}
+							</div>
+							{updates.length - 1 !== idx && (
+								<hr
+									class="mt-2"
+								/>
+							)}
+						</article>
+					))}
+				</div>
+			</div>
+		</Stack>
+	</Container>
+</Layout>

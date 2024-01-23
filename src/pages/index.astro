@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import Partnerships from "@/components/Partnerships.astro";
 import Specials from "@/components/Specials.astro";
 import { getCollection } from "astro:content";
+import UpdatesCard from "@/components/UpdatesCard.astro";
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -197,30 +198,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<Tiers />
 
-	<Container className="mt-8">
-		<Card className="flex flex-row items-center bg-gradient-to-tr from-secondary/25 via-transparent">
-			<SymbolIcon
-				className="w-28 h-28 p-6 pr-0"
-			/>
-			<div>
-				<CardHeader>
-					<CardTitle>
-						Updates
-					</CardTitle>
-					<CardDescription>
-						We are always working on something new. Check out our updates to see what we are up to.
-					</CardDescription>
-				</CardHeader>
-				<CardFooter>
-					<a href="/updates">
-						<Button variant="secondary">
-							See updates
-						</Button>
-					</a>
-				</CardFooter>
-			</div>
-		</Card>
-	</Container>
+	<UpdatesCard />
 
 	<img 
 		src="/static/shapes/wave.svg" 

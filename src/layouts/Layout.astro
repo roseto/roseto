@@ -63,7 +63,7 @@ const pageTitle = frontmatter?.title ?? title;
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Navbar path={Astro.url.pathname} origin={Astro.url.origin} buttons={navbar?.buttons} client:load />
-		<main class="flex-1 overflow-x-hidden">
+		<main class="flex-1">
 			{isMarkdown ? (
 				<Container className="prose dark:prose-invert">
 					<slot/>

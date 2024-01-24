@@ -67,6 +67,18 @@
   }
 }
 
+@layer components {
+	.highlight-primary {
+		border-radius: 85% 15% 81% 19% / 19% 86% 14% 81%;
+		@apply bg-primary text-background dark:text-primary-foreground;
+	}
+
+	.highlight-secondary {
+		border-radius: 85% 15% 81% 19% / 19% 86% 14% 81%;
+		@apply bg-secondary text-secondary-foreground dark:text-background;
+	}
+}
+
 .grainy {
 	position: relative;
 	overflow: hidden;

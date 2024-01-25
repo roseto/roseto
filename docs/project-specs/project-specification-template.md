@@ -4,6 +4,10 @@ description: PROJECT ID
 
 # Project Specification Template
 
+{% hint style="info" %}
+Specification Status - **WIP/DONE**
+{% endhint %}
+
 ## Description
 
 DESCRIPTION

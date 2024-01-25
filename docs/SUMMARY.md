@@ -25,6 +25,7 @@
 
 ## Project Specs
 
+* [📄 Project Specs](project-specs/project-specs.md)
 * [Learning about volunteering](project-specs/roseto-20240110.md)
 * [Roseto Sync](project-specs/roseto-20240113.md)
 * [Project Specification Template](project-specs/project-specification-template.md)

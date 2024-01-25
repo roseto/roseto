@@ -33,7 +33,3 @@ Our projects have helped a lot of people in Romania:
 ## Project Specifications
 
 As we said before, transparency is a top priority for us, so that's why every project specification is created publicly. This way you can even comment on them and contribute to our projects.
-
-{% content-ref url="https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/" %}
-[Project Specs](https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/)
-{% endcontent-ref %}

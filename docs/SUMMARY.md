@@ -5,7 +5,6 @@
 * [🏠 Homepage](https://roseto.space)
 * [💰 Open Collective](https://opencollective.com/roseto)
 * [🔑 License](https://roseto.space/license)
-* [📝 Project Specifications](https://app.gitbook.com/o/sfq4aQvobKUVNISfKWwF/s/yIAC3QX6FZNwX2LK56wX/)
 
 ***
 
@@ -26,3 +25,9 @@
   * [All projects](what-we-do/projects/all-projects.md)
   * [Safety and Privacy](what-we-do/projects/safety-and-privacy.md)
   * [Partners](what-we-do/projects/partners.md)
+
+## Project Specs
+
+* [Learning about volunteering](project-specs/learning-about-volunteering.md)
+* [Roseto Sync](project-specs/roseto-sync.md)
+* [Project Specification Template](project-specs/project-specification-template.md)

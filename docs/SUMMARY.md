@@ -18,13 +18,10 @@
 * [🖊 Digital signing of documents](about/digital-signing-of-documents.md)
 * [🌐 Our domains](about/our-domains.md)
 * [🤝 Roseto Group Members](about/roseto-group-members.md)
-
-## What we do
-
-* [💡 Projects](what-we-do/projects/README.md)
-  * [All projects](what-we-do/projects/all-projects.md)
-  * [Safety and Privacy](what-we-do/projects/safety-and-privacy.md)
-  * [Partners](what-we-do/projects/partners.md)
+* [💡 Projects](about/projects/README.md)
+  * [All projects](about/projects/all-projects.md)
+  * [Safety and Privacy](about/projects/safety-and-privacy.md)
+  * [Partners](about/projects/partners.md)
 
 ## Project Specs
 

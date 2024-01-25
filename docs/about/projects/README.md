@@ -17,19 +17,14 @@ We're all about creating experiences that make a real impact. Our projects range
 
 **You can check out all of our projects available here:**
 
-{% content-ref url="all-projects.md" %}
-[all-projects.md](all-projects.md)
-{% endcontent-ref %}
-
-## **Our Impact**
-
-Our projects have helped a lot of people in Romania:
-
-* **Boosted Digital Literacy:** We've helped young people become more tech-savvy and navigate the digital world with confidence.
-* **Nurtured Entrepreneurship:** We've encouraged young people to start their own businesses and become innovators.
-* **Strengthened Communities:** We've brought people together through engaging events and initiatives, fostering a sense of belonging.
-* **Solved Local Problems:** We've made life easier for people by providing useful tools like bus schedule information and community platforms.
+{% embed url="https://roseto.space/projects/" %}
+Link to all projects
+{% endembed %}
 
 ## Project Specifications
 
 As we said before, transparency is a top priority for us, so that's why every project specification is created publicly. This way you can even comment on them and contribute to our projects.
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

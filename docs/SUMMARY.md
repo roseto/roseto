@@ -19,7 +19,6 @@
 * [🌐 Our domains](about/our-domains.md)
 * [🤝 Roseto Group Members](about/roseto-group-members.md)
 * [💡 Projects](about/projects/README.md)
-  * [All projects](about/projects/all-projects.md)
   * [Safety and Privacy](about/projects/safety-and-privacy.md)
   * [Partners](about/projects/partners.md)
 

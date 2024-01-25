@@ -4,7 +4,7 @@ title: Roseto Sync
 location: Anywhere
 cover: /static/community.svg
 description: Sync with Roseto's community.
-spec: https://docs.roseto.space/project-specs/s/roseto-20240113
+spec: https://docs.roseto.space/project-specs/roseto-20240113
 ---
 
 # Overview

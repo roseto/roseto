@@ -11,5 +11,5 @@ in the form of a changelog, where we will post updates about the project.
 
 And just because we wanted to celebrate, we also started working on 2 new projects:
 
-- [**Roseto Sync**](https://docs.roseto.space/project-specs/s/roseto-20240113)
-- [**Learning about Volunteering**](https://docs.roseto.space/project-specs/s/roseto-20240110)
+- [**Roseto Sync**](https://docs.roseto.space/project-specs/roseto-20240113)
+- [**Learning about Volunteering**](https://docs.roseto.space/project-specs/roseto-20240110)

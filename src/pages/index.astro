@@ -207,21 +207,14 @@ const countProjects = await getCollection("projects").then((projects) => project
 	/>
 	<div class="bg-gradient-to-b from-primary to-secondary">
 		<Container>
-			<Stack className="relative">
-				<div
-					class="sticky top-4 z-40 mx-auto p-2 border border-muted rounded bg-background w-full max-w-screen-sm"
+			<Stack>
+				<h2
+					class="text-6xl font-bold"
 				>
-					<h2
-						class="text-3xl md:text-5xl font-bold text-center mb-1"
-					>
-						<span class="text-primary">Roseto</span>'s Mission
-					</h2>
-					<Progress 
-						id="mission-progress"
-					/>
-				</div>
-	
-				<Card id="mission-card-1" className="mt-2">
+					Roseto's Mission
+				</h2>
+
+				<Card className="mt-2">
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
 						<CardDescription className="text-xl">
@@ -230,7 +223,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardContent>
 				</Card>
 	
-				<Card id="mission-card-2">
+				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
 						<CardDescription className="text-xl">
@@ -239,7 +232,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardContent>
 				</Card>
 	
-				<Card id="mission-card-3">
+				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
 						<CardDescription className="text-xl">
@@ -249,7 +242,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardContent>
 				</Card>
 	
-				<Card id="mission-card-4">
+				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
 						<CardDescription className="text-xl">
@@ -258,7 +251,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardContent>
 				</Card>
 	
-				<Card id="mission-card-5" className="mb-24">
+				<Card>
 					<CardContent className="flex flex-col text-center items-center mt-8">
 						<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
 						<CardDescription className="text-xl">
@@ -268,7 +261,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 				</Card>
 			</Stack>
 			<h2
-				class="text-4xl font-bold text-center mt-4 text-secondary-foreground"
+				class="text-4xl font-bold text-center mt-8 text-secondary-foreground"
 			>
 				And we are not stopping here.
 			</h2>
@@ -343,36 +336,3 @@ const countProjects = await getCollection("projects").then((projects) => project
 		</Stack>
 	</Container>
 </Layout>
-
-<script is:inline>
-	var missions = document.querySelectorAll("[id^=mission-card-]");
-
-	// See how many steps we have
-	var steps = missions.length;
-
-	var missionTops = Array.from(missions).map((mission) => {
-		return mission.getBoundingClientRect().top;
-	});
-
-	document.addEventListener("scroll", () => {
-		const missionProgress = document.querySelector("#mission-progress > div");
-		if (!missionProgress) return;
-
-		// Get the current scroll position
-		const scrollPosition = window.scrollY;
-
-		// Get the current mission
-		const currentMission = missionTops.findIndex((top) => {
-			return top > scrollPosition;
-		});
-
-		// Get the current progress
-		const currentProgress = (currentMission / steps) * 100;
-
-		// Using Math, make 100 - currentProgress and make sure we don't go above 95%
-		const calculatedProgress = 100 - currentProgress > 100 ? 5 : 100 - currentProgress;
-
-		// Update the progress bar
-		missionProgress.style.transform = `translateX(-${calculatedProgress}%)`;
-	});
-</script>

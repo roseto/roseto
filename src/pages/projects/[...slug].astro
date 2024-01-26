@@ -70,7 +70,7 @@ const { Content } = await entry.render();
 			{entry.data.date &&
 				<p class="text-muted-foreground text-sm">
 					<CalendarIcon className="inline w-4 h-4 mr-1" />
-					{new Date(entry.data.date).toLocaleDateString("EN", { year: "numeric", month: "long", day: "numeric" })}
+					{new Date(entry.data.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}
 				</p>
 			}
 

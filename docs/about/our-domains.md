@@ -9,10 +9,11 @@ coverY: -171
 
 Our web domains are very important, since they are the main ways that we interact with you and you with us. Here i[^1]s a list of domains that we own, so that you know for sure what is officially from Roseto.
 
-* [`roseto.space`](https://roseto.space)
+* [`roseto.co`](https://roseto.co)
 * [`ciorogarla.eu.org`](https://ciorogarla.eu.org)
 * [`roseto.link`](https://roseto.link)
-* `profiteri.eu.org` (Deprecated, now redirects to `roseto.space`)
+* `roseto.space` (Deprecated, now redirects to `roseto.co`)
+* `profiteri.eu.org` (Deprecated, now redirects to `roseto.co`)
 * `ciorogarlaunita.eu.org` (Deprecated, now redirects to `ciorogarla.eu.org`)
 
 [^1]: 

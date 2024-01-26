@@ -2,9 +2,9 @@
 
 ## Links
 
-* [🏠 Homepage](https://roseto.space)
+* [🏠 Homepage](https://roseto.co)
 * [💰 Open Collective](https://opencollective.com/roseto)
-* [🔑 License](https://roseto.space/license)
+* [🔑 License](https://roseto.co/license)
 
 ***
 
@@ -17,7 +17,7 @@
 * [🌳 Our commitment to sustainability](about/our-commitment-to-sustainability.md)
 * [🖊 Digital signing of documents](about/digital-signing-of-documents.md)
 * [🌐 Our domains](about/our-domains.md)
-* [🤝 Roseto Group Members](about/roseto-group-members.md)
+* [🤝 Roseto Collective Members](about/roseto-collective-members.md)
 * [💡 Projects](about/projects/README.md)
   * [Safety and Privacy](about/projects/safety-and-privacy.md)
   * [Partners](about/projects/partners.md)

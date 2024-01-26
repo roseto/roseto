@@ -9,5 +9,5 @@ To ensure effective partnership management, we establish clear partnership agree
 {% hint style="info" %}
 Do you want a partnership with us?
 
-You can always contact us at [hello@roseto.space](mailto:hello@roseto.space).
+You can always contact us at [hello@roseto.co](mailto:hello@roseto.co).
 {% endhint %}

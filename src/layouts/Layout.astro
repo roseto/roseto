@@ -62,7 +62,7 @@ const pageTitle = frontmatter?.title ?? title;
 		<ViewTransitions />
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load />
+		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} />
 		<main class="flex-1">
 			{isMarkdown ? (
 				<Container className="prose dark:prose-invert">

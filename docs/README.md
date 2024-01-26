@@ -12,7 +12,7 @@ coverY: 94
 
 ## About Roseto
 
-Roseto is a dynamic and forward-thinking group committed to empowering the youth while fostering the digital transformation of local communities and businesses. With a passion for innovation and community development, we strive to bridge the gap between technology and local needs, ensuring that the younger generation has the tools and opportunities they need to thrive in today's digital age.
+Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed to empowering the youth while fostering the digital transformation of local communities and businesses. With a passion for innovation and community development, we strive to bridge the gap between technology and local needs, ensuring that the younger generation has the tools and opportunities they need to thrive in today's digital age.
 
 ## Explore Roseto
 

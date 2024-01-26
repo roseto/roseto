@@ -25,6 +25,6 @@ Link to all projects
 
 As we said before, transparency is a top priority for us, so that's why every project specification is created publicly. This way you can even comment on them and contribute to our projects.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../project-specs/project-specs.md" %}
+[project-specs.md](../../project-specs/project-specs.md)
 {% endcontent-ref %}

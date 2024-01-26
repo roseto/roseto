@@ -17,7 +17,7 @@ We're all about creating experiences that make a real impact. Our projects range
 
 **You can check out all of our projects available here:**
 
-{% embed url="https://roseto.space/projects/" %}
+{% embed url="https://roseto.co/projects/" %}
 Link to all projects
 {% endembed %}
 

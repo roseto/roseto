@@ -39,5 +39,5 @@ Welcome to Roseto—where empowerment and digital transformation converge. Toget
 {% hint style="info" %}
 **License**
 
-Keep in mind that [our license](https://roseto.space/license) applies to all of the pages in this documentation site.
+Keep in mind that [our license](https://roseto.co/license) applies to all of the pages in this documentation site.
 {% endhint %}

@@ -13,6 +13,7 @@ import Partnerships from "@/components/Partnerships.astro";
 import Specials from "@/components/Specials.astro";
 import { getCollection } from "astro:content";
 import UpdatesCard from "@/components/UpdatesCard.astro";
+import SlideUp from "@/components/SlideUp";
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -47,25 +48,30 @@ const countProjects = await getCollection("projects").then((projects) => project
 				alt=""
 				class="absolute left-0 h-full dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
 			/>
-			<h1 class="text-6xl md:text-9xl font-black">
-				<span
-					class="bg-clip-text text-primary"
-				>
-					Growing
-				</span> is a necessity, not an option.
-			</h1>
+			<SlideUp delay={100}>
+				<h1 class="text-6xl md:text-9xl font-black">
+					<span
+						class="bg-clip-text text-primary"
+					>
+						Growing
+					</span> is a necessity, not an option.
+				</h1>
+			</SlideUp>
 
-			<p class="text-2xl font-bold w-full text-muted-foreground">
-				The self-improvement space you need.
-			</p>
-			<div
-				class="absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
+			<SlideUp delay={300} className="w-full">
+				<p class="text-2xl font-bold w-full text-muted-foreground">
+					The self-improvement space you need.
+				</p>
+			</SlideUp>
+			<SlideUp
+				delay={1000}
+				className="text-muted-foreground absolute bottom-0 opacity-50 flex flex-col items-center justify-center"
 			>
 				<DoubleArrowDownIcon className="animate-bounce" />
 				<p
 					class="text-sm font-bold"
 				>Sounds good? Scroll down.</p>
-			</div>
+			</SlideUp>
 		</Stack>
 	</Container>
 
@@ -99,22 +105,24 @@ const countProjects = await getCollection("projects").then((projects) => project
 		class="bg-secondary"
 	>
 		<Container className="relative">
-			<img 
-				src="/static/shapes/clover.svg" 
-				alt=""
-				class="absolute bottom-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
-			/>
-			<h2
-				class="text-6xl font-bold text-secondary-foreground py-8"
-			>
-				Projects
-			</h2>
-			<ProjectList />
-			<a href="/projects">
-				<Button className="w-full mb-4 text-secondary-foreground border-black">
-					See all {countProjects} projects
-				</Button>
-			</a>
+			<SlideUp triggerInView client:load>
+				<img 
+					src="/static/shapes/clover.svg" 
+					alt=""
+					class="absolute bottom-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+				/>
+				<h2
+					class="text-6xl font-bold text-secondary-foreground py-8"
+				>
+					Projects
+				</h2>
+				<ProjectList />
+				<a href="/projects">
+					<Button className="w-full mb-4 text-secondary-foreground border-black">
+						See all {countProjects} projects
+					</Button>
+				</a>
+			</SlideUp>
 		</Container>
 	</div>
 	<img 
@@ -128,8 +136,12 @@ const countProjects = await getCollection("projects").then((projects) => project
 			<div
 				class="grid grid-cols-1 md:grid-cols-2 gap-2"
 			>
-				<Partnerships />
-				<Specials />
+				<SlideUp triggerInView client:load>
+					<Partnerships />
+				</SlideUp>
+				<SlideUp triggerInView delay={200} client:load>
+					<Specials />
+				</SlideUp>
 			</div>
 
 			<h2
@@ -198,7 +210,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<Tiers />
 
-	<UpdatesCard />
+	<SlideUp triggerInView client:load>
+		<UpdatesCard />
+	</SlideUp>
 
 	<img 
 		src="/static/shapes/wave.svg" 
@@ -260,11 +274,13 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardContent>
 				</Card>
 			</Stack>
-			<h2
-				class="text-4xl font-bold text-center mt-8 text-secondary-foreground"
-			>
-				And we are not stopping here.
-			</h2>
+			<SlideUp triggerInView client:load>
+				<h2
+					class="text-4xl font-bold text-center mt-8 text-secondary-foreground"
+				>
+					And we are not stopping here.
+				</h2>
+			</SlideUp>
 	
 		</Container>
 	</div>

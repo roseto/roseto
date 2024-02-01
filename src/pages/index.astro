@@ -105,24 +105,29 @@ const countProjects = await getCollection("projects").then((projects) => project
 		class="bg-secondary"
 	>
 		<Container className="relative">
-			<SlideUp triggerInView client:load>
+			
 				<img 
 					src="/static/shapes/clover.svg" 
 					alt=""
 					class="absolute bottom-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
 				/>
-				<h2
-					class="text-6xl font-bold text-secondary-foreground py-8"
-				>
-					Projects
-				</h2>
-				<ProjectList />
-				<a href="/projects">
-					<Button className="w-full mb-4 text-secondary-foreground border-black">
-						See all {countProjects} projects
-					</Button>
-				</a>
-			</SlideUp>
+				<SlideUp triggerInView client:load>
+					<h2
+						class="text-6xl font-bold text-secondary-foreground py-8"
+					>
+						Projects
+					</h2>
+				</SlideUp>
+				<SlideUp delay={100} triggerInView client:load>
+					<ProjectList />
+				</SlideUp>
+				<SlideUp delay={200} triggerInView client:load>
+					<a href="/projects">
+						<Button className="w-full mb-4 text-secondary-foreground border-black">
+							See all {countProjects} projects
+						</Button>
+					</a>
+				</SlideUp>
 		</Container>
 	</div>
 	<img 

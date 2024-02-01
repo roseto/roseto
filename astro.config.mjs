@@ -21,6 +21,9 @@ export default defineConfig({
 		mdx(), 
 		prefetch()
 	],
+	build: {
+		format: "file"
+	},
 	output: "hybrid",
 	adapter: cloudflare({
 		runtime: {

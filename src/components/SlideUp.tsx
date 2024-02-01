@@ -11,23 +11,20 @@ interface Props {
 const _animationStringDelay = "delay-100 delay-150 delay-200 delay-300 delay-500 delay-700 delay-1000";
 
 export default function SlideUp({ children, delay, className, triggerInView }: Props) {
+	const isBrowser = typeof window !== "undefined";
 	const { ref, inView } = useInView({
 		threshold: 0.50,
 		triggerOnce: true,
+		initialInView: true
 	});
 	
+	const triggered = isBrowser && triggerInView ? inView : true;
+
 	// Don't even ask me about the noscript tag, it's a hack to make sure the animation works even with JS disabled
 	return (
 		<>
-			<noscript className="hidden">
-				<style>{`
-					.slide-up-container {
-						opacity: 1;
-					}
-				`}</style>
-			</noscript>
 			<div
-				className={`slide-up-container opacity-0 ${triggerInView ? inView ? "animate-slide-up" : "" : "animate-slide-up"} ${delay ? "delay-" + delay : ""} ${className || ""}`}
+				className={`slide-up-container opacity-0 noscript:opacity-1 ${triggered ? "animate-slide-up" : ""} ${delay ? "delay-" + delay : ""} ${className || ""}`}
 				ref={ref}
 			>
 				{children}

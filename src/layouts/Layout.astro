@@ -28,7 +28,7 @@ const isMarkdown = frontmatter !== undefined;
 const pageTitle = frontmatter?.title ?? title;
 ---
 
-<html lang="en">
+<html lang="en" class="noscript">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
@@ -60,9 +60,12 @@ const pageTitle = frontmatter?.title ?? title;
 		<slot name="head" />
 
 		<ViewTransitions />
+		<script is:inline>
+		  document.documentElement.classList.remove("noscript");
+		</script>
 	</head>
 	<body class="flex flex-col min-h-screen">
-		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} />
+		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load/>
 		<main class="flex-1">
 			{isMarkdown ? (
 				<Container className="prose dark:prose-invert">

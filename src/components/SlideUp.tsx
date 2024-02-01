@@ -12,7 +12,7 @@ const _animationStringDelay = "delay-100 delay-150 delay-200 delay-300 delay-500
 
 export default function SlideUp({ children, delay, className, triggerInView }: Props) {
 	const { ref, inView } = useInView({
-		threshold: 0.25,
+		threshold: 0.35,
 		triggerOnce: true,
 	});
 	

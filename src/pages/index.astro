@@ -150,7 +150,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 				Why <span class="text-primary">Roseto</span>?
 			</h2>
 			<div class="grid grid-cols-2 gap-2 justify-center relative">
-				<div class="flex flex-col text-center items-center mt-8">
+				<SlideUp className="flex flex-col text-center items-center mt-8" triggerInView client:load>
 					<FrameIcon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -160,9 +160,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<CardDescription>
 						We are built on privacy, security, freedom, sustainability, development, and community.
 					</CardDescription>
-				</div>
+				</SlideUp>
 
-				<div class="flex flex-col text-center items-center mt-8">
+				<SlideUp className="flex flex-col text-center items-center mt-8" delay={100} triggerInView client:load>
 					<LockOpen2Icon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -172,9 +172,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<CardDescription>
 						We are as open as possible. From our code, to the money we make, to our plans.
 					</CardDescription>
-				</div>
+				</SlideUp>
 
-				<div class="flex flex-col text-center items-center mt-8">
+				<SlideUp className="flex flex-col text-center items-center mt-8" delay={200} triggerInView client:load>
 					<GlobeIcon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -184,9 +184,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<CardDescription>
 						While we are based in Romania, we are doing our best to extend our reach to the entire world.
 					</CardDescription>
-				</div>
+				</SlideUp>
 
-				<div class="flex flex-col text-center items-center mt-8">
+				<SlideUp className="flex flex-col text-center items-center mt-8" delay={300} triggerInView client:load>
 					<RocketIcon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -196,7 +196,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<CardDescription>
 						We are always looking for new ways to improve our services and the way we do things.
 					</CardDescription>
-				</div>
+				</SlideUp>
 
 				<img 
 					src="/static/shapes/blobs.svg" 
@@ -311,7 +311,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 				</CardContent>
 			</div>
 
-			<Contributors />
+			<SlideUp triggerInView client:load>
+				<Contributors />
+			</SlideUp>
 
 			<!--
 			<h2
@@ -332,23 +334,25 @@ const countProjects = await getCollection("projects").then((projects) => project
 			/>
 			-->
 
-			<Card>
-				<CardHeader>
-					<CardTitle>
-						About
-					</CardTitle>
-					<CardDescription>
-						Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed
-						to empowering the youth while fostering the digital transformation 
-						of local communities and businesses. With a passion for innovation
-						and community development, we strive to bridge the gap between
-						technology and local needs, ensuring that the younger generation
-						has the tools and opportunities they need to thrive in today's
-						digital age. Join us in our mission to create a brighter, more
-						connected future for all.
-					</CardDescription>
-				</CardHeader>
-			</Card>
+			<SlideUp triggerInView client:load>
+				<Card>
+					<CardHeader>
+						<CardTitle>
+							About
+						</CardTitle>
+						<CardDescription>
+							Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed
+							to empowering the youth while fostering the digital transformation 
+							of local communities and businesses. With a passion for innovation
+							and community development, we strive to bridge the gap between
+							technology and local needs, ensuring that the younger generation
+							has the tools and opportunities they need to thrive in today's
+							digital age. Join us in our mission to create a brighter, more
+							connected future for all.
+						</CardDescription>
+					</CardHeader>
+				</Card>
+			</SlideUp>
 		</Stack>
 	</Container>
 </Layout>

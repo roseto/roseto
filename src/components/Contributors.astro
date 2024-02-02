@@ -4,12 +4,11 @@ import { Card, CardContent, CardHeader, CardDescription, CardTitle } from "./ui/
 import { Button } from "./ui/button";
 
 
+const { className } = Astro.props;
 const contributors = await getCollection("contributors")
 ---
 
-<hr class="my-8"/>
-
-<Card>
+<Card className={className}>
 	<CardHeader>
 		<CardTitle>
 			Our Contributors
@@ -48,5 +47,3 @@ const contributors = await getCollection("contributors")
 		</a>
 	</CardContent>
 </Card>
-
-<hr class="my-8"/>

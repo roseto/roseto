@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
 import ProjectList from "@/components/ProjectList.astro";
@@ -13,6 +13,7 @@ import Specials from "@/components/Specials.astro";
 import { getCollection } from "astro:content";
 import UpdatesCard from "@/components/UpdatesCard.astro";
 import SlideUp from "@/components/SlideUp";
+import { Badge } from "@/components/ui/badge";
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -101,36 +102,36 @@ const countProjects = await getCollection("projects").then((projects) => project
 		class="w-full h-32 -mb-px pointer-events-none"
 	/>
 	<div
-		class="bg-secondary"
+		class="bg-gradient-to-b from-secondary to-primary relative"
 	>
 		<Container className="relative">
-			
-				<img 
-					src="/static/shapes/clover.svg" 
-					alt=""
-					class="absolute bottom-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
-				/>
-				<SlideUp triggerInView client:load>
-					<h2
-						class="text-6xl font-bold text-secondary-foreground py-8"
-					>
-						Projects
-					</h2>
-				</SlideUp>
-				<SlideUp delay={100} triggerInView client:load>
-					<ProjectList />
-				</SlideUp>
-				<SlideUp delay={200} triggerInView client:load>
-					<a href="/projects">
-						<Button className="w-full mb-4 text-secondary-foreground border-black">
-							See all {countProjects} projects
-						</Button>
-					</a>
-				</SlideUp>
-		</Container>
+			<img 
+				src="/static/shapes/clover.svg" 
+				alt=""
+				class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+			/>
+			<SlideUp triggerInView client:load>
+				<h2
+					class="text-6xl font-bold text-secondary-foreground py-8"
+				>
+					Projects
+				</h2>
+			</SlideUp>
+			<SlideUp delay={100} triggerInView client:load>
+				<ProjectList />
+			</SlideUp>
+			<SlideUp delay={200} triggerInView client:load>
+				<a href="/projects">
+					<Button variant="outline" className="w-full mb-4 border-primary-foreground hover:border-secondary-foreground">
+						See all {countProjects} projects
+					</Button>
+				</a>
+			</SlideUp>
+	</Container>
 	</div>
+
 	<img 
-		src="/static/shapes/wave-secondary.svg" 
+		src="/static/shapes/wave.svg" 
 		alt=""
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
@@ -214,149 +215,138 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<Tiers />
 
-	<SlideUp triggerInView client:load>
-		<UpdatesCard />
-	</SlideUp>
-
-	<img 
-		src="/static/shapes/wave.svg" 
-		alt=""
-		class="w-full h-32 mt-4 -mb-px pointer-events-none"
-	/>
-	<div class="bg-gradient-to-b from-primary to-secondary">
-		<Container>
+	<div class="relative mt-16">
+		<div 
+			class="absolute bg-[url(/static/shapes/hex_banner_bkg.svg)] opacity-25 top-0 left-0 bottom-0 right-0 w-full pointer-events-none"
+			style={{
+				maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
+				"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0),  rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
+			}}
+		/>
+		<Container className="relative">
 			<Stack>
-				<h2
-					class="text-6xl font-bold"
-				>
-					Roseto's Mission
-				</h2>
+				<SlideUp client:load triggerInView>
+					<h1
+						class="text-7xl font-bold"
+						transition:name="about-title"
+					>
+						Learn about Roseto
+					</h1>
+				</SlideUp>
 
-				<Card className="mt-2">
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<img src="/static/engineering_team.svg" alt="Engineering Team" class="w-full h-64 mb-4" />
-						<CardDescription className="text-xl">
-							Build and maintain open-source software, tools, and services that help people and businesses.
-						</CardDescription>
-					</CardContent>
-				</Card>
-	
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<img src="/static/community.svg" alt="Community" class="w-full h-64 mb-4" />
-						<CardDescription className="text-xl">
-							Build a community of people that share the same values and beliefs.
-						</CardDescription>
-					</CardContent>
-				</Card>
-	
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<img src="/static/group_selfie.svg" alt="Group Selfie" class="w-full h-64 mb-4" />
-						<CardDescription className="text-xl">
-							Help young people develop their skills and find their passion,
-							volunteer and help the community while having fun.
-						</CardDescription>
-					</CardContent>
-				</Card>
-	
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<img src="/static/business_deal.svg" alt="Business Deal" class="w-full h-64 mb-4" />
-						<CardDescription className="text-xl">
-							Help businesses and organizations with their digital transformation and development.
-						</CardDescription>
-					</CardContent>
-				</Card>
-	
-				<Card>
-					<CardContent className="flex flex-col text-center items-center mt-8">
-						<img src="/static/group_hangout.svg" alt="Group Hangout" class="w-full h-64 mb-4" />
-						<CardDescription className="text-xl">
-							Connect people together and help them grow and develop their skills.
-						</CardDescription>
-					</CardContent>
-				</Card>
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+					<SlideUp className="md:col-span-2" client:load triggerInView>
+						<Card className="h-full">
+							<CardHeader>
+								<Badge className="self-start">
+									Values
+								</Badge>
+								<CardTitle className="text-7xl"><span class="highlight-primary">Grow</span>, Learn, Connect</CardTitle>
+							</CardHeader>
+						</Card>
+					</SlideUp>
+
+					<SlideUp className="md:col-span-2" delay={100} client:load triggerInView>
+						<Card className="h-full">
+							<CardHeader>
+								<Badge className="self-start">
+									Definition
+								</Badge>
+								<CardTitle>Who are we</CardTitle>
+							</CardHeader>
+							<CardContent>
+								Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed to empowering the youth while fostering the digital transformation of local communities and businesses. With a passion for innovation and community development, we strive to bridge the gap between technology and local needs, ensuring that the younger generation has the tools and opportunities they need to thrive in today's digital age. Join us in our mission to create a brighter, more connected future for all.
+							</CardContent>
+						</Card>
+					</SlideUp>
+
+					<SlideUp delay={100} className="md:col-span-1" client:load triggerInView>
+						<Card className="h-full bg-green-800 text-white">
+							<CardHeader>
+								<Badge className="self-start" variant="secondary">
+									Sustainability
+								</Badge>
+							</CardHeader>
+							<CardContent>
+								<p>
+									We are committed to creating a sustainable future for all.
+									And we are trying our best to create as less carbon footprint as possible.
+									We use renewable energy, static site generators, and only update 
+									the content when necessary.
+								</p>
+							</CardContent>
+						</Card>
+					</SlideUp>
+
+					<SlideUp delay={200} className="md:col-span-2" client:load triggerInView>
+						<Card className="bg-[url(/static/shapes/grid_banner_bkg.svg)] bg-cover bg-center h-full">
+							<CardHeader>
+								<Badge className="self-start">
+									Mission
+								</Badge>
+								<CardTitle>Digitalize, evolve, grow together</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<p>
+									We are on a mission to digitalize the world, evolve the communities, and grow together.
+									We are trying to make the world a better place for everyone.
+								</p>
+							</CardContent>
+						</Card>
+					</SlideUp>
+
+					<SlideUp delay={300} className="md:col-span-1 md:row-span-2" client:load triggerInView>
+						<UpdatesCard />
+					</SlideUp>
+
+					<SlideUp className="md:col-span-2" delay={100} client:load triggerInView>
+						<Contributors className="h-full"/>
+					</SlideUp>
+
+					<SlideUp className="md:col-span-1" client:load triggerInView delay={200}>
+						<Card className="h-full">
+							<CardHeader>
+								<Badge className="self-start">
+									All about you
+								</Badge>
+								<CardTitle className="text-6xl">
+									We really <span class="highlight-primary">love</span> you.
+								</CardTitle>
+							</CardHeader>
+						</Card>
+					</SlideUp>
+
+					<SlideUp className="md:col-span-1" client:load triggerInView delay={100}>
+						<Card className="h-full">
+							<CardHeader>
+								<Badge className="self-start">
+									Organization
+								</Badge>
+								<CardTitle className="text-6xl">
+									We are a collective
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<p>
+									We love to work with each other and we love the informal environment we have created.
+									That's why we are not a non-profit organization, we are a collective. We function
+									mostly the same way, with the aid of <a href="https://www.oceurope.org/" class="text-primary hover:underline" target="_blank">Open Collective Europe</a>.
+								</p>
+							</CardContent>
+						</Card>
+					</SlideUp>
+
+
+					<SlideUp className="md:col-span-3 h-96" client:load triggerInView delay={200}>
+						<Card className="h-full">
+							<img 
+								src="/static/community.svg"
+								class="w-full h-full object-cover"
+							/>
+						</Card>
+					</SlideUp>
+				</div>
 			</Stack>
-			<SlideUp triggerInView client:load>
-				<h2
-					class="text-4xl font-bold text-center mt-8 text-secondary-foreground"
-				>
-					And we are not stopping here.
-				</h2>
-			</SlideUp>
-	
 		</Container>
 	</div>
-	<img 
-		src="/static/shapes/wave-secondary.svg" 
-		alt=""
-		class="w-full h-32 mb-4 rotate-180 -mt-px pointer-events-none"
-	/>
-
-	<Container>
-		<Stack>
-			<div class="mt-4">
-				<CardHeader>
-					<CardTitle>
-						This is how <span class="highlight-secondary">transparent</span> we are
-					</CardTitle>
-				</CardHeader>
-				<CardContent>
-					<ul
-						class="list-disc list-inside text-primary"
-					>
-						<li><a class="hover:underline" target="_blank" href="https://opencollective.com/roseto">Our budget</a></li>
-						<li><a class="hover:underline" target="_blank" href="https://docs.roseto.co/">Everything about us</a></li>
-						<li><a class="hover:underline" target="_blank" href="https://docs.roseto.co/project-specs">Project specifications</a></li>
-						<li><a class="hover:underline" target="_blank" href="https://github.com/roseto">Our source code</a></li>
-						<li><a class="hover:underline" target="_blank" href="https://roseto.co/license">Our license</a></li>
-					</ul>
-				</CardContent>
-			</div>
-
-			<SlideUp triggerInView client:load>
-				<Contributors />
-			</SlideUp>
-
-			<!--
-			<h2
-				class="text-4xl font-bold text-center mt-8"
-			>
-				<span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Where</span> is Roseto?
-			</h2>
-			<p
-				class="text-center"
-			>
-				Everywhere. This way you can access Roseto from anywhere pretty fast.
-			</p>
-
-			<img 
-				src="/static/global-network.svg"
-				alt="Cloudflare Workers"
-				class="w-full"
-			/>
-			-->
-
-			<SlideUp triggerInView client:load>
-				<Card>
-					<CardHeader>
-						<CardTitle>
-							About
-						</CardTitle>
-						<CardDescription>
-							Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed
-							to empowering the youth while fostering the digital transformation 
-							of local communities and businesses. With a passion for innovation
-							and community development, we strive to bridge the gap between
-							technology and local needs, ensuring that the younger generation
-							has the tools and opportunities they need to thrive in today's
-							digital age. Join us in our mission to create a brighter, more
-							connected future for all.
-						</CardDescription>
-					</CardHeader>
-				</Card>
-			</SlideUp>
-		</Stack>
-	</Container>
 </Layout>

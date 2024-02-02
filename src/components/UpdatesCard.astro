@@ -11,63 +11,61 @@ const latestUpdate = await getCollection("updates")
 const { Content } = await latestUpdate.render();
 ---
 
-<Container className="mt-8">
-	<Card className="flex flex-row bg-gradient-to-tr from-secondary/25 via-transparent">
-		<SymbolIcon
-			className="w-28 h-28 p-6 pr-0"
-		/>
-		<div>
-			<CardHeader>
-				<CardTitle>
-					Updates
-				</CardTitle>
-				<CardDescription>
-					We are always working on something new. Check out our updates to see what we are up to.
-				</CardDescription>
-			</CardHeader>
-			<CardContent className="flex flex-row">
-				<div
-					class="w-px mr-4 -ml-4 border-primary/50 border-dashed border-l-2"
-				/>
-				<a href="/updates" class="no-underline">
-					<article>
-						<div class="relative flex flex-row items-center">
-							<div
-								class="w-3 h-0.5 bg-primary absolute top-1.5 -left-[calc(1rem+2px)]"
-							/>
-		
-							<p
-								class="text-muted-foreground text-xs mb-2"
-							>
-								{new Date(latestUpdate.data.date).toLocaleDateString("en-GB", {
-									year: "numeric",
-									month: "short",
-									day: "numeric",
-								})}
-							</p>
-						</div>
-						<h2
-							class="text-4xl font-bold"
-						>
-							{latestUpdate.data.title}
-						</h2>
-						
+<Card className="flex flex-row bg-gradient-to-tr from-secondary/25 via-transparent">
+	<SymbolIcon
+		className="w-28 h-28 p-6 pr-0"
+	/>
+	<div>
+		<CardHeader>
+			<CardTitle>
+				Updates
+			</CardTitle>
+			<CardDescription>
+				We are always working on something new. Check out our updates to see what we are up to.
+			</CardDescription>
+		</CardHeader>
+		<CardContent className="flex flex-row">
+			<div
+				class="w-px mr-4 -ml-4 border-primary/50 border-dashed border-l-2"
+			/>
+			<a href="/updates" class="no-underline">
+				<article>
+					<div class="relative flex flex-row items-center">
 						<div
-							class="relative prose max-w-screen-lg dark:prose-invert max-h-24 overflow-hidden"
-							style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));"
+							class="w-3 h-0.5 bg-primary absolute top-1.5 -left-[calc(1rem+2px)]"
+						/>
+	
+						<p
+							class="text-muted-foreground text-xs mb-2"
 						>
-							<Content />
-						</div>
-					</article>
-				</a>
-			</CardContent>
-			<CardFooter>
-				<a href="/updates">
-					<Button variant="secondary">
-						See updates
-					</Button>
-				</a>
-			</CardFooter>
-		</div>
-	</Card>
-</Container>
+							{new Date(latestUpdate.data.date).toLocaleDateString("en-GB", {
+								year: "numeric",
+								month: "short",
+								day: "numeric",
+							})}
+						</p>
+					</div>
+					<h2
+						class="text-4xl font-bold"
+					>
+						{latestUpdate.data.title}
+					</h2>
+					
+					<div
+						class="relative prose max-w-screen-lg dark:prose-invert h-64 overflow-hidden pointer-events-none"
+						style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));"
+					>
+						<Content />
+					</div>
+				</article>
+			</a>
+		</CardContent>
+		<CardFooter>
+			<a href="/updates">
+				<Button variant="secondary">
+					See updates
+				</Button>
+			</a>
+		</CardFooter>
+	</div>
+</Card>

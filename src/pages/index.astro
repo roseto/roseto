@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, HeartFilledIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
@@ -179,7 +179,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardDescription>
 				</SlideUp>
 
-				<SlideUp className="flex flex-col text-center items-center mt-8" delay={200} triggerInView client:load>
+				<SlideUp className="flex flex-col text-center items-center mt-8" delay={100} triggerInView client:load>
 					<GlobeIcon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -191,7 +191,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</CardDescription>
 				</SlideUp>
 
-				<SlideUp className="flex flex-col text-center items-center mt-8" delay={300} triggerInView client:load>
+				<SlideUp className="flex flex-col text-center items-center mt-8" delay={200} triggerInView client:load>
 					<RocketIcon
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
@@ -237,11 +237,8 @@ const countProjects = await getCollection("projects").then((projects) => project
 				<div class="grid grid-cols-1 md:grid-cols-4 gap-2">
 					<SlideUp className="md:col-span-2" client:load triggerInView>
 						<Card className="h-full">
-							<CardHeader>
-								<Badge className="self-start">
-									Values
-								</Badge>
-								<CardTitle className="text-7xl"><span class="highlight-primary">Grow</span>, Learn, Connect</CardTitle>
+							<CardHeader className="h-full justify-center items-center">
+								<CardTitle className="text-7xl my-auto"><span class="highlight-primary">Grow</span>, Learn, Connect</CardTitle>
 							</CardHeader>
 						</Card>
 					</SlideUp>
@@ -262,6 +259,9 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 					<SlideUp delay={100} className="md:col-span-1" client:load triggerInView>
 						<Card className="h-full bg-green-800 text-white">
+							<GlobeIcon 
+								className="absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
+							/>
 							<CardHeader>
 								<Badge className="self-start" variant="secondary">
 									Sustainability
@@ -305,9 +305,12 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 					<SlideUp className="md:col-span-1" client:load triggerInView delay={200}>
 						<Card className="h-full">
-							<CardHeader>
+							<HeartFilledIcon 
+								className="animate-pulse text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
+							/>
+							<CardHeader className="relative">
 								<Badge className="self-start">
-									All about you
+									It's you
 								</Badge>
 								<CardTitle className="text-6xl">
 									We really <span class="highlight-primary">love</span> you.

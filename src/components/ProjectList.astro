@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 
 
 const projects = await getCollection("projects");
@@ -30,6 +32,8 @@ const getSpanClassName = (idx: number) => {
 
 	return className
 }
+
+const date = new Date();
 ---
 
 <div
@@ -56,6 +60,12 @@ const getSpanClassName = (idx: number) => {
 					/>
 				}
 				<CardHeader className="relative z-10">
+					{project.data.date?.getTime() > Date.now() ?
+						<Badge className="self-start">
+							Upcoming
+							<DoubleArrowRightIcon className="ml-1" />
+						</Badge>
+					: null}
 					<CardTitle>
 						<p transition:name={"title" + project.id}>
 							{project.data.title}

@@ -42,7 +42,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 >
 	
 	<Container>
-		<Stack style={{ height: "80svh" }} className="relative justify-center items-center">
+		<Stack className="h-[500px] md:h-[80vh] relative justify-center items-center">
 			<img 
 				src="/static/shapes/rectangles.svg" 
 				alt=""
@@ -217,7 +217,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<div class="relative mt-16">
 		<div 
-			class="absolute bg-[url(/static/shapes/hex_banner_bkg.svg)] opacity-25 top-0 left-0 bottom-0 right-0 w-full pointer-events-none"
+			class="absolute bg-[url(/static/shapes/hex_banner_bkg.svg)] bg-[length:1000px_1000px] opacity-25 top-0 left-0 bottom-0 right-0 w-full pointer-events-none"
 			style={{
 				maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
 				"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0),  rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,

@@ -64,7 +64,7 @@ const pageTitle = frontmatter?.title ?? title;
 		  document.documentElement.classList.remove("noscript");
 		</script>
 	</head>
-	<body class="flex flex-col min-h-screen">
+	<body class="flex flex-col min-h-screen dark:bg-grid-neutral-600/[0.1] bg-grid-neutral-400/[0.1]">
 		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load/>
 		<main class="flex-1">
 			{isMarkdown ? (

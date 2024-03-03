@@ -15,7 +15,7 @@
 * [👐 We are open](about/we-are-open.md)
 * [🔐 Privacy](about/privacy.md)
 * [🌳 Our commitment to sustainability](about/our-commitment-to-sustainability.md)
-* [🖊 Digital signing of documents](about/digital-signing-of-documents.md)
+* [🖊️ Digital signing of documents](about/digital-signing-of-documents.md)
 * [🌐 Our domains](about/our-domains.md)
 * [🤝 Roseto Collective Members](about/roseto-collective-members.md)
 * [💡 Projects](about/projects/README.md)
@@ -25,6 +25,7 @@
 ## Project Specs
 
 * [📄 Project Specs](project-specs/project-specs.md)
-* [Learning about volunteering](project-specs/roseto-20240110.md)
+* [Roseto Pay (WIP)](project-specs/project-specification-template.md)
 * [Roseto Sync](project-specs/roseto-20240113.md)
-* [Project Specification Template](project-specs/project-specification-template.md)
+* [Learning about volunteering](project-specs/roseto-20240110.md)
+* [Project Specification Template](project-specs/project-specification-template-1.md)

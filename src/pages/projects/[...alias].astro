@@ -9,6 +9,7 @@ export async function getStaticPaths() {
 
 	for (const entry of projects) {
 		for (const alias of entry.data.aliases || []) {
+			// include only .md files
 			aliases.set(alias.replace(/^\//, ''), entry);
 		}
 	}
@@ -25,6 +26,7 @@ export async function getStaticPaths() {
 	);
 }
 
+// @ts-expect-error
 const baseUrl = import.meta.env.PROD ? 'https://roseto.co' : Astro.url.origin;
 
 const { dest, title } = Astro.props;

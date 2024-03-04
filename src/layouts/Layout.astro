@@ -19,14 +19,17 @@ interface Props {
 			"data-astro-reload"?: boolean;
 		}[];
 	};
-	noFooter?: boolean;
 }
 
-const { frontmatter, title, navbar, noFooter } = Astro.props;
+const { frontmatter, title, navbar } = Astro.props;
 
 const isMarkdown = frontmatter !== undefined;
 const pageTitle = frontmatter?.title ?? title;
 ---
+
+<script is:inline>
+	document.documentElement.classList.remove("noscript");
+</script>
 
 <html lang="en" class="noscript">
 	<head>
@@ -60,9 +63,6 @@ const pageTitle = frontmatter?.title ?? title;
 		<slot name="head" />
 
 		<ViewTransitions />
-		<script is:inline>
-		  document.documentElement.classList.remove("noscript");
-		</script>
 	</head>
 	<body class="flex flex-col min-h-screen dark:bg-grid-neutral-600/[0.1] bg-grid-neutral-400/[0.1]">
 		<Navbar path={Astro.url.pathname} buttons={navbar?.buttons} client:load/>

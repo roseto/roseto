@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { Card, CardContent, CardHeader, CardDescription, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
+import { Image } from "astro:assets";
 
 
 const { className } = Astro.props;
@@ -26,11 +27,10 @@ const contributors = await getCollection("contributors")
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img
+					<Image
 						class="rounded-full w-16 h-16 object-cover"
 						src={contributor.data.avatar}
 						alt={contributor.data.name}
-						loading="lazy"
 					/>
 				</a>
 			))}

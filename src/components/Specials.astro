@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Card, CardContent, CardHeader, CardDescription, CardTitle } from "./ui/card";
 
@@ -24,11 +25,10 @@ const specials = await getCollection("contributors", ({data}) => data?.special);
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img
+					<Image
 						class="rounded w-24 h-24 object-cover"
 						src={special.data.avatar}
 						alt={special.data.name}
-						loading="lazy"
 					/>
 					<h3 class="text-center text-md text-muted-foreground">{special.data.name}</h3>
 				</a>

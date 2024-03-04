@@ -26,6 +26,7 @@ export default defineConfig({
 	},
 	output: "hybrid",
 	adapter: cloudflare({
+		imageService: "compile",
 		runtime: {
 			mode: "local",
 			persistTo: ".wrangler/state/v3"

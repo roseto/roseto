@@ -75,6 +75,6 @@ const pageTitle = frontmatter?.title ?? title;
 				<slot/>
 			)}
 		</main>
-		{noFooter ? null : <Footer transition:persist />}
+		<Footer transition:persist />
 	</body>
 </html>

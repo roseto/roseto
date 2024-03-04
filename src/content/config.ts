@@ -2,9 +2,9 @@ import { z, defineCollection } from "astro:content";
 
 const contributorsCollection = defineCollection({
 	type: "data",
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		name: z.string(),
-		avatar: z.string(),
+		avatar: image(),
 		link: z.string().url(),
 		core: z.boolean().optional(),
 		partner: z.boolean().optional(),
@@ -14,12 +14,12 @@ const contributorsCollection = defineCollection({
 
 const projectsCollection = defineCollection({
 	type: "content",
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),
 		spec: z.string().url().optional(),
 		link: z.string().url().optional(),
-		cover: z.string().optional(),
+		cover: image().optional(),
 		date: z.date().optional(),
 		location: z.string().optional(),
 		aliases: z.array(z.string()).optional(),

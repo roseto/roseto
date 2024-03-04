@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -47,7 +48,7 @@ const date = new Date();
 		>
 			<Card className="w-full h-full">
 				{project.data?.cover &&
-					<img
+					<Image
 						src={project.data.cover}
 						transition:name={"cover" + project.id}
 						alt={project.data.title}

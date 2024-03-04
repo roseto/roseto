@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
@@ -42,8 +43,9 @@ const { Content } = await entry.render();
 	<Container>
 		<Stack>
 			{entry.data.cover &&
-				<img
+				<Image
 					src={entry.data.cover}
+					alt={entry.data.title}
 					class="h-64 w-full object-cover rounded"
 					transition:name={"cover" + entry.id}
 				/>

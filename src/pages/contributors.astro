@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { Hint } from "@/components/ui/hint";
 import { Stack } from "@/components/ui/stack";
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 
@@ -14,7 +15,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 	<Container>
 		<Stack>
 			<h1
-				class="text-7xl font-bold"7xl
+				class="text-7xl font-bold"
 			>
 				Who contributed to Roseto?
 			</h1>
@@ -40,7 +41,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img 
+						<Image 
 							src={contributor.data.avatar} 
 							alt={contributor.data.name} 
 							class="w-16 h-16 rounded-full object-cover mb-2"
@@ -68,7 +69,7 @@ const contributors = await getCollection("contributors", ({ data }) => !data.cor
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img 
+						<Image 
 							src={contributor.data.avatar} 
 							alt={contributor.data.name} 
 							class:list={[

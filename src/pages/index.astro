@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, HeartFilledIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, HeartFilledIcon, LockClosedIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Contributors from "@/components/Contributors.astro";
 import Tiers from "@/components/Tiers.astro";
@@ -306,7 +306,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<SlideUp className="md:col-span-1" client:load triggerInView delay={200}>
 						<Card className="h-full">
 							<HeartFilledIcon 
-								className="animate-pulse text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
+								className="animate-bounce text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
 							/>
 							<CardHeader className="relative">
 								<Badge className="self-start">
@@ -340,12 +340,41 @@ const countProjects = await getCollection("projects").then((projects) => project
 					</SlideUp>
 
 
-					<SlideUp className="md:col-span-3 h-96" client:load triggerInView delay={200}>
+					<SlideUp className="md:col-span-2 h-[400px]" client:load triggerInView delay={200}>
 						<Card className="h-full">
 							<img 
 								src="/static/community.svg"
 								class="w-full h-full object-cover"
 							/>
+						</Card>
+					</SlideUp>
+
+					<SlideUp className="md:col-span-1" client:load triggerInView delay={300}>
+						<Card className="h-full">
+							<LockClosedIcon 
+								className="animate-pulse text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
+							/>
+							<CardHeader>
+								<Badge className="self-start">
+									Privacy
+								</Badge>
+								<CardTitle className="text-6xl">
+									We are privacy-first
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<p>
+									Privacy is one of our core values. We are doing our best to keep your data safe and secure.
+									We are using end-to-end encryption, we are not tracking you, and we are not selling your data.
+								</p>
+							</CardContent>
+							<CardFooter>
+								<a href="/privacy">
+									<Button>
+										Read more
+									</Button>
+								</a>
+							</CardFooter>
 						</Card>
 					</SlideUp>
 				</div>

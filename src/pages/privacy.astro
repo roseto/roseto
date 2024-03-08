@@ -8,7 +8,6 @@ import { Container } from "@/components/ui/container";
 let privacy = await readFile("./PRIVACY.md", "utf-8");
 privacy = privacy.replace(/^.+\n/, "");
 const content = marked.parse(privacy);
-
 ---
 
 <Layout title="Privacy Policy">

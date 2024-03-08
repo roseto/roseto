@@ -1,8 +1,12 @@
 # Privacy
 
 This is Roseto's (Roseto Collective) privacy policy. It applies to all of our apps, services, features, software, websites, activites,
-events and any other products or services that we offer. This policy is effective as of 8th of March 2024. This policy is subject to change
-at any time, so please check back regularly for updates.
+events and any other products or services that we offer. This policy is effective as of **8th of March 2024**. This policy is subject to change
+at any time, so please check back regularly for updates. 
+
+**This document may appear in other repositories, websites, apps, services, features, software, events, activities and any other products or
+services that we offer. This document is the same across all of our products and services. We make sure to keep this document up to date and
+to provide you with the latest version of our privacy policy.**
 
 ## Information we collect
 
@@ -35,21 +39,21 @@ We make sure to only use services that respect your privacy and are GDPR complia
 
 Our third-party services include:
 
-- [DocuSeal](https://docuseal.eu)
-- [Deta](https://deta.space)
-- [Open Collective](https://opencollective.com)
-- [GitHub](https://github.com)
-- [GitBook](https://gitbook.com)
+- [DocuSeal](https://docuseal.eu) &middot; For our document signing service;
+- [Deta](https://deta.space) &middot; For other utilities such as polls, forms, etc.;
+- [Open Collective](https://opencollective.com) &middot; For our financial services;
+- [GitHub](https://github.com) &middot; For our source code;
+- [GitBook](https://gitbook.com) &middot; For our documentation;
 
 These services are used to provide you with our services and to improve your experience.
 
 Our third-parties may also include partners such as:
 
-- Businesses
-- Non-profit organizations
-- Government authorities
-- Law enforcement agencies
-- Institutions
+- Businesses;
+- Non-profit organizations;
+- Government authorities;
+- Law enforcement agencies;
+- Institutions;
 
 We make sure that our partnerships contracts specify a very strict and clear privacy policy that respects your privacy and is GDPR compliant.
 

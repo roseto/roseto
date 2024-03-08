@@ -1,6 +1,6 @@
 # Privacy
 
-This is Roseto's (Roseto Collective) privacy policy. It applies to all of our apps, services, features, software, websites, activites,
+This is Roseto's (Roseto Collective) privacy policy. It applies to all of our apps, services, features, software, websites, activities,
 events and any other products or services that we offer. This policy is effective as of **8th of March 2024**. This policy is subject to change
 at any time, so please check back regularly for updates. 
 
@@ -80,8 +80,8 @@ We store the information we collect on secure servers. We take reasonable measur
 measures are perfect and we cannot guarantee the security of your information. We encourage you to take reasonable measures to secure your
 information.
 
-That's why we are commited to collecting only needed information and using the best practices to secure your information. We are also
-commited to using services that respect your privacy and are GDPR compliant.
+That's why we are committed to collecting only needed information and using the best practices to secure your information. We are also
+committed to using services that respect your privacy and are GDPR compliant.
 
 ## How to contact us
 

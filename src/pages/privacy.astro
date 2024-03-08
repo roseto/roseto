@@ -4,30 +4,11 @@ import { marked } from "marked";
 import Layout from "@/layouts/Layout.astro";
 import { Stack } from "@/components/ui/stack";
 import { Container } from "@/components/ui/container";
-import { exec } from "child_process";
-import { Hint } from "@/components/ui/hint";
 
 let privacy = await readFile("./PRIVACY.md", "utf-8");
 privacy = privacy.replace(/^.+\n/, "");
 const content = marked.parse(privacy);
 
-let commitHash = import.meta.env.CF_PAGES_COMMIT_SHA;
-
-if (import.meta.env.MODE === "development") {
-	commitHash = "develop";
-} else if (!commitHash) {
-	commitHash = await new Promise((resolve, reject) => {
-		exec("git rev-parse HEAD", (err, stdout) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve(stdout);
-			}
-		});
-	});
-}
-
-commitHash = commitHash.slice(0, 7);
 ---
 
 <Layout title="Privacy Policy">
@@ -38,10 +19,6 @@ commitHash = commitHash.slice(0, 7);
 			>
 				Privacy
 			</h1>
-
-			<Hint>
-				This document is secured by commit <code class="bg-muted text-muted-foreground rounded">{commitHash}</code>. This means that the privacy policy cannot be changed without the commit hash changing.
-			</Hint>
 
 			<div class="prose dark:prose-invert max-w-none" set:html={content} />
 		</Stack>

@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import CarbonBadge from "@/components/CarbonBadge.astro";
 import { Card, CardContent } from "./ui/card";
 import { Container } from "./ui/container";
+import HashVerifier from "./HashVerifier.astro";
 
 const currentYear = new Date().getFullYear();
 ---
@@ -125,6 +126,8 @@ const currentYear = new Date().getFullYear();
 						/>
 					</a>
 				</div>
+
+				<HashVerifier />
 			</CardContent>
 		</Card>
 	</Container>

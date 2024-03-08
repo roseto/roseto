@@ -13,7 +13,7 @@ export default defineConfig({
 		port: 3000
 	},
 	site: "https://roseto.co",
-	trailingSlash: false,
+	trailingSlash: "ignore",
 	integrations: [
 		react(), 
 		tailwind({

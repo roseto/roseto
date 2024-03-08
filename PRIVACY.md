@@ -35,10 +35,11 @@ We make sure to only use services that respect your privacy and are GDPR complia
 
 Our third-party services include:
 
-- DocuSeal
-- Open Collective
-- GitHub
-- GitBook
+- [DocuSeal](https://docuseal.eu)
+- [Deta](https://deta.space)
+- [Open Collective](https://opencollective.com)
+- [GitHub](https://github.com)
+- [GitBook](https://gitbook.com)
 
 These services are used to provide you with our services and to improve your experience.
 

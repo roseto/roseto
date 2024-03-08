@@ -31,17 +31,7 @@ let commitHash = import.meta.env.CF_PAGES_COMMIT_SHA;
 if (import.meta.env.MODE === "development") {
 	commitHash = "develop";
 } else if (!commitHash) {
-	const { exec } = await import("child_process");
-
-	commitHash = await new Promise((resolve, reject) => {
-		exec("git rev-parse HEAD", (err, stdout) => {
-			if (err) {
-				reject(err);
-			} else {
-				resolve(stdout);
-			}
-		});
-	});
+	commitHash = "unknown"
 }
 
 commitHash = commitHash.slice(0, 7);

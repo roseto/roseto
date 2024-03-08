@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer.astro";
 import { Container } from "@/components/ui/container";
 import { ViewTransitions } from "astro:transitions";
+import { exec } from "child_process";
+import { Hint } from "@/components/ui/hint";
 
 interface Props {
 	frontmatter?: {
@@ -25,6 +27,24 @@ const { frontmatter, title, navbar } = Astro.props;
 
 const isMarkdown = frontmatter !== undefined;
 const pageTitle = frontmatter?.title ?? title;
+
+let commitHash = import.meta.env.CF_PAGES_COMMIT_SHA;
+
+if (import.meta.env.MODE === "development") {
+	commitHash = "develop";
+} else if (!commitHash) {
+	commitHash = await new Promise((resolve, reject) => {
+		exec("git rev-parse HEAD", (err, stdout) => {
+			if (err) {
+				reject(err);
+			} else {
+				resolve(stdout);
+			}
+		});
+	});
+}
+
+commitHash = commitHash.slice(0, 7);
 ---
 
 <script is:inline>
@@ -75,6 +95,6 @@ const pageTitle = frontmatter?.title ?? title;
 				<slot/>
 			)}
 		</main>
-		<Footer transition:persist />
+		<Footer commitHash={commitHash} transition:persist />
 	</body>
 </html>

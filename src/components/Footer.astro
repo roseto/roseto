@@ -3,9 +3,15 @@ import { Separator } from "@/components/ui/separator";
 import CarbonBadge from "@/components/CarbonBadge.astro";
 import { Card, CardContent } from "./ui/card";
 import { Container } from "./ui/container";
-import HashVerifier from "./HashVerifier.astro";
+import { Hint } from "./ui/hint";
 
 const currentYear = new Date().getFullYear();
+
+interface Props {
+	commitHash: string;
+}
+
+const { commitHash } = Astro.props;
 ---
 
 
@@ -127,7 +133,10 @@ const currentYear = new Date().getFullYear();
 					</a>
 				</div>
 
-				<HashVerifier />
+				<Hint>
+					Version: <code class="bg-muted text-muted-foreground">{commitHash}</code>
+				</Hint>
+
 			</CardContent>
 		</Card>
 	</Container>

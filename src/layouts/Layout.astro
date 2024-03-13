@@ -49,11 +49,13 @@ commitHash = commitHash.slice(0, 7);
 		<meta name="generator" content={Astro.generator} />
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(0 0% 100%)" />
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 12%)" />
-		{Astro.url.pathname === "/" ?
-			<title>Roseto — Growing is a necessity, not an option.</title>
-			:
-			<title>{pageTitle} &middot; Roseto</title>
-		}
+		<title>
+			{Astro.url.pathname === "/" ?
+				"Roseto — Growing is a necessity, not an option."
+				:
+				`${pageTitle} — Roseto`
+			}
+		</title>
 
 		<meta name="title" content="Roseto — Growing is a necessity, not an option." />
 		<meta name="description" content="A small collective with the objective of informing the youth and digitalize local communities." />

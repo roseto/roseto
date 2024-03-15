@@ -1,0 +1,23 @@
+---
+import { readFile } from "fs/promises";
+import { marked } from "marked";
+import Layout from "@/layouts/Layout.astro";
+import { Stack } from "@/components/ui/stack";
+import { Container } from "@/components/ui/container";
+---
+
+<Layout title="Not Found">
+	<Container>
+		<Stack>
+			<h1
+				class="text-7xl font-bold"
+			>
+				404
+			</h1>
+
+			<p>
+				The page you are looking for couldn't be found :(
+			</p>
+		</Stack>
+	</Container>
+</Layout>

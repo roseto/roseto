@@ -25,7 +25,6 @@
 ## Project Specs
 
 * [📄 Project Specs](project-specs/project-specs.md)
-* [Roseto Pay (WIP)](project-specs/project-specification-template.md)
 * [Roseto Sync](project-specs/roseto-20240113.md)
 * [Learning about volunteering](project-specs/roseto-20240110.md)
-* [Project Specification Template](project-specs/project-specification-template-1.md)
+* [Project Specification Template](project-specs/project-specification-template.md)

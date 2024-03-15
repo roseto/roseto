@@ -1,33 +1,32 @@
 ---
-description: ROSETO-20240303
+description: PROJECT ID
 ---
 
-# Roseto Pay (WIP)
+# Project Specification Template
 
 {% hint style="info" %}
-Specification Status - **WIP**
+Specification Status - **WIP/DONE**
 {% endhint %}
 
 ## Description
 
-**Roseto Pay** (placeholder name, still WIP) is a payment solution for users, a way to obtain a debit card and transfer funds to other users and pay to any vendor, online or offline. **Roseto Pay** is an alternative to Revolut, but simpler. It will only include features like cards (virtual or physical), payment controls, and transfers to other users, with more features to be determined if they will be added.
-
-It will be based on **Stripe Issuing** and **Stripe Treasury**, services that allows for issuing cards and for holding money. For now, **Stripe Issuing** and **Stripe Treasury** is not available yet in Romania, and we are still waiting for their support.
+DESCRIPTION
 
 ## Details
 
-* Project ID: **ROSETO-20240303**
-* Location: **Romania**
-* Time/Date: **Not applicable**
-* Subject: **Easy and simple payments**
-* Participants: **Not applicable**
-* Coordinators: **Not applicable**
-* Duration: **TO BE DETERMINED**
-* Allocated budget: **TO BE DETERMINED**
+* Project ID: **ROSETO-YYYYMMDD**
+* Location: **LOCATION**
+* Time/Date: **TIME/DATE**
+* Subject: **SUBJECT**
+* Participants: **NUMBER**
+* Coordinators: **PEOPLE**
+* Duration: **TIME**
+* Allocated budget: **BUDGET**
 
 ## Involved Partnerships
 
-* Involved Partners: **NONE**
+* Involved Partners:
+  *
 
 ## Budget
 

@@ -1,0 +1,21 @@
+---
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Layout from "@/layouts/VerifyLayout.astro";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+---
+
+<Layout>
+	<Card className="p-8">
+		<h2 class="text-7xl font-bold">Diploma is <span class="text-destructive">NOT VALID</span></h2>
+	</Card>
+	<a href="/verify">
+		<Button 
+			variant="outline"
+			className="w-full"
+		>
+			<ArrowLeftIcon className="mr-2 h-4 w-4" />
+			Check another diploma ID
+		</Button>
+	</a>
+</Layout>

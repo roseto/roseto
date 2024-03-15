@@ -5,9 +5,17 @@ import { Input } from "@/components/ui/input";
 import Layout from "@/layouts/VerifyLayout.astro";
 ---
 
+<script>
+	// Autofocus
+	document.addEventListener("astro:page-load", () => {
+		document.getElementById("verifier-input")?.focus();
+	})
+</script>
+
 <Layout>
 	<form method="post" action="/verify/redirect">
 		<Input
+			id="verifier-input"
 			name="id"
 			type="text"
 			required

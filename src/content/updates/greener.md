@@ -1,7 +1,8 @@
 ---
-title: Making Roseto greener and faster
 date: 2024-03-13
 ---
+
+# Making Roseto greener and faster
 
 Newest update to Roseto's webpage and [Roseto Link](https://roseto.link) includes
 new ways of fetching and displaying data. This will make the website faster and

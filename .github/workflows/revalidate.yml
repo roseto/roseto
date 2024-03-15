@@ -1,0 +1,13 @@
+name: Revalidate Content
+on:
+  schedule:
+    - cron: '0 12 * * 1' # Runs every Monday at 12:00 PM UTC
+  workflow_dispatch:
+
+jobs:
+  post_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post Request to Cloudflare
+        run: |
+          curl -X POST https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${{ secrets.HOOK_ID }}

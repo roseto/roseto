@@ -1,3 +1,3 @@
 /*
 	Referrer-Policy: no-referrer
-	Permission-Policy: document-domain=(), local-fonts=(self)
+	Permission-Policy: document-domain=()

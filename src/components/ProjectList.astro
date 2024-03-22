@@ -33,8 +33,6 @@ const getSpanClassName = (idx: number) => {
 
 	return className
 }
-
-const date = new Date();
 ---
 
 <div
@@ -48,20 +46,26 @@ const date = new Date();
 		>
 			<Card className="w-full h-full">
 				{project.data?.cover &&
-					<Image
-						src={project.data.cover}
-						transition:name={"cover" + project.id}
-						alt={project.data.title}
-						loading="lazy"
-						style={{
-							maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
-							"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
-						}}
-						class="absolute top-0 left-0 w-full h-full z-0 object-cover opacity-50"
-					/>
+					<>
+						{/* This hack is here so that typescript doesn't bother with inferSize. 
+							We use both remote images and local images, but we do the checking so it's fine ;) */}
+						{/* @ts-ignore */}
+						<Image
+							src={project.data.cover}
+							transition:name={"cover" + project.id}
+							inferSize={project.data.cover.toString().startsWith("http") ? true : false}
+							alt={project.data.title}
+							loading="lazy"
+							style={{
+								maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
+								"-webkit-mask-image": `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))`,
+							}}
+							class="absolute top-0 left-0 w-full h-full z-0 object-cover opacity-50"
+						/>
+					</>
 				}
 				<CardHeader className="relative z-10">
-					{project.data.date?.getTime() > Date.now() ?
+					{(project.data.date?.getTime() || 0) > Date.now() ?
 						<Badge className="self-start">
 							Upcoming
 							<DoubleArrowRightIcon className="ml-1" />

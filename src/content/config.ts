@@ -19,7 +19,7 @@ const projectsCollection = defineCollection({
 		description: z.string(),
 		spec: z.string().url().optional(),
 		link: z.string().url().optional(),
-		cover: image().optional(),
+		cover: image().or(z.string().url()).optional(),
 		date: z.date().optional(),
 		location: z.string().optional(),
 		aliases: z.array(z.string()).optional(),

@@ -72,7 +72,9 @@ const updates = await getCollection("updates").then((collection) =>
 									class="text-4xl font-bold"
 									id={update.slug}
 								>
-									{update.data.title}
+									{await update.render().then(({ Content }) => (
+										<Content />
+									))}
 								</h2>
 							</a>
 							

@@ -1,8 +1,7 @@
 ---
+title: "We revamped our website, welcome!"
 date: 2024-01-22
 ---
-
-# We revamped our website, welcome!
 
 We are happy to announce that we revamped our website. We really hope you like it!
 

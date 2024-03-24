@@ -1,8 +1,7 @@
 ---
+title: "Ok, ok, now we really are new!"
 date: 2024-01-26
 ---
-
-# Ok, ok, now we really are new!
 
 Following the previous update, we had this coming for a while. We renamed ourselves to "**Roseto Collective**",
 which is a name that better represents us. We are a collective of people, and we are working on a project

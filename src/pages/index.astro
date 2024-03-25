@@ -111,17 +111,13 @@ const countProjects = await getCollection("projects").then((projects) => project
 				alt=""
 				class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
 			/>
+			<h2
+				class="text-6xl font-bold text-secondary-foreground py-8"
+			>
+				Projects
+			</h2>
+			<ProjectList />
 			<SlideUp triggerInView client:load>
-				<h2
-					class="text-6xl font-bold text-secondary-foreground py-8"
-				>
-					Projects
-				</h2>
-			</SlideUp>
-			<SlideUp delay={100} triggerInView client:load>
-				<ProjectList />
-			</SlideUp>
-			<SlideUp delay={200} triggerInView client:load>
 				<a href="/projects">
 					<Button variant="outline" className="w-full mb-4 border-primary-foreground hover:border-secondary-foreground">
 						See all {countProjects} projects

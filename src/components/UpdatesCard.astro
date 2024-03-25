@@ -2,7 +2,6 @@
 import { SymbolIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from "./ui/card";
-import { Container } from "./ui/container";
 import { getCollection } from "astro:content";
 
 const latestUpdate = await getCollection("updates")
@@ -46,6 +45,13 @@ const { Content } = await latestUpdate.render();
 							})}
 						</p>
 					</div>
+
+					<h2
+						class="text-4xl font-bold"
+					>
+						{latestUpdate.data.title}
+					</h2>
+
 					<div
 						class="relative prose max-w-screen-lg dark:prose-invert h-96 overflow-hidden pointer-events-none"
 						style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));"

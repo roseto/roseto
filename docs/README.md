@@ -6,6 +6,20 @@ description: >-
 cover: >-
   https://images.unsplash.com/photo-1600577916048-804c9191e36c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHx3ZWxjb21lfGVufDB8fHx8MTcwNjIyMzAwMnww&ixlib=rb-4.0.3&q=85
 coverY: 94
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
 ---
 
 # 👋 Welcome

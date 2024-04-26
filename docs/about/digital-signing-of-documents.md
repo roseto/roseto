@@ -5,7 +5,7 @@ cover: >-
 coverY: 0
 ---
 
-# 🖊 Digital signing of documents
+# 🖊️ Digital signing of documents
 
 As you know from our statement, we are dedicated to making our carbon footprint as small as possible. We realised that a big part of our carbon footprint is the documents that we make and the ones that we need to get a signatures for.
 
@@ -19,7 +19,7 @@ We know that this is a new method of signing documents and we can agree that it 
 
 Here are the steps that a document goes through to being signed:
 
-1. An email gets sent to a specific address that needs to be the signee. A link will be present that allows them to sign the document. **Always make sure it comes from a Roseto email address (ex. mario@roseto.co)**;
+1. An email gets sent to a specific address that needs to be the signee. A link will be present that allows them to sign the document;
 2. The Signee clicks the link and gets forwarded to [DocuSeal](https://docuseal.eu);
 3. The Signee completes the needed fields and then proceeds to sign the document by drawing;
 4. After every required field gets filled, the signee confirms the signing of the document and the signed document gets sent back to us. The signee can also download or send themselves a copy of the document;

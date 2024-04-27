@@ -25,6 +25,7 @@
 ## Project Specs
 
 * [📄 Project Specs](project-specs/project-specs.md)
+* [ciorogarla.eu.org](project-specs/roseto-20240427.md)
 * [Paquet](project-specs/roseto-20240322.md)
 * [Learning about volunteering](project-specs/roseto-20240110.md)
 * [Project Specification Template](project-specs/project-specification-template.md)

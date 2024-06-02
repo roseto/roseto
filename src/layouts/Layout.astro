@@ -51,7 +51,7 @@ commitHash = commitHash.slice(0, 7);
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 12%)" />
 		<title>
 			{Astro.url.pathname === "/" ?
-				"Roseto — Growing is a necessity, not an option."
+				"Roseto — Growing together."
 				:
 				`${pageTitle} — Roseto`
 			}
@@ -60,17 +60,19 @@ commitHash = commitHash.slice(0, 7);
 		<meta name="title" content="Roseto — Growing is a necessity, not an option." />
 		<meta name="description" content="A small collective with the objective of informing the youth and digitalize local communities." />
 
+		<link rel="canonical" href="https://roseto.dev" />
+
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://roseto.co" />
+		<meta property="og:url" content="https://roseto.dev" />
 		<meta property="og:title" content="Roseto — Growing is a necessity, not an option." />
 		<meta property="og:description" content="A small collective with the objective of informing the youth and digitalize local communities." />
 		<meta property="og:image" content="https://roseto.co/og-image.png" />
 
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://roseto.co" />
+		<meta property="twitter:url" content="https://roseto.dev" />
 		<meta property="twitter:title" content="Roseto — Growing is a necessity, not an option." />
 		<meta property="twitter:description" content="A small collective with the objective of informing the youth and digitalize local communities." />
-		<meta property="twitter:image" content="https://roseto.co/og-image.png" />
+		<meta property="twitter:image" content="https://roseto.dev/og-image.png" />
 
 		<slot name="head" />
 

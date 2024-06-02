@@ -26,8 +26,7 @@ export async function getStaticPaths() {
 	);
 }
 
-// @ts-expect-error
-const baseUrl = import.meta.env.PROD ? 'https://roseto.co' : Astro.url.origin;
+const baseUrl = import.meta.env.PROD ? 'https://roseto.dev' : Astro.url.origin;
 
 const { dest, title } = Astro.props;
 const replacement = `${baseUrl}${dest}`;

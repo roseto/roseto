@@ -1,6 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Image } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
@@ -43,8 +42,8 @@ const { Content } = await entry.render();
 	<Container>
 		<Stack>
 			{entry.data.cover &&
-				<Image
-					src={entry.data.cover}
+				<img
+					src={typeof entry.data.cover === "string" ? entry.data.cover : entry.data.cover.src}
 					alt={entry.data.title}
 					class="h-64 w-full object-cover rounded"
 					transition:name={"cover" + entry.id}
@@ -74,15 +73,6 @@ const { Content } = await entry.render();
 					<CalendarIcon className="inline w-4 h-4 mr-1" />
 					{new Date(entry.data.date).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}
 				</p>
-			}
-
-			{entry.data.spec &&
-				<>
-					<a class="text-primary text-sm hover:underline" href={entry.data.spec} target="_blank">
-						<Pencil2Icon className="inline w-4 h-4 mr-1" />
-						Project specification
-					</a>
-				</>
 			}
 
 			<hr class="my-4"/>

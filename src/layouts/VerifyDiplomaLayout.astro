@@ -1,10 +1,9 @@
 ---
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { Hint } from "@/components/ui/hint";
-import { Input } from "@/components/ui/input";
 import { Stack } from "@/components/ui/stack";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import Layout from "@/layouts/Layout.astro";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 ---
 
 <Layout title="Verify diploma">
@@ -16,6 +15,14 @@ import Layout from "@/layouts/Layout.astro";
 				Verify diploma
 			</h1>
 			<p>Verify diplomas issued by Roseto. Diplomas issued by Roseto contain a specific code that allows them to verify their authenticity.</p>
+
+			<Alert>
+				<InfoCircledIcon />
+				<AlertTitle>Diplomas are phasing out</AlertTitle>
+				<AlertDescription>
+					We are phasing out diploma verification on January 26th 2024. If you have a diploma that needs to be verified, please contact us.
+				</AlertDescription>
+			</Alert>
 
 			<slot/>
 		</Stack>

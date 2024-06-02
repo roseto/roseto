@@ -11,18 +11,18 @@ export const POST: APIRoute = async ({ request }) => {
 		return new Response(null, {
 			status: 302,
 			headers: {
-				Location: "/verify",
+				Location: "/verify-diploma",
 			},
 		});
 	}
 
-	const exists = await fetch(url.origin + "/verify/" + id.toUpperCase());
+	const exists = await fetch(url.origin + "/verify-diploma/" + id.toUpperCase());
 
 	if (exists.status === 200) {
 		return new Response(null, {
 			status: 302,
 			headers: {
-				Location: `/verify/${id.toUpperCase()}`,
+				Location: `/verify-diploma/${id.toUpperCase()}`,
 			},
 		});
 	}
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 	return new Response(null, {
 		status: 302,
 		headers: {
-			Location: `/verify/not-found`,
+			Location: `/verify-diploma/not-found`,
 		},
 	});
 }

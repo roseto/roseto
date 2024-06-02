@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Hint } from "@/components/ui/hint";
 import { Input } from "@/components/ui/input";
-import Layout from "@/layouts/VerifyLayout.astro";
+import Layout from "@/layouts/VerifyDiplomaLayout.astro";
 ---
 
 <script>
@@ -13,7 +13,7 @@ import Layout from "@/layouts/VerifyLayout.astro";
 </script>
 
 <Layout>
-	<form method="post" action="/verify/redirect">
+	<form method="post" action="/verify-diploma/redirect">
 		<Input
 			id="verifier-input"
 			name="id"

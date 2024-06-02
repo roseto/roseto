@@ -5,17 +5,12 @@ import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
 import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, HeartFilledIcon, LockClosedIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import Contributors from "@/components/Contributors.astro";
-import Tiers from "@/components/Tiers.astro";
 import ProjectList from "@/components/ProjectList.astro";
 import { Button } from "@/components/ui/button";
-import Partnerships from "@/components/Partnerships.astro";
-import Specials from "@/components/Specials.astro";
 import { getCollection } from "astro:content";
 import UpdatesCard from "@/components/UpdatesCard.astro";
 import SlideUp from "@/components/SlideUp";
 import { Badge } from "@/components/ui/badge";
-import communitySvg from "@/assets/images/community.svg"
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -28,22 +23,13 @@ const countProjects = await getCollection("projects").then((projects) => project
 			{
 				text: "Updates",
 				href: "/updates",
-			},
-			{
-				text: "Verify diploma",
-				href: "/verify",
-			},
-			{
-				text: "Docs",
-				href: "https://docs.roseto.co",
-				target: "_blank"
 			}
 		]
 	}}
 >
 	
 	<Container>
-		<Stack className="h-[500px] md:h-[80vh] relative justify-center items-center">
+		<Stack className="h-[500px] md:h-[80vh] relative justify-center">
 			<img 
 				src="/static/shapes/rectangles.svg" 
 				alt=""
@@ -55,18 +41,18 @@ const countProjects = await getCollection("projects").then((projects) => project
 						class="bg-clip-text text-primary"
 					>
 						Growing
-					</span> is a necessity, not an option.
+					</span> together.
 				</h1>
 			</SlideUp>
 
 			<SlideUp delay={300} className="w-full">
 				<p class="text-2xl font-bold w-full text-muted-foreground">
-					The self-improvement space you need.
+					Creating a experience that is safe, secure, private, and sustainable.
 				</p>
 			</SlideUp>
 			<SlideUp
 				delay={1000}
-				className="text-muted-foreground absolute bottom-0 flex flex-col items-center justify-center"
+				className="text-muted-foreground self-center absolute bottom-0 flex flex-col items-center justify-center"
 			>
 				<DoubleArrowDownIcon className="animate-bounce" />
 				<p
@@ -82,15 +68,14 @@ const countProjects = await getCollection("projects").then((projects) => project
 			<h2
 				class="text-4xl font-bold"
 			>
-				What happened to Profiteri (Ciorogarla Unita)?
+				What happened to OG Roseto?
 			</h2>
 			
 			<Card>
 				<CardContent className="mt-6">
 					<p>
-						We decided to invest more time and effort into Profiteri (Ciorogarla Unita) and make it more
-						than just a collective of people. We want to make it a community, a network of people that
-						share the same values and beliefs.
+						We have decided to rebrand and restructure the organization.
+						We are now a business, with a focus on privacy, security, freedom, sustainability and development.
 					</p>
 				</CardContent>
 			</Card>
@@ -135,17 +120,6 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 	<Container>
 		<Stack className="mt-8">
-			<div
-				class="grid grid-cols-1 md:grid-cols-2 gap-2"
-			>
-				<SlideUp triggerInView client:load>
-					<Partnerships />
-				</SlideUp>
-				<SlideUp triggerInView delay={200} client:load>
-					<Specials />
-				</SlideUp>
-			</div>
-
 			<h2
 				class="text-6xl font-bold mt-4"
 			>
@@ -160,7 +134,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 						Solid foundation
 					</CardTitle>
 					<CardDescription>
-						We are built on privacy, security, freedom, sustainability, development, and community.
+						We are built on privacy, security, freedom, sustainability and development.
 					</CardDescription>
 				</SlideUp>
 
@@ -169,10 +143,10 @@ const countProjects = await getCollection("projects").then((projects) => project
 						className="w-20 h-20 hover:scale-110 hover:text-primary transition-all duration-300 ease-in-out"
 					/>
 					<CardTitle className="mt-2 text-2xl">
-						Open
+						Transparency
 					</CardTitle>
 					<CardDescription>
-						We are as open as possible. From our code, to the money we make, to our plans.
+						We are transparent about what we do, how we do it, and why we do it.
 					</CardDescription>
 				</SlideUp>
 
@@ -184,7 +158,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 						Everwhere
 					</CardTitle>
 					<CardDescription>
-						While we are based in Romania, we are doing our best to extend our reach to the entire world.
+						While we are based in Romania, we are available worldwide.
 					</CardDescription>
 				</SlideUp>
 
@@ -210,8 +184,6 @@ const countProjects = await getCollection("projects").then((projects) => project
 		</Stack>
 	</Container>
 
-	<Tiers />
-
 	<div class="relative mt-16">
 		<div 
 			class="absolute bg-[url(/static/shapes/hex_banner_bkg.svg)] bg-[length:1000px_1000px] opacity-25 top-0 left-0 bottom-0 right-0 w-full pointer-events-none"
@@ -235,7 +207,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 					<SlideUp className="md:col-span-2" client:load triggerInView>
 						<Card className="h-full">
 							<CardHeader className="h-full justify-center items-center">
-								<CardTitle className="text-7xl my-auto"><span class="highlight-primary">Grow</span>, Learn, Connect</CardTitle>
+								<CardTitle className="text-7xl my-auto"><span class="highlight-primary">Grow</span>, Learn, Develop</CardTitle>
 							</CardHeader>
 						</Card>
 					</SlideUp>
@@ -249,7 +221,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 								<CardTitle>Who are we</CardTitle>
 							</CardHeader>
 							<CardContent>
-								Roseto ("Roseto Collective") is a dynamic and forward-thinking group committed to empowering the youth while fostering the digital transformation of local communities and businesses. With a passion for innovation and community development, we strive to bridge the gap between technology and local needs, ensuring that the younger generation has the tools and opportunities they need to thrive in today's digital age. Join us in our mission to create a brighter, more connected future for all.
+								INSERT NEW TEXT HERE
 							</CardContent>
 						</Card>
 					</SlideUp>
@@ -296,55 +268,21 @@ const countProjects = await getCollection("projects").then((projects) => project
 						<UpdatesCard />
 					</SlideUp>
 
-					<SlideUp className="md:col-span-2" delay={100} client:load triggerInView>
-						<Contributors className="h-full"/>
-					</SlideUp>
-
-					<SlideUp className="md:col-span-1" client:load triggerInView delay={200}>
-						<Card className="h-full">
-							<HeartFilledIcon 
-								className="animate-bounce text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
-							/>
-							<CardHeader className="relative">
-								<Badge className="self-start">
-									It's you
-								</Badge>
-								<CardTitle className="text-6xl">
-									We really <span class="highlight-primary">love</span> you.
-								</CardTitle>
-							</CardHeader>
-						</Card>
-					</SlideUp>
-
 					<SlideUp className="md:col-span-1" client:load triggerInView delay={100}>
 						<Card className="h-full">
 							<CardHeader>
 								<Badge className="self-start">
-									Collective
+									Tech
 								</Badge>
 								<CardTitle className="text-6xl">
-									We are a collective
+									We believe in ethical tech
 								</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<p>
-									We love to work with each other and we love the informal environment we have created.
-									That's why we are not a non-profit organization, we are a collective. We function
-									mostly the same way, with the aid of <a href="https://www.oceurope.org/" class="text-primary hover:underline" target="_blank">Open Collective Europe</a>.
+									INSERT NEW TEXT HERE
 								</p>
 							</CardContent>
-						</Card>
-					</SlideUp>
-
-
-					<SlideUp className="md:col-span-2 h-[400px]" client:load triggerInView delay={200}>
-						<Card className="h-full">
-							<Image
-								alt=""
-								loading="eager"
-								src={communitySvg}
-								class="w-full h-full object-cover"
-							/>
 						</Card>
 					</SlideUp>
 

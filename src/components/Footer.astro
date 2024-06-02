@@ -5,6 +5,7 @@ import { Card, CardContent } from "./ui/card";
 import { Container } from "./ui/container";
 import { Hint } from "./ui/hint";
 import { Image } from "astro:assets";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 const currentYear = new Date().getFullYear();
 
@@ -31,7 +32,7 @@ const { commitHash } = Astro.props;
 		<Card className="w-full bg-gradient-to-t from-primary/30 dark:from-primary/10 via-transparent">
 			<CardContent className="mt-6 flex flex-col space-y-2">
 				<p>
-					<a class="hover:underline" href="/license">Roseto Collective &copy; {currentYear} is licensed under Creative Commons BY-NC-SA 4.0 </a>
+					&copy; { currentYear } Roseto &middot; All rights reserved.
 				</p>
 				
 				<CarbonBadge />
@@ -41,24 +42,12 @@ const { commitHash } = Astro.props;
 					<a href="/updates" class="text-muted-foreground hover:underline">
 						Updates
 					</a>
-					<a href="/contributors" class="text-muted-foreground hover:underline">
-						Contributors
-					</a>
 					<!-- Due to how Cloudflare Workers handles requests, we have to force reload the page when we navigate to it since it is server rendered -->
-					<a href="/verify" class="text-muted-foreground hover:underline">
+					<a href="/verify-diploma" class="text-muted-foreground hover:underline">
 						Verify diploma
-					</a>
-					<a href="https://docs.roseto.co" target="_blank" class="text-muted-foreground hover:underline">
-						Docs
-					</a>
-					<a href="/license" class="text-muted-foreground hover:underline">
-						License
 					</a>
 					<a href="/privacy" class="text-muted-foreground hover:underline">
 						Privacy Policy
-					</a>
-					<a href="/code" class="text-muted-foreground hover:underline">
-						Code of Conduct
 					</a>
 					<a href="/contact" class="text-muted-foreground hover:underline">
 						Contact
@@ -115,41 +104,14 @@ const { commitHash } = Astro.props;
 							class="w-6 h-6 fill-muted-foreground"
 						/>
 					</a>
-			
-					<Separator orientation="vertical" className="bg-muted-foreground" />
-			
-					<a 
-						href="https://opencollective.com/roseto"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Image 
-							width={24}
-							height={24} 
-							loading="eager" 
-							src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
-							alt="Open Collective"
-							class="w-6 h-6 fill-muted-foreground"
-						/>
-					</a>
-			
-					<Separator orientation="vertical" className="bg-muted-foreground" />
-			
-					<a 
-						href="https://chat.whatsapp.com/B5dxooCfG9sCMMd7kea7m5"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Image 
-							width={24}
-							height={24} 
-							loading="eager" 
-							src="https://cdn.simpleicons.org/whatsapp/000000/ffffff" 
-							alt="WhatsApp"
-							class="w-6 h-6 fill-muted-foreground"
-						/>
-					</a>
 				</div>
+
+				<p class="flex items-center gap-2">
+					<EnvelopeClosedIcon className="inline" />
+					<a class="underline" href="mailto:hello@roseto.co">
+						hello@roseto.dev
+					</a>
+				</p>
 
 				<Hint>
 					Version: <code class="bg-muted text-muted-foreground">{commitHash}</code>

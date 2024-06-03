@@ -41,13 +41,13 @@ const countProjects = await getCollection("projects").then((projects) => project
 						class="bg-clip-text text-primary"
 					>
 						Growing
-					</span> together.
+					</span> is a necessity, not an option.
 				</h1>
 			</SlideUp>
 
 			<SlideUp delay={300} className="w-full">
 				<p class="text-2xl font-bold w-full text-muted-foreground">
-					Creating a experience that is safe, secure, private, and sustainable.
+					Creating an experience that is safe, private, and sustainable.
 				</p>
 			</SlideUp>
 			<SlideUp
@@ -118,6 +118,16 @@ const countProjects = await getCollection("projects").then((projects) => project
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
 
+	<Container className="text-center my-16">
+		<h3 class="italic font-bold text-4xl mb-4">
+			"Great experience, I would do it again."
+		</h3>
+		<p class="text-foreground/50">
+			"Learning about Volunteering" feedback<br/>
+			~89% positive
+		</p>
+	</Container>
+
 	<Container>
 		<Stack className="mt-8">
 			<h2
@@ -182,6 +192,16 @@ const countProjects = await getCollection("projects").then((projects) => project
 			</div>
 
 		</Stack>
+	</Container>
+
+	<Container className="text-center my-16">
+		<h3 class="italic font-bold text-4xl mb-4">
+			"Amazing trainers, I learned a lot."
+		</h3>
+		<p class="text-foreground/50">
+			"Training Activity" feedback<br/>
+			~90% positive
+		</p>
 	</Container>
 
 	<div class="relative mt-16">
@@ -268,7 +288,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 						<UpdatesCard />
 					</SlideUp>
 
-					<SlideUp className="md:col-span-1" client:load triggerInView delay={100}>
+					<SlideUp className="md:col-span-2" client:load triggerInView delay={100}>
 						<Card className="h-full">
 							<CardHeader>
 								<Badge className="self-start">
@@ -280,7 +300,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 							</CardHeader>
 							<CardContent>
 								<p>
-									INSERT NEW TEXT HERE
+									We believe that tech should be 
 								</p>
 							</CardContent>
 						</Card>

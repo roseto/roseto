@@ -1,7 +1,10 @@
 - [ ] Update privacy policy
 - [ ] Remove code of conduct
-- [ ] Update README.md
+- [ ] Add references to partnerships
+- [ ] Create README.md
 - [ ] Projects overhaul
+- [ ] Add a new services page and section
+- [ ] Remove slideups
 	- [ ] Remove projects page
 	- [ ] Rename as history
 	- [ ] Remove `431.ciorogarla.eu.org`

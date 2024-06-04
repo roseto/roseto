@@ -12,6 +12,15 @@ import SlideUp from "@/components/SlideUp";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import ServicesList from "@/components/ServicesList.astro";
+import { Image } from "astro:assets";
+
+import liceuWebp from "@/assets/contributors/liceul-tehnologic-pamfil-seicaru.webp";
+import marstefWebp from "@/assets/contributors/marstef-food.webp";
+import mazgaWebp from "@/assets/contributors/mazga-bar-sportiv.webp";
+import savinWebp from "@/assets/contributors/savin-angel-mario.webp";
+import adrianWebp from "@/assets/contributors/adrian-visinoschi.webp";
+import maryWebp from "@/assets/contributors/mary-malaika-michael.webp";
+import liviuWebp from "@/assets/contributors/chiru-liviu-alexandru.webp";
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -78,6 +87,33 @@ const countProjects = await getCollection("projects").then((projects) => project
 		</Alert>
 	</Container>
 
+	<Container className="text-center flex flex-col items-center mt-16 gap-4">
+		<p class="text-foreground/50">
+			Trusted by
+		</p>
+		<div class="flex flex-row gap-2 opacity-50 grayscale">
+			<Image
+				src={liceuWebp}
+				height={72}
+				alt="Liceul Tehnologic Pamfil Șeicaru"
+			/>
+			<Image
+				src={marstefWebp}
+				alt="Marstef Food"
+				width={72}
+				height={72}
+				class="rounded-full object-cover"
+			/>
+			<Image
+				src={mazgaWebp}
+				alt="Mazga Bar Sportiv"
+				width={72}
+				height={72}
+				class="rounded-full object-cover"
+			/>
+		</div>
+	</Container>
+
 	<img 
 		src="/static/shapes/wave-secondary.svg" 
 		alt=""
@@ -100,12 +136,47 @@ const countProjects = await getCollection("projects").then((projects) => project
 			<ServicesList />
 		</Container>
 	</div>
-
 	<img 
 		src="/static/shapes/wave.svg" 
 		alt=""
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
+
+	<Container className="text-center flex flex-col items-center my-16 gap-4">
+		<p class="text-foreground/50">
+			Contributed to by
+		</p>
+		<div class="flex flex-row gap-2 opacity-50 grayscale">
+			<Image
+				src={savinWebp}
+				width={48}
+				height={48}
+				class="rounded-full h-12 w-12 object-cover"
+				alt="Savin Angel-Mario"
+			/>
+			<Image
+				src={adrianWebp}
+				width={48}
+				height={48}
+				class="rounded-full h-12 w-12 object-cover"
+				alt="Adrian Vișinoschi"
+			/>
+			<Image
+				src={maryWebp}
+				width={48}
+				height={48}
+				class="rounded-full h-12 w-12 object-cover"
+				alt="Mary Malaika Michael"
+			/>
+			<Image
+				src={liviuWebp}
+				width={48}
+				height={48}
+				class="rounded-full h-12 w-12 object-cover"
+				alt="Chiru Liviu Alexandru"
+			/>
+		</div>
+	</Container>
 
 	<Container className="relative">
 		<img 

@@ -1,0 +1,64 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { Container } from "@/components/ui/container";
+import { Stack } from "@/components/ui/stack";
+
+export async function getStaticPaths() {
+	const projectEntries = await getCollection("services");
+	
+	return projectEntries.map((entry) => ({
+		params: {
+			slug: entry.slug,
+		},
+		props: {
+			entry
+		}
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<"services">;
+}
+
+const { entry } = Astro.props;
+
+if (!entry.body) {
+	return Astro.redirect(entry.data.link || "/");
+}
+
+const { Content } = await entry.render();
+---
+
+<style is:global>
+	.prose img {
+		@apply rounded max-h-[300px] w-full object-cover;
+	}
+</style>
+
+<Layout title={entry.data.title}>
+	<Container>
+		<Stack>
+			<div class="flex flex-row items-center gap-2">
+				<img 
+					src={typeof entry.data.icon === "string" ? entry.data.icon : entry.data.icon.src}
+					class="w-16 h-16 rounded-full border bg-black p-2"
+					alt={entry.data.title}
+				/>
+				<h2 class="text-2xl font-bold">
+					{entry.data.title}
+				</h2>
+			</div>
+			<p class="text-foreground/50 mt-2 text-sm">
+				{entry.data.description}
+			</p>
+
+			<hr class="my-4"/>
+
+			<div class="prose max-w-screen-lg dark:prose-invert">
+				<Content />
+			</div>
+		</Stack>
+	</Container>
+</Layout>
+

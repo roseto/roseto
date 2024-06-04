@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Card, CardContent, CardFooter } from "./ui/card";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+
+interface Props {
+	service: CollectionEntry<"services">;
+	className?: string;
+}
+
+const { service, className } = Astro.props;
+---
+
+<Card className={cn([className])}>
+	<CardContent className="mt-6">
+		<div class="flex flex-row items-center gap-2">
+			<img 
+				src={typeof service.data.icon === "string" ? service.data.icon : service.data.icon.src}
+				class="w-16 h-16 rounded-full border bg-black p-2"
+				alt={service.data.title}
+			/>
+			<h2 class="text-2xl font-bold">
+				{service.data.title}
+			</h2>
+		</div>
+		<p class="text-inherit mt-2">
+			{service.data.description}
+		</p>
+	</CardContent>
+	<CardFooter>
+		<Button>
+			{service.data.pricing}
+		</Button>
+		<a href={"service/" + service.slug}>
+			<Button variant="outline">
+				Learn more
+			</Button>
+		</a>
+	</CardFooter>
+</Card>

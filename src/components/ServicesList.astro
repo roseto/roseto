@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content"
+import ServiceCard from "./ServiceCard.astro";
+
+const services = await getCollection("services");
+---
+
+<div class="grid grid-cols-1 md:grid-cols-4">
+	{services.map((service) => (
+		<ServiceCard 
+			service={service}
+			className={service.data.className}
+		/>
+	))}
+</div>

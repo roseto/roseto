@@ -5,12 +5,23 @@ const projectsCollection = defineCollection({
 	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),
-		spec: z.string().url().optional(),
 		link: z.string().url().optional(),
 		cover: image().or(z.string().url()).optional(),
 		date: z.date().optional(),
 		location: z.string().optional(),
 		aliases: z.array(z.string()).optional(),
+	})
+});
+
+const servicesCollection = defineCollection({
+	type: "content",
+	schema: ({ image }) => z.object({
+		icon: image().or(z.string().url()),
+		title: z.string(),
+		description: z.string(),
+		pricing: z.string().optional(),
+		className: z.string().optional(),
+		link: z.string().url().optional(),
 	})
 });
 
@@ -23,6 +34,7 @@ const updatesCollection = defineCollection({
 });
 
 export const collections = {
+	services: servicesCollection,
 	projects: projectsCollection,
 	updates: updatesCollection,
 }

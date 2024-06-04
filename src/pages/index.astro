@@ -1,9 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import { Image } from "astro:assets";
 import { Container } from "@/components/ui/container";
 import { Stack } from "@/components/ui/stack";
-import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, HeartFilledIcon, LockClosedIcon, LockOpen2Icon, RocketIcon } from "@radix-ui/react-icons";
+import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockClosedIcon, LockOpen2Icon, QuestionMarkCircledIcon, RocketIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import ProjectList from "@/components/ProjectList.astro";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,8 @@ import { getCollection } from "astro:content";
 import UpdatesCard from "@/components/UpdatesCard.astro";
 import SlideUp from "@/components/SlideUp";
 import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import ServicesList from "@/components/ServicesList.astro";
 
 const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
@@ -33,7 +34,7 @@ const countProjects = await getCollection("projects").then((projects) => project
 			<img 
 				src="/static/shapes/rectangles.svg" 
 				alt=""
-				class="absolute left-0 h-full dark:mix-blend-overlay mix-blend-multiply pointer-events-none"
+				class="absolute left-0 h-full opacity-50 mix-blend-multiply dark:mix-blend-overlay dark:opacity-100 pointer-events-none"
 			/>
 			<SlideUp delay={100}>
 				<h1 class="text-6xl md:text-9xl font-black">
@@ -64,22 +65,17 @@ const countProjects = await getCollection("projects").then((projects) => project
 
 
 	<Container>
-		<Stack className="mt-32">
-			<h2
-				class="text-4xl font-bold"
-			>
+		<Alert>
+			<QuestionMarkCircledIcon/>
+			<AlertTitle>
 				What happened to OG Roseto?
-			</h2>
-			
-			<Card>
-				<CardContent className="mt-6">
-					<p>
-						We have decided to rebrand and restructure the organization.
-						We are now a business, with a focus on privacy, security, freedom, sustainability and development.
-					</p>
-				</CardContent>
-			</Card>
-		</Stack>
+			</AlertTitle>
+			<AlertDescription>
+				We have decided to rebrand and restructure the organization.
+				Roseto is now a business, with a focus on privacy, security, freedom, sustainability and development.
+				We know that this is a big change, but we believe that this is the right direction for us and for the community.
+			</AlertDescription>
+		</Alert>
 	</Container>
 
 	<img 
@@ -88,28 +84,21 @@ const countProjects = await getCollection("projects").then((projects) => project
 		class="w-full h-32 -mb-px pointer-events-none"
 	/>
 	<div
-		class="bg-gradient-to-b from-secondary to-primary relative"
+		class="bg-gradient-to-b from-secondary to-primary"
 	>
-		<Container className="relative">
+		<Container>
 			<img 
-				src="/static/shapes/clover.svg" 
+				src="/static/shapes/blobs.svg" 
 				alt=""
-				class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+				class="absolute left-1 right-1 opacity-50 h-72 w-72 pointer-events-none mix-blend-multiply"
 			/>
 			<h2
-				class="text-6xl font-bold text-secondary-foreground py-8"
+				class="text-6xl font-bold text-secondary-foreground py-8 z-10"
 			>
-				Projects
+				Services
 			</h2>
-			<ProjectList />
-			<SlideUp triggerInView client:load>
-				<a href="/projects">
-					<Button variant="outline" className="w-full mb-4 border-primary-foreground hover:border-secondary-foreground">
-						See all {countProjects} projects
-					</Button>
-				</a>
-			</SlideUp>
-	</Container>
+			<ServicesList />
+		</Container>
 	</div>
 
 	<img 
@@ -117,6 +106,27 @@ const countProjects = await getCollection("projects").then((projects) => project
 		alt=""
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
+
+	<Container className="relative">
+		<img 
+			src="/static/shapes/clover.svg" 
+			alt=""
+			class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+		/>
+		<h2
+			class="text-6xl font-bold py-8"
+		>
+			Projects
+		</h2>
+		<ProjectList />
+		<SlideUp triggerInView client:load>
+			<a href="/projects">
+				<Button variant="outline" className="w-full mb-4">
+					See all {countProjects} projects
+				</Button>
+			</a>
+		</SlideUp>
+	</Container>
 
 	<Container className="text-center my-16">
 		<h3 class="italic font-bold text-4xl mb-4">
@@ -241,7 +251,8 @@ const countProjects = await getCollection("projects").then((projects) => project
 								<CardTitle>Who are we</CardTitle>
 							</CardHeader>
 							<CardContent>
-								INSERT NEW TEXT HERE
+								Roseto is a business that is focused on privacy, security, freedom, sustainability and development.
+								We are digitalizing the world, evolving the communities, and growing together.
 							</CardContent>
 						</Card>
 					</SlideUp>

@@ -29,13 +29,17 @@ const { service, className } = Astro.props;
 		</p>
 	</CardContent>
 	<CardFooter className="gap-2 mt-auto flex-wrap">
-		<Button>
-			{service.data.pricing}
-		</Button>
-		<a href={"service/" + service.slug}>
-			<Button variant="outline">
-				Learn more
+		<a href={service.data.link}>
+			<Button>
+				{service.data.pricing}
 			</Button>
 		</a>
+		{service.body.length > 0 &&
+			<a href={"service/" + service.slug}>
+				<Button variant="outline">
+					Learn more
+				</Button>
+			</a>
+		}
 	</CardFooter>
 </Card>

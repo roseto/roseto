@@ -3,9 +3,6 @@
 - [ ] Create README.md
 - [X] Projects overhaul
 - [X] Add a new services page and section
-- [ ] Remove slideups
-	- [ ] Remove projects page
-	- [ ] Rename as history
 	- [ ] Remove `431.ciorogarla.eu.org`
 	- [ ] Remove `profiteri.eu.org`
 	- [ ] Remove `roseto.space`
@@ -15,6 +12,7 @@
 	- [ ] Redirect `roseto.co` to `roseto.dev`
 	- [ ] Update website carbon badge
 - [X] Remove funding.yml
+- [ ] Configure contact page
 - [ ] Remove Open Collective page
 - [ ] Remove `docs.roseto.co`
 - [ ] Delete Roseto Studio

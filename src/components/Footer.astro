@@ -56,7 +56,7 @@ const { commitHash } = Astro.props;
 			
 				<div class="mt-2 flex flex-row items-center h-6 gap-4">
 					<a 
-						href="https://facebook.com/rosetocollective"
+						href="https://facebook.com/rosetodev"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -73,7 +73,7 @@ const { commitHash } = Astro.props;
 					<Separator orientation="vertical" className="bg-muted-foreground" />
 			
 					<a 
-						href="https://instagram.com/rosetocollective"
+						href="https://instagram.com/rosetodev"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -90,7 +90,6 @@ const { commitHash } = Astro.props;
 					<Separator orientation="vertical" className="bg-muted-foreground" />
 			
 					<a 
-			
 						href="https://github.com/roseto"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -104,14 +103,31 @@ const { commitHash } = Astro.props;
 							class="w-6 h-6 fill-muted-foreground"
 						/>
 					</a>
-				</div>
 
-				<p class="flex items-center gap-2">
-					<EnvelopeClosedIcon className="inline" />
-					<a class="underline" href="mailto:hello@roseto.co">
-						hello@roseto.dev
+					<Separator orientation="vertical" className="bg-muted-foreground" />
+
+					<a 
+						href="https://opencollective.com/roseto"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Image 
+							width={24}
+							height={24} 
+							loading="eager" 
+							src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
+							alt="Open Collective"
+							class="w-6 h-6 fill-muted-foreground"
+						/>
 					</a>
-				</p>
+
+					<Separator orientation="vertical" className="bg-muted-foreground" />
+
+					<a class="flex items-center gap-2" href="mailto:hello@roseto.co">
+						<EnvelopeClosedIcon className="inline w-6 h-6" />
+						<span class="underline">hello@roseto.dev</span>
+					</a>
+				</div>
 
 				<Hint>
 					Version: <code class="bg-muted text-muted-foreground">{commitHash}</code>

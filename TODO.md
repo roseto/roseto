@@ -1,22 +1,20 @@
 - [ ] Update privacy policy
-- [ ] Add references to partnerships
+- [X] Add references to partnerships
 - [ ] Create README.md
 - [X] Projects overhaul
 - [X] Add a new services page and section
 	- [ ] Remove `431.ciorogarla.eu.org`
-	- [ ] Remove `profiteri.eu.org`
+	- [X] Remove `profiteri.eu.org`
 	- [ ] Remove `roseto.space`
 	- [ ] Remove platforma ciorogarla
 - [ ] Switch to `roseto.dev`
-	- [ ] Buy `roseto.dev`
+	- [X] Buy `roseto.dev`
 	- [ ] Redirect `roseto.co` to `roseto.dev`
 	- [ ] Update website carbon badge
-- [X] Remove funding.yml
 - [ ] Configure contact page
-- [ ] Remove Open Collective page
 - [ ] Remove `docs.roseto.co`
 - [ ] Delete Roseto Studio
 - [ ] Update instagram and facebook
 - [ ] Update github page
-- [ ] Add services & products section
+- [X] Add services & products section
 - [X] Add testimonials section

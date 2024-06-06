@@ -1,6 +1,7 @@
 - [ ] Update privacy policy
 - [X] Add references to partnerships
 - [ ] Create README.md
+- [ ] Cancel ERASMUS application
 - [X] Projects overhaul
 - [X] Add a new services page and section
 	- [ ] Remove `431.ciorogarla.eu.org`

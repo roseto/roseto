@@ -21,7 +21,7 @@ const servicesCollection = defineCollection({
 		description: z.string(),
 		pricing: z.string().optional(),
 		className: z.string().optional(),
-		link: z.string().url().optional(),
+		link: z.string().url().or(z.string()).optional(),
 	})
 });
 

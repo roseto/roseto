@@ -2,6 +2,7 @@
 - [X] Add references to partnerships
 - [ ] Create README.md
 - [ ] Cancel ERASMUS application
+- [ ] Add status page
 - [X] Projects overhaul
 - [X] Add a new services page and section
 	- [ ] Remove `431.ciorogarla.eu.org`

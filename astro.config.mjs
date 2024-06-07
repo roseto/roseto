@@ -12,7 +12,7 @@ export default defineConfig({
 	server: {
 		port: 3000
 	},
-	site: "https://roseto.co",
+	site: "https://roseto.dev",
 	trailingSlash: "ignore",
 	integrations: [
 		react(), 
@@ -32,6 +32,6 @@ export default defineConfig({
 		runtime: {
 			mode: "local",
 			persistTo: ".wrangler/state/v3"
-		}
+		},
 	})
 });

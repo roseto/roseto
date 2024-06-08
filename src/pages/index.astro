@@ -21,8 +21,6 @@ import savinWebp from "@/assets/contributors/savin-angel-mario.webp";
 import adrianWebp from "@/assets/contributors/adrian-visinoschi.webp";
 import maryWebp from "@/assets/contributors/mary-malaika-michael.webp";
 import liviuWebp from "@/assets/contributors/chiru-liviu-alexandru.webp";
-
-const countProjects = await getCollection("projects").then((projects) => projects.length);
 ---
 
 
@@ -30,10 +28,6 @@ const countProjects = await getCollection("projects").then((projects) => project
 	title="Welcome"
 	navbar={{
 		buttons: [
-			{
-				text: "Docs",
-				href: "https://docs.roseto.dev",
-			},
 			{
 				text: "Updates",
 				href: "/updates",
@@ -194,13 +188,6 @@ const countProjects = await getCollection("projects").then((projects) => project
 			Projects
 		</h2>
 		<ProjectList />
-		<SlideUp triggerInView client:load>
-			<a href="/projects">
-				<Button variant="outline" className="w-full mb-4">
-					See all {countProjects} projects
-				</Button>
-			</a>
-		</SlideUp>
 	</Container>
 
 	<Container className="text-center my-16">

@@ -4,10 +4,10 @@ import { Badge } from "./ui/badge";
 
 let percentage: number;
 let rating: string
-const res = await fetch("https://api.websitecarbon.com/site?url=https://roseto.co")
+const res = await fetch("https://api.websitecarbon.com/site?url=https://roseto.dev").catch(() => null);
 
 
-if (res.ok) {
+if (res?.ok) {
 	const data = await res.json();
 
 	percentage = data.cleanerThan * 100;
@@ -23,7 +23,7 @@ if (res.ok) {
 
 <div class="flex flex-row flex-wrap gap-2">
 	<a
-		href="https://websitecarbon.com/website/roseto.co"
+		href="https://websitecarbon.com/website/roseto.dev"
 		target="_blank"
 		rel="noopener noreferrer"
 	>
@@ -39,7 +39,7 @@ if (res.ok) {
 	</a>
 	
 	<a
-		href="https://websitecarbon.com/website/roseto.co"
+		href="https://websitecarbon.com/website/roseto.dev"
 		target="_blank"
 		rel="noopener noreferrer"
 	>

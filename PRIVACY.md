@@ -1,7 +1,7 @@
 # Privacy
 
 This is Roseto's privacy policy. It applies to all of our apps, services, features, software, websites, activities,
-events and any other products or services that we offer. This policy is effective as of **8th of March 2024**. This policy is subject to change at any time, so please check back regularly for updates. 
+events and any other products or services that we offer. This policy is effective as of **9th of June 2024**. This policy is subject to change at any time, so please check back regularly for updates. 
 
 **This document may appear in other repositories, websites, apps, services, features, software, events, activities and any other products or services that we offer. This document is the same across all of our products and services. We make sure to keep this document up to date and to provide you with the latest version of our privacy policy.**
 

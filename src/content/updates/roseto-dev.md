@@ -21,7 +21,7 @@ like web development, web design, and consulting.
 Here are some of the changes summarized:
 * Roseto Link will be discontinued on Dec 19, 2024;
 * Platforma Ciorogarla will be discontinued and replaced with a new service to host web applications;
-* `roseto.space` will be discontinued on Aug 15, 2024;
+* `roseto.space` will be closed on Aug 15, 2024;
 * `roseto.co` will be closed on Jan 26, 2025;
 * Roseto Diplomas will be discontinued on Jan 26th 2024;
 * Roseto's internal studio will be closed;

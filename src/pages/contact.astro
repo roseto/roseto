@@ -1,0 +1,134 @@
+---
+import { Card, CardTitle, CardContent, CardHeader } from "@/components/ui/card";
+import { Container } from "@/components/ui/container"
+import { Stack } from "@/components/ui/stack"
+import Layout from "@/layouts/Layout.astro"
+import { EnvelopeClosedIcon, GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
+
+export const prerender = false;
+---
+
+<Layout
+	title="Contact"
+>
+	<Container>
+		<Stack>
+			<h1
+				class="text-7xl font-bold"
+			>
+				Contact
+			</h1>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+				<Card>
+					<EnvelopeClosedIcon 
+						className="text-black dark:text-white absolute -top-4 right-0 opacity-25 w-32 h-32"
+					/>
+					<CardHeader>
+						<CardTitle>
+							Email
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						Contact us via email at 
+						<a class="text-primary hover:underline"href="mailto:hello@roseto.dev">
+							hello@roseto.dev
+						</a>
+					</CardContent>
+				</Card>
+				<Card>
+					<img
+						src="https://cdn.simpleicons.org/github/000000/ffffff"
+						class="absolute -top-4 right-0 opacity-25 w-32 h-32"
+					/>
+					<CardHeader>
+						<CardTitle>
+							GitHub
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p>
+							You can also reach out to us on GitHub at 
+							<a class="text-primary hover:underline" href="https://github.com/roseto">
+								@roseto
+							</a>
+						</p>
+
+						<p>
+							We're always looking for contributors to help us improve our projects.
+						</p>
+					</CardContent>
+				</Card>
+				<Card>
+					<img
+						src="https://cdn.simpleicons.org/instagram/000000/ffffff"
+						class="absolute -top-4 right-0 opacity-25 w-32 h-32"
+					/>
+					<CardHeader>
+						<CardTitle>
+							Instagram
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p>
+							Follow us on Instagram at 
+							<a class="text-primary hover:underline" href="https://instagram.com/rosetodev">
+								@rosetodev
+							</a>
+						</p>
+
+						<p>
+							We post updates about our projects and other cool stuff we're working on.
+						</p>
+					</CardContent>
+				</Card>
+				<Card>
+					<img
+						src="https://cdn.simpleicons.org/facebook/000000/ffffff"
+						class="absolute -top-4 right-0 opacity-25 w-32 h-32"
+					/>
+					<CardHeader>
+						<CardTitle>
+							Facebook
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p>
+							Like us on Facebook at 
+							<a class="text-primary hover:underline" href="https://facebook.com/rosetodev">
+								@rosetodev
+							</a>
+						</p>
+
+						<p>
+							We post updates about our projects and other cool stuff we're working on.
+						</p>
+					</CardContent>
+				</Card>
+				<Card>
+					<img
+						src="https://cdn.simpleicons.org/opencollective/000000/ffffff"
+						class="absolute -top-4 right-0 opacity-25 w-32 h-32"
+					/>
+					<CardHeader>
+						<CardTitle>
+							Open Collective
+						</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<p>
+							Support us on Open Collective at 
+							<a class="text-primary hover:underline" href="https://opencollective.com/roseto">
+								@roseto
+							</a>
+						</p>
+
+						<p>
+							We're always looking for contributors to help us improve our projects.
+						</p>
+					</CardContent>
+				</Card>
+			</div>
+		</Stack>
+	</Container>
+</Layout>

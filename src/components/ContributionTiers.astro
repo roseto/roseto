@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import TierCard from "./ContributionTierCard.astro";
+import { Button } from "./ui/button";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { Container } from "./ui/container";
+
+const tiers = await getCollection("contributionTiers")
+---
+
+<Container>
+	<h2
+		class="mt-8 text-6xl font-bold"
+	>
+		<span class="highlight-primary">Contribute</span> financially	
+	</h2>
+</Container>
+
+<div
+	class="mt-4 p-4 mx-auto max-w-screen-xl flex flex-row gap-2 flex-nowrap overflow-x-scroll"
+>
+	{tiers.map((tier) => (
+		<TierCard tier={tier}/>
+	))}
+</div>
+
+<Container>
+	<a
+		href="https://opencollective.com/roseto/contribute"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<Button className="w-full mt-4" variant="outline">
+			See all the contribution options
+			<ArrowRightIcon className="ml-2 h-4 w-4"/>
+		</Button>
+	</a>
+</Container>

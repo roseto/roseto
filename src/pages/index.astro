@@ -22,6 +22,7 @@ import adrianWebp from "@/assets/contributors/adrian-visinoschi.webp";
 import maryWebp from "@/assets/contributors/mary-malaika-michael.webp";
 import liviuWebp from "@/assets/contributors/chiru-liviu-alexandru.webp";
 import { Separator } from "@/components/ui/separator";
+import ContributionTiers from "@/components/ContributionTiers.astro";
 ---
 
 
@@ -141,6 +142,8 @@ import { Separator } from "@/components/ui/separator";
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
 
+	<ContributionTiers />
+
 	<Container className="text-center flex flex-col items-center my-16 gap-4">
 		<p class="text-foreground/50">
 			Contributed to by
@@ -195,7 +198,7 @@ import { Separator } from "@/components/ui/separator";
 		<Separator className="mb-16 w-3/5 mx-auto" />
 
 		<h3 class="italic font-bold text-5xl mb-4">
-			"Great experience, I would do it again."
+			"Great <span class="highlight-primary">experience</span>, I would do it again."
 		</h3>
 		<p class="text-foreground/50">
 			"Learning about Volunteering" feedback<br/>
@@ -275,7 +278,7 @@ import { Separator } from "@/components/ui/separator";
 		<Separator className="mb-16 w-3/5 mx-auto" />
 
 		<h3 class="italic font-bold text-5xl mb-4">
-			"Amazing trainers, I learned a lot."
+			"Amazing trainers, I <span class="highlight-primary">learned</span> a lot."
 		</h3>
 		<p class="text-foreground/50">
 			"Training Activity" feedback<br/>

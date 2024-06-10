@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Hint } from './ui/hint';
+import { Button } from './ui/button';
+
+interface Props {
+	tier: CollectionEntry<"contributionTiers">
+}
+
+const { tier } = Astro.props;
+---
+
+<Card
+	className="flex flex-col shrink-0 w-64"
+>	
+	<div
+		class="absolute opacity-50 top-0 left-0 w-64 h-64 z-0 pointer-events-none bg-gradient-to-br from-primary via-transparent"
+	>
+		<img src="/static/shapes/star.svg" alt="" class="w-2/5 dark:mix-blend-overlay mix-blend-multiply">
+	</div>
+
+	<CardHeader className="z-10">
+		<p
+			class="text-xs text-muted-foreground"
+		>
+			{tier.data.type.toUpperCase()}
+		</p>
+		<CardTitle>
+			{tier.data.name}
+		</CardTitle>
+		<CardDescription className="text-foreground">
+			{tier.data.description}
+		</CardDescription>
+	</CardHeader>
+	<CardContent className="mt-auto">
+		<h3>
+			<span class="text-4xl font-bold">€{tier.data.amount}</span>
+			{tier.data.interval === "monthly" && "/month"}
+		</h3>
+		
+		<p
+			class="text-muted-foreground text-sm"
+		>
+			{tier.data.interval === "monthly" 
+				? "This is a recurring contribution" 
+				: "This is a one-time contribution"}
+		</p>
+
+		{tier.data.more ? 
+			<a href={tier.data.more}>
+				<Button className="w-full mt-2" variant="outline">
+					Learn more
+				</Button>
+			</a>
+		: null}
+
+		<a
+			href={tier.data.link}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Button
+				className="w-full mt-4"
+			>
+				Contribute
+			</Button>
+		</a>
+
+		<Hint className="mt-2">
+			You will be redirected to Open Collective for payment
+		</Hint>
+	</CardContent>
+</Card>

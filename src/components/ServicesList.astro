@@ -5,7 +5,7 @@ import ServiceCard from "./ServiceCard.astro";
 const services = await getCollection("services");
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-2">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
 	{services.map((service) => (
 		<ServiceCard 
 			service={service}

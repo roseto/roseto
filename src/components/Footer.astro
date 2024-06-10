@@ -37,7 +37,7 @@ const { commitHash } = Astro.props;
 				
 				<CarbonBadge />
 			
-				<div class="flex flex-row gap-16 py-4">
+				<div class="flex flex-row flex-wrap gap-x-16 gap-y-8 py-4">
 					<div class="flex flex-col">
 						<p class="mb-1 text-xl">Open</p>
 						<!-- Due to how Cloudflare Workers handles requests, we have to force reload the page when we navigate to it since it is server rendered -->
@@ -75,7 +75,7 @@ const { commitHash } = Astro.props;
 					</div>
 				</div>
 			
-				<div class="mt-2 flex flex-row items-center h-6 gap-4">
+				<div class="mt-2 flex flex-row items-center gap-4">
 					<a 
 						href="https://facebook.com/rosetodotdev"
 						target="_blank"
@@ -87,11 +87,9 @@ const { commitHash } = Astro.props;
 							loading="eager" 
 							src="https://cdn.simpleicons.org/facebook/000000/ffffff" 
 							alt="Facebook"
-							class="w-6 h-6 fill-muted-foreground"
+							class="w-6 h-6"
 						/>
 					</a>
-			
-					<Separator orientation="vertical" className="bg-muted-foreground" />
 			
 					<a 
 						href="https://instagram.com/rosetodotdev"
@@ -104,11 +102,9 @@ const { commitHash } = Astro.props;
 							loading="eager" 
 							src="https://cdn.simpleicons.org/instagram/000000/ffffff"
 							alt="Instagram"
-							class="w-6 h-6 fill-muted-foreground"
+							class="w-6 h-6"
 						/>
 					</a>
-			
-					<Separator orientation="vertical" className="bg-muted-foreground" />
 			
 					<a 
 						href="https://github.com/roseto"
@@ -121,11 +117,9 @@ const { commitHash } = Astro.props;
 							loading="eager" 
 							src="https://cdn.simpleicons.org/github/000000/ffffff" 
 							alt="GitHub"
-							class="w-6 h-6 fill-muted-foreground"
+							class="w-6 h-6"
 						/>
 					</a>
-
-					<Separator orientation="vertical" className="bg-muted-foreground" />
 
 					<a 
 						href="https://opencollective.com/roseto"
@@ -138,17 +132,14 @@ const { commitHash } = Astro.props;
 							loading="eager" 
 							src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
 							alt="Open Collective"
-							class="w-6 h-6 fill-muted-foreground"
+							class="w-6 h-6"
 						/>
 					</a>
-
-					<Separator orientation="vertical" className="bg-muted-foreground" />
-
-					<a class="flex items-center gap-2" href="mailto:hello@roseto.co">
-						<EnvelopeClosedIcon className="inline w-6 h-6" />
-						<span class="underline">hello@roseto.dev</span>
-					</a>
 				</div>
+				<a class="flex items-center gap-2" href="mailto:hello@roseto.co">
+					<EnvelopeClosedIcon className="inline w-6 h-6" />
+					<span class="underline">hello@roseto.dev</span>
+				</a>
 
 				<Hint>
 					Version: <code class="bg-muted text-muted-foreground">{commitHash}</code>

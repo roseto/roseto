@@ -44,12 +44,13 @@ const { Content } = await entry.render();
 					src={typeof entry.data.icon === "string" ? entry.data.icon : entry.data.icon.src}
 					class="w-16 h-16 rounded-full border bg-black p-2"
 					alt={entry.data.title}
+					transition:name={"icon" + entry.slug}
 				/>
-				<h2 class="text-2xl font-bold">
+				<h2 class="text-2xl font-bold" transition:name={"title" + entry.slug}>
 					{entry.data.title}
 				</h2>
 			</div>
-			<p class="text-foreground/50 mt-2 text-sm">
+			<p class="text-foreground/50 mt-2 text-sm" transition:name={"description" + entry.slug}>
 				{entry.data.description}
 			</p>
 

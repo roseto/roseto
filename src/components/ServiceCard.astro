@@ -19,12 +19,13 @@ const { service, className } = Astro.props;
 				src={typeof service.data.icon === "string" ? service.data.icon : service.data.icon.src}
 				class="w-16 h-16 rounded-full border bg-[#121212] p-2"
 				alt={service.data.title}
+				transition:name={"icon" + service.slug}
 			/>
-			<h2 class="text-2xl font-bold">
+				<h2 class="text-2xl font-bold" transition:name={"title" + service.slug}>
 				{service.data.title}
 			</h2>
 		</div>
-		<p class="text-inherit mt-2">
+		<p class="text-inherit mt-2" transition:name={"description" + service.slug}>
 			{service.data.description}
 		</p>
 	</CardContent>

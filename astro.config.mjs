@@ -6,8 +6,6 @@ import mdx from "@astrojs/mdx";
 import prefetch from "@astrojs/prefetch";
 import cloudflare from "@astrojs/cloudflare";
 
-import partytown from "@astrojs/partytown";
-
 // https://astro.build/config
 export default defineConfig({
   server: {
@@ -24,7 +22,7 @@ export default defineConfig({
   trailingSlash: "ignore",
   integrations: [react(), tailwind({
     applyBaseStyles: false
-  }), sitemap(), mdx(), prefetch(), partytown()],
+  }), sitemap(), mdx(), prefetch()],
   build: {
     format: "file"
   },

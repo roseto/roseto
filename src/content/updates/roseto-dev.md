@@ -31,7 +31,7 @@ Here are some of the changes summarized:
 * DocuSeal will not be used anymore;
 * Roseto's Open Collective page will be removed;
 * `profiteri.eu.org` will be completely removed;
-* Roseto Docs will be closed. The new documentation will be available at `docs.roseto.dev`;
+* Roseto Docs will be closed and all documentation will be moved to `roseto.dev`;
 * Roseto will reside at `roseto.dev`;
 * Roseto will also launch a cool new secret product in the coming months;
 

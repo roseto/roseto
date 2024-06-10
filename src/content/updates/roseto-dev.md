@@ -12,6 +12,9 @@ We have been working on Roseto for a while now, and we have been through a lot o
 Ciorogarla Unita, then we became Roseto Collective, and now we are just Roseto. We thought this was the best
 approach for us to take in order to offer more experiences and have a stable foundation for our projects.
 
+Having an unstable base as a non-profit with limited resources and reach was not the best approach for us.
+We want to offer more products and services, and we want to be able to do that in a sustainable way.
+
 ## What's changing?
 
 Roseto will start offering different products and services. Commercial products will not be 

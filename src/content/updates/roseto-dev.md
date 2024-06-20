@@ -1,6 +1,6 @@
 ---
 title: "The new Roseto"
-date: 2024-07-10
+date: 2024-06-10
 ---
 
 The new and final iteration of Roseto is here. Roseto Collective is now just Roseto. And we are now
@@ -17,7 +17,7 @@ We want to offer more products and services, and we want to be able to do that i
 
 ## What's changing?
 
-Roseto will start offering different products and services. Commercial products will not be 
+Roseto will start offering different products and services. Commercial products will not be
 open-source, but anything non-commercial will be open-source. We will also start offering services
 like web development, web design, and consulting.
 

@@ -26,7 +26,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 ---
 
 
-<Layout 
+<Layout
 	title="Welcome"
 	navbar={{
 		buttons: [
@@ -37,11 +37,11 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 		]
 	}}
 >
-	
+
 	<Container>
 		<Stack className="h-[500px] md:h-[80vh] relative justify-center">
-			<img 
-				src="/static/shapes/rectangles.svg" 
+			<img
+				src="/static/shapes/rectangles.svg"
 				alt=""
 				class="absolute left-0 h-full opacity-50 mix-blend-multiply dark:mix-blend-overlay dark:opacity-100 pointer-events-none"
 			/>
@@ -114,8 +114,9 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 		</div>
 	</Container>
 
-	<img 
-		src="/static/shapes/wave-secondary.svg" 
+	<!--
+	<img
+		src="/static/shapes/wave-secondary.svg"
 		alt=""
 		class="w-full h-32 -mb-px pointer-events-none"
 	/>
@@ -123,8 +124,8 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 		class="bg-gradient-to-b from-secondary to-primary"
 	>
 		<Container>
-			<img 
-				src="/static/shapes/blobs.svg" 
+			<img
+				src="/static/shapes/blobs.svg"
 				alt=""
 				class="absolute left-1 right-1 opacity-50 h-72 w-72 pointer-events-none mix-blend-multiply"
 			/>
@@ -136,11 +137,12 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 			<ServicesList />
 		</Container>
 	</div>
-	<img 
-		src="/static/shapes/wave.svg" 
+	<img
+		src="/static/shapes/wave.svg"
 		alt=""
 		class="w-full h-32 rotate-180 -mt-px pointer-events-none"
 	/>
+	-->
 
 	<ContributionTiers />
 
@@ -181,8 +183,8 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 	</Container>
 
 	<Container className="relative">
-		<img 
-			src="/static/shapes/clover.svg" 
+		<img
+			src="/static/shapes/clover.svg"
 			alt=""
 			class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
 		/>
@@ -264,8 +266,8 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 					</CardDescription>
 				</SlideUp>
 
-				<img 
-					src="/static/shapes/blobs.svg" 
+				<img
+					src="/static/shapes/blobs.svg"
 					alt=""
 					class="absolute left-0 bottom-0 w-64 md:w-full max-w-md h-64 dark:mix-blend-overlay mix-blend-multiply opacity-50 pointer-events-none"
 				/>
@@ -289,7 +291,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 	</Container>
 
 	<div class="relative mt-16">
-		<div 
+		<div
 			class="absolute bg-[url(/static/shapes/hex_banner_bkg.svg)] bg-[length:1000px_1000px] opacity-25 top-0 left-0 bottom-0 right-0 w-full pointer-events-none"
 			style={{
 				maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))`,
@@ -333,7 +335,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 
 					<SlideUp delay={100} className="md:col-span-1" client:load triggerInView>
 						<Card className="h-full bg-green-800 text-white">
-							<GlobeIcon 
+							<GlobeIcon
 								className="absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
 							/>
 							<CardHeader>
@@ -345,7 +347,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 								<p>
 									We are committed to creating a sustainable future for all.
 									And we are trying our best to create as less carbon footprint as possible.
-									We use renewable energy, static site generators, and only update 
+									We use renewable energy, static site generators, and only update
 									the content when necessary.
 								</p>
 							</CardContent>
@@ -385,7 +387,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 							</CardHeader>
 							<CardContent className="space-y-2">
 								<p>
-									Tech is the future, but it has to be done right. We believe in a future where everyone has access to technology, 
+									Tech is the future, but it has to be done right. We believe in a future where everyone has access to technology,
 									where everyone is safe and secure, and where everyone is free. We are trying to make this future a reality.
 								</p>
 
@@ -399,7 +401,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 
 					<SlideUp className="md:col-span-1" client:load triggerInView delay={300}>
 						<Card className="h-full">
-							<LockClosedIcon 
+							<LockClosedIcon
 								className="animate-pulse text-primary absolute -bottom-8 -right-8 opacity-25 w-48 h-48"
 							/>
 							<CardHeader>

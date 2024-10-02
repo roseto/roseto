@@ -13,7 +13,7 @@ const { tier } = Astro.props;
 
 <Card
 	className="flex flex-col shrink-0 w-64"
->	
+>
 	<div
 		class="absolute opacity-50 top-0 left-0 w-64 h-64 z-0 pointer-events-none bg-gradient-to-br from-primary via-transparent"
 	>
@@ -35,19 +35,19 @@ const { tier } = Astro.props;
 	</CardHeader>
 	<CardContent className="mt-auto">
 		<h3>
-			<span class="text-4xl font-bold">€{tier.data.amount}</span>
+			<span class="text-4xl font-bold">{typeof tier.data.amount === "number" ? `\$${tier.data.amount}` : tier.data.amount}</span>
 			{tier.data.interval === "monthly" && "/month"}
 		</h3>
-		
+
 		<p
 			class="text-muted-foreground text-sm"
 		>
-			{tier.data.interval === "monthly" 
-				? "This is a recurring contribution" 
-				: "This is a one-time contribution"}
+			{tier.data.interval === "monthly"
+				? "This is a recurring payment"
+				: "This is a one-time payment"}
 		</p>
 
-		{tier.data.more ? 
+		{tier.data.more ?
 			<a href={tier.data.more}>
 				<Button className="w-full mt-2" variant="outline">
 					Learn more
@@ -63,12 +63,12 @@ const { tier } = Astro.props;
 			<Button
 				className="w-full mt-4"
 			>
-				Contribute
+				Pay
 			</Button>
 		</a>
 
 		<Hint className="mt-2">
-			You will be redirected to Open Collective for payment
+			You will be redirected to Polar for payment
 		</Hint>
 	</CardContent>
 </Card>

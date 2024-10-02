@@ -8,7 +8,6 @@ import { Card } from "@/components/ui/card";
 
 const license = await readFile("./LICENSE.md", "utf-8");
 const content = marked.parse(license);
-const currentYear = new Date().getFullYear();
 ---
 
 <Layout title="License">
@@ -22,7 +21,7 @@ const currentYear = new Date().getFullYear();
 
 			<p>
 				Roseto's open-source projects are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license.
-				
+
 				<a
 					href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
 					class="hover:underline text-primary"
@@ -32,9 +31,9 @@ const currentYear = new Date().getFullYear();
 				</a>
 			</p>
 			<p>
-				This license requires that reusers give credit to the creator. 
-				It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, 
-				for noncommercial purposes only. If others modify or adapt the material, 
+				This license requires that reusers give credit to the creator.
+				It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format,
+				for noncommercial purposes only. If others modify or adapt the material,
 				they must license the modified material under identical terms.
 			</p>
 

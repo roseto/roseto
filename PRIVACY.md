@@ -1,7 +1,7 @@
 # Privacy
 
 This is Roseto's privacy policy. It applies to all of our apps, services, features, software, websites, activities,
-events and any other products or services that we offer. This policy is effective as of **9th of June 2024**. This policy is subject to change at any time, so please check back regularly for updates. 
+events and any other products or services that we offer. This policy is effective as of **9th of June 2024**. This policy is subject to change at any time, so please check back regularly for updates.
 
 **This document may appear in other repositories, websites, apps, services, features, software, events, activities and any other products or services that we offer. This document is the same across all of our products and services. We make sure to keep this document up to date and to provide you with the latest version of our privacy policy.**
 
@@ -24,7 +24,7 @@ or other personal information. We **DO NOT** collect any sensitive information a
 - the duration of your usage;
 - the country you are using our services from;
 
-This is anonymous information and *CANNOT* be used to identify you in any shape or form. 
+This is anonymous information and *CANNOT* be used to identify you in any shape or form.
 This information is used to improve our services and to provide you with a better experience.
 
 ## Third-party services
@@ -35,7 +35,6 @@ We make sure to only use services that respect your privacy and are GDPR complia
 
 Our third-party services include:
 
-- [Deta](https://deta.space) &middot; For other utilities such as polls, forms, etc.;
 - [Open Collective](https://opencollective.com) &middot; For our financial services;
 - [GitHub](https://github.com) &middot; For our source code;
 

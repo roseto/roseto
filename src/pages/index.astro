@@ -6,12 +6,9 @@ import { DoubleArrowDownIcon, FrameIcon, GlobeIcon, LockClosedIcon, LockOpen2Ico
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import ProjectList from "@/components/ProjectList.astro";
 import { Button } from "@/components/ui/button";
-import { getCollection } from "astro:content";
 import UpdatesCard from "@/components/UpdatesCard.astro";
 import SlideUp from "@/components/SlideUp";
 import { Badge } from "@/components/ui/badge";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import ServicesList from "@/components/ServicesList.astro";
 import { Image } from "astro:assets";
 
 import liceuWebp from "@/assets/contributors/liceul-tehnologic-pamfil-seicaru.webp";
@@ -57,7 +54,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 
 			<SlideUp delay={300} className="w-full mt-2">
 				<p class="text-2xl font-bold w-full text-muted-foreground">
-					Creating safe, secure and efficient experiences
+					The self-improvement space you need
 				</p>
 			</SlideUp>
 			<SlideUp
@@ -72,20 +69,6 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 		</Stack>
 	</Container>
 
-
-	<Container>
-		<Alert>
-			<QuestionMarkCircledIcon/>
-			<AlertTitle>
-				What happened to Roseto Collective?
-			</AlertTitle>
-			<AlertDescription>
-				We have decided to rebrand and restructure the organization.
-				Roseto is now a business, with a focus on privacy, security, freedom, sustainability and development.
-				We know that this is a big change, but we believe that this is the right direction for us and for the community.
-			</AlertDescription>
-		</Alert>
-	</Container>
 
 	<Container className="text-center flex flex-col items-center mt-16 gap-4">
 		<p class="text-foreground/50">
@@ -144,7 +127,20 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 	/>
 	-->
 
-	<ContributionTiers />
+	<Container className="relative">
+		<img
+			src="/static/shapes/clover.svg"
+			alt=""
+			class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
+		/>
+		<h2
+			class="text-6xl font-bold py-8"
+		>
+			Projects
+		</h2>
+		<ProjectList />
+	</Container>
+
 
 	<Container className="text-center flex flex-col items-center my-16 gap-4">
 		<p class="text-foreground/50">
@@ -182,19 +178,7 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 		</div>
 	</Container>
 
-	<Container className="relative">
-		<img
-			src="/static/shapes/clover.svg"
-			alt=""
-			class="absolute top-1 right-1 opacity-50 h-72 w-72 pointer-events-none"
-		/>
-		<h2
-			class="text-6xl font-bold py-8"
-		>
-			Projects
-		</h2>
-		<ProjectList />
-	</Container>
+	<ContributionTiers />
 
 	<Container className="text-center my-16">
 		<Separator className="mb-16 w-3/5 mx-auto" />
@@ -327,8 +311,8 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 								<CardTitle>Who are we</CardTitle>
 							</CardHeader>
 							<CardContent>
-								Roseto is a business that is focused on privacy, security, freedom, sustainability and development.
-								We are digitalizing the world, evolving the communities, and growing together.
+								Roseto is an organization focused on personal development, growth, open-mindness and more.
+								We do our best to create the best experiences that can impact the way you think.
 							</CardContent>
 						</Card>
 					</SlideUp>
@@ -387,13 +371,8 @@ import ContributionTiers from "@/components/ContributionTiers.astro";
 							</CardHeader>
 							<CardContent className="space-y-2">
 								<p>
-									Tech is the future, but it has to be done right. We believe in a future where everyone has access to technology,
-									where everyone is safe and secure, and where everyone is free. We are trying to make this future a reality.
-								</p>
-
-								<p>
-									We nurture open-source community projects such as <a href="https://ciorogarla.eu.org" class="text-primary hover:underline">ciorogarla.eu.org</a>
-									with the goal of creating a better future for everyone.
+									A good future is one where you focus on yourself and then help others
+									grow and evolve.
 								</p>
 							</CardContent>
 						</Card>

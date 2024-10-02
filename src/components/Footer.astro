@@ -40,14 +40,10 @@ const { commitHash } = Astro.props;
 				<div class="flex flex-row flex-wrap gap-x-16 gap-y-8 py-4">
 					<div class="flex flex-col">
 						<p class="mb-1 text-xl">Open</p>
-						<!-- Due to how Cloudflare Workers handles requests, we have to force reload the page when we navigate to it since it is server rendered -->
-						<a href="/verify-diploma" class="text-muted-foreground hover:underline">
-							Verify diploma
-						</a>
 
-						<a href="/open-source" class="text-muted-foreground hover:underline">
+						<!-- <a href="/open-source" class="text-muted-foreground hover:underline">
 							Open source
-						</a>
+						</a> -->
 
 						<a href="https://opencollective.com/roseto/contribute" target="_blank" class="text-muted-foreground hover:underline">
 							Donate

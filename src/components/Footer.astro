@@ -1,5 +1,4 @@
 ---
-import { Separator } from "@/components/ui/separator";
 import CarbonBadge from "@/components/CarbonBadge.astro";
 import { Card, CardContent } from "./ui/card";
 import { Container } from "./ui/container";
@@ -34,22 +33,10 @@ const { commitHash } = Astro.props;
 				<p>
 					&copy; { currentYear } Roseto &middot; All rights reserved.
 				</p>
-				
+
 				<CarbonBadge />
-			
+
 				<div class="flex flex-row flex-wrap gap-x-16 gap-y-8 py-4">
-					<div class="flex flex-col">
-						<p class="mb-1 text-xl">Open</p>
-
-						<!-- <a href="/open-source" class="text-muted-foreground hover:underline">
-							Open source
-						</a> -->
-
-						<a href="https://opencollective.com/roseto/contribute" target="_blank" class="text-muted-foreground hover:underline">
-							Donate
-						</a>
-					</div>
-
 					<div class="flex flex-col">
 						<p class="mb-1 text-xl">About</p>
 						<a href="/updates" class="text-muted-foreground hover:underline">
@@ -60,7 +47,7 @@ const { commitHash } = Astro.props;
 							Contact
 						</a>
 					</div>
-	
+
 					<div class="flex flex-col">
 						<p class="mb-1 text-xl">Legal</p>
 						<a href="/privacy" class="text-muted-foreground hover:underline">
@@ -74,64 +61,49 @@ const { commitHash } = Astro.props;
 						</a>
 					</div>
 				</div>
-			
+
 				<div class="mt-2 flex flex-row items-center gap-4">
-					<a 
+					<a
 						href="https://facebook.com/rosetodotdev"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Image 
+						<Image
 							width={24}
 							height={24}
-							loading="eager" 
-							src="https://cdn.simpleicons.org/facebook/000000/ffffff" 
+							loading="eager"
+							src="https://cdn.simpleicons.org/facebook/000000/ffffff"
 							alt="Facebook"
 							class="w-6 h-6"
 						/>
 					</a>
-			
-					<a 
+
+					<a
 						href="https://instagram.com/rosetodotdev"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Image 
+						<Image
 							width={24}
 							height={24}
-							loading="eager" 
+							loading="eager"
 							src="https://cdn.simpleicons.org/instagram/000000/ffffff"
 							alt="Instagram"
 							class="w-6 h-6"
 						/>
 					</a>
-			
-					<a 
+
+					<a
 						href="https://github.com/roseto"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Image 
+						<Image
 							width={24}
-							height={24} 
-							loading="eager" 
-							src="https://cdn.simpleicons.org/github/000000/ffffff" 
+							height={24}
+							loading="eager"
+							src="https://cdn.simpleicons.org/github/000000/ffffff"
 							alt="GitHub"
-							class="w-6 h-6"
-						/>
-					</a>
-
-					<a 
-						href="https://opencollective.com/roseto"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Image 
-							width={24}
-							height={24} 
-							loading="eager" 
-							src="https://cdn.simpleicons.org/opencollective/000000/ffffff" 
-							alt="Open Collective"
 							class="w-6 h-6"
 						/>
 					</a>
